@@ -1,0 +1,21 @@
+{
+ "participant": 27,
+ "uniqueid": "debughQPFC:debugVkDAn",
+ "games": 8,
+ "decisions": 74,
+ "fits": {
+  "bounded": {
+   "model": "bounded",
+   "params": {
+    "eps": 0.2630752552751867,
+    "alpha": 7.313530356092284,
+    "lam": 2.380423874647431,
+    "tau": 0.0142991506073349
+   },
+   "loglik": -243.82828050404243,
+   "k": 4,
+   "aic": 495.65656100808485,
+   "evals": 3000
+  }
+ }
+}

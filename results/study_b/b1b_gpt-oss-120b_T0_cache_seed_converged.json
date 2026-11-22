@@ -1,0 +1,56 @@
+{
+  "model": "gpt-oss-120b",
+  "condition": "T0",
+  "procedure": "converged",
+  "replicate_cache": 2,
+  "decisions": 455,
+  "people": 39,
+  "cache_1": {
+    "best_model": "bounded",
+    "bounded_loglik": -2014.52,
+    "bounded_params": {
+      "eps": 0.4998839453213132,
+      "alpha": 0.02827478227466851,
+      "lam": 999.9999999999998,
+      "tau": 0.0010000000000000002
+    },
+    "dAIC_per_decision": {
+      "vs_unbounded": 0.1592,
+      "vs_leaky": 0.0405
+    },
+    "people_best_bounded": 33,
+    "people_dAIC_per_decision_median": {
+      "vs_unbounded": 1.4854,
+      "vs_leaky": 0.2919
+    },
+    "percentile_dAIC_per_decision": {
+      "vs_unbounded": 0.0,
+      "vs_leaky": 0.179
+    },
+    "percentile_alpha": 0.231
+  },
+  "cache_2": {
+    "best_model": "bounded",
+    "bounded_loglik": -2009.6,
+    "bounded_params": {
+      "eps": 0.4998837805443831,
+      "alpha": 0.022345017359496868,
+      "lam": 999.980313581635,
+      "tau": 0.0010000539822088415
+    },
+    "dAIC_per_decision": {
+      "vs_unbounded": 0.1808,
+      "vs_leaky": 0.0621
+    },
+    "people_best_bounded": 29,
+    "people_dAIC_per_decision_median": {
+      "vs_unbounded": 1.3755,
+      "vs_leaky": 0.234
+    },
+    "percentile_dAIC_per_decision": {
+      "vs_unbounded": 0.026,
+      "vs_leaky": 0.308
+    },
+    "percentile_alpha": 0.205
+  }
+}

@@ -1,0 +1,64 @@
+{
+ "participant": 9,
+ "uniqueid": "debugBlt17:debugRA2ks",
+ "games": 5,
+ "decisions": 40,
+ "fits": {
+  "bounded": {
+   "model": "bounded",
+   "procedure": "converged",
+   "params": {
+    "eps": 0.4999333029395692,
+    "alpha": 0.14545871051234474,
+    "lam": 999.9763609895901,
+    "tau": 0.0010000000000000002
+   },
+   "loglik": -187.75179832099684,
+   "k": 4,
+   "aic": 383.5035966419937,
+   "evals": 3639,
+   "at_limit": [
+    "eps",
+    "lam",
+    "tau"
+   ],
+   "limits": {
+    "eps": [
+     1e-06,
+     0.5
+    ],
+    "alpha": [
+     0.0001,
+     100.0
+    ],
+    "lam": [
+     0.001,
+     1000.0
+    ],
+    "tau": [
+     0.001,
+     100.0
+    ]
+   },
+   "greedy_search_loglik": -201.11482625403897,
+   "starts": [
+    {
+     "start": "greedy_search",
+     "loglik": -192.51385920057942,
+     "runs": 2
+    },
+    {
+     "start": "ridge",
+     "loglik": -187.75179832099684,
+     "runs": 2
+    },
+    {
+     "start": "extra",
+     "loglik": -187.7518059967706,
+     "runs": 2
+    }
+   ]
+  }
+ },
+ "procedure": "converged"
+}

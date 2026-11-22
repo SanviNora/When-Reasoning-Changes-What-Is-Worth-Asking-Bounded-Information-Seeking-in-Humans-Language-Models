@@ -1,0 +1,288 @@
+{
+  "model": "qwen3-32b",
+  "condition": "T0",
+  "heldout_split": "confirmation",
+  "families": 80,
+  "items": 1297,
+  "M3": "corrected likelihood (M3_corrected)",
+  "heldout_loglik": {
+    "M0": -9351.75,
+    "M1": -8927.6,
+    "M2c": -8927.63,
+    "M2s": -8923.12,
+    "M3": -9259.98,
+    "M1a": -8687.38
+  },
+  "best_planned_heldout": "M2s",
+  "best_planned_minus_other_planned": {
+    "M0": {
+      "difference": 428.63,
+      "ci95": [
+        332.84,
+        514.58
+      ],
+      "families_favoring_first": 69,
+      "families": 80
+    },
+    "M1": {
+      "difference": 4.48,
+      "ci95": [
+        -1.23,
+        10.91
+      ],
+      "families_favoring_first": 40,
+      "families": 80
+    },
+    "M2c": {
+      "difference": 4.51,
+      "ci95": [
+        -1.2,
+        10.95
+      ],
+      "families_favoring_first": 40,
+      "families": 80
+    },
+    "M3": {
+      "difference": 336.86,
+      "ci95": [
+        219.12,
+        442.62
+      ],
+      "families_favoring_first": 62,
+      "families": 80
+    }
+  },
+  "exploratory_M1a_minus_planned": {
+    "M0": {
+      "difference": 664.38,
+      "ci95": [
+        532.11,
+        790.93
+      ],
+      "families_favoring_first": 70,
+      "families": 80
+    },
+    "M1": {
+      "difference": 240.22,
+      "ci95": [
+        169.55,
+        311.62
+      ],
+      "families_favoring_first": 58,
+      "families": 80
+    },
+    "M2c": {
+      "difference": 240.25,
+      "ci95": [
+        169.57,
+        311.65
+      ],
+      "families_favoring_first": 58,
+      "families": 80
+    },
+    "M2s": {
+      "difference": 235.74,
+      "ci95": [
+        164.57,
+        306.4
+      ],
+      "families_favoring_first": 56,
+      "families": 80
+    },
+    "M3": {
+      "difference": 572.6,
+      "ci95": [
+        416.6,
+        724.42
+      ],
+      "families_favoring_first": 64,
+      "families": 80
+    }
+  },
+  "bootstrap": {
+    "resamples": 2000,
+    "unit": "family",
+    "seed": 20261118
+  },
+  "robustness_multi_clue_unrelated": {
+    "note": "post hoc: confirmation families sharing no sub-history of >= 2 clues with a calibration family, multi-clue replies only (single clues recur across splits)",
+    "families_excluded_as_related": [
+      "F165"
+    ],
+    "families": 79,
+    "items": 617,
+    "single_clue_probes": {
+      "distinct_single_clues": 30,
+      "also_probed_alone_in_reference_splits": 26
+    },
+    "best_planned_minus_other_planned": {
+      "M0": {
+        "difference": 413.72,
+        "ci95": [
+          322.47,
+          503.92
+        ],
+        "families_favoring_first": 67
+      },
+      "M1": {
+        "difference": 2.37,
+        "ci95": [
+          -3.34,
+          8.88
+        ],
+        "families_favoring_first": 30
+      },
+      "M2c": {
+        "difference": 2.4,
+        "ci95": [
+          -3.3,
+          8.9
+        ],
+        "families_favoring_first": 30
+      },
+      "M3": {
+        "difference": 325.95,
+        "ci95": [
+          203.87,
+          441.0
+        ],
+        "families_favoring_first": 60
+      }
+    }
+  },
+  "calibration_bootstrap": {
+    "resamples": 1000,
+    "unit": "processing-calibration family",
+    "params_2.5_50_97.5": {
+      "M0": {
+        "zeta": [
+          0.4713,
+          0.5125,
+          0.5517
+        ]
+      },
+      "M1": {
+        "nu": [
+          0.3689,
+          0.4258,
+          0.4831
+        ],
+        "zeta": [
+          0.0297,
+          0.102,
+          0.1928
+        ]
+      },
+      "M2c": {
+        "alpha": [
+          0.0001,
+          0.0005,
+          0.0127
+        ],
+        "nu": [
+          0.3689,
+          0.4258,
+          0.4833
+        ],
+        "zeta": [
+          0.0296,
+          0.1015,
+          0.1928
+        ]
+      },
+      "M2s": {
+        "alpha": [
+          0.0001,
+          0.0001,
+          0.0079
+        ],
+        "nu": [
+          0.3561,
+          0.4163,
+          0.4727
+        ],
+        "zeta": [
+          0.0332,
+          0.1063,
+          0.1989
+        ]
+      },
+      "M3": {
+        "k0": [
+          2.4487,
+          2.8232,
+          3.248
+        ],
+        "k1": [
+          -2.4181,
+          -1.7366,
+          -1.0515
+        ],
+        "zeta": [
+          0.4356,
+          0.473,
+          0.5108
+        ]
+      },
+      "M1a": {
+        "nu_x": [
+          0.2431,
+          0.2781,
+          0.3157
+        ],
+        "nu_r": [
+          0.0479,
+          0.0686,
+          0.0923
+        ],
+        "zeta": [
+          0.1641,
+          0.2198,
+          0.2834
+        ]
+      }
+    },
+    "share_best_aic_planned": {
+      "M0": 0.0,
+      "M1": 0.059,
+      "M2c": 0.023,
+      "M2s": 0.918,
+      "M3": 0.0
+    },
+    "share_best_aic_all": {
+      "M0": 0.0,
+      "M1": 0.0,
+      "M2c": 0.0,
+      "M2s": 0.0,
+      "M3": 0.0,
+      "M1a": 1.0
+    },
+    "dAIC_vs_M2s": {
+      "M0": [
+        403.2429,
+        585.094,
+        763.3774
+      ],
+      "M1": [
+        -4.7792,
+        17.9345,
+        41.3418
+      ],
+      "M2c": [
+        -4.6885,
+        19.0548,
+        43.1197
+      ],
+      "M3": [
+        211.2957,
+        433.0038,
+        652.2059
+      ],
+      "M1a": [
+        -490.2575,
+        -345.3752,
+        -227.0573
+      ]
+    }
+  }
+}

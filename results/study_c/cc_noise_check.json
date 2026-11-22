@@ -1,0 +1,35 @@
+{
+  "calibration": {
+    "pairs": 96,
+    "samples_per_branch": 4.0,
+    "mean_K": 7.208,
+    "mean_inverse_K_squared": 0.0308,
+    "branches_per_query": 3.964,
+    "mean_p_1_minus_p": 0.0473,
+    "observed_sd": 0.0842,
+    "noise_sd_locked_estimate": 0.066,
+    "noise_sd_corrected": 0.0762,
+    "true_sd_locked_estimate": 0.0523,
+    "true_sd_corrected": 0.0358
+  },
+  "confirmation": {
+    "pairs": 360,
+    "samples_per_branch": 8.0,
+    "mean_K": 6.825,
+    "mean_inverse_K_squared": 0.03246,
+    "branches_per_query": 3.768,
+    "mean_p_1_minus_p": 0.0586,
+    "observed_sd": 0.0721,
+    "noise_sd_locked_estimate": 0.058,
+    "noise_sd_corrected": 0.062,
+    "true_sd_locked_estimate": 0.0428,
+    "true_sd_corrected": 0.0368
+  },
+  "planned": {
+    "tau_sd": 0.0532,
+    "noise_sd_at_8_samples": 0.0462,
+    "power": 0.864
+  },
+  "calibration_projected_to_8_samples_corrected": 0.0539,
+  "realized_power_at_r2_0.20": 0.501
+}

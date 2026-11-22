@@ -1,0 +1,16 @@
+{
+  "model": "olmo2-32b",
+  "calls": 100,
+  "format_compliance": 1.0,
+  "format_by_task": {
+    "classify": 1.0,
+    "identify": 1.0,
+    "guess": 1.0
+  },
+  "classify_balanced_accuracy": 0.541,
+  "identify_accuracy": 0.05,
+  "identify_chance": 0.03,
+  "guess_consistent_rate": 0.35,
+  "median_completion_tokens": 8.0,
+  "passes_floor": true
+}

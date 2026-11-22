@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "variant": "conservative",
+  "distance": "false retentions; infinite if an allowed code is ruled out",
+  "procedure": "Manuscript Methods: 4 MH chains per (query, feedback) case with tree-regeneration proposals; top 10 per alpha on a log grid 1e-4..100 plus the exact expression",
+  "cases": 55,
+  "filters_total": 2547,
+  "iterations_per_chain": 100000,
+  "chain_alphas": [
+    0.001,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "chain_starts": [
+    "exact",
+    "exact",
+    "prior",
+    "prior"
+  ],
+  "alpha_grid": [
+    0.0001,
+    0.000178,
+    0.000316,
+    0.000562,
+    0.001,
+    0.001778,
+    0.003162,
+    0.005623,
+    0.01,
+    0.017783,
+    0.031623,
+    0.056234,
+    0.1,
+    0.177828,
+    0.316228,
+    0.562341,
+    1.0,
+    1.778279,
+    3.162278,
+    5.623413,
+    10.0,
+    17.782794,
+    31.622777,
+    56.234133,
+    100.0
+  ],
+  "top_k": 10,
+  "seeds": "1000 * case + chain",
+  "authors_code_sha256": "fc7caad68beb6d8e8fdde2afa7a4a5ce9c52364b23d2362efc29eaca5112469a",
+  "our_choices": "chain alphas, starting points, proposal correction (prior ratio exponent alpha - 1) and a size cap of max(1.5 x exact size, 50) nodes are not specified in the paper"
+}

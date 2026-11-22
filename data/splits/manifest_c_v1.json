@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "seed": 20261120,
+  "split": "c_confirmation",
+  "families": 120,
+  "candidates_drawn": 367,
+  "rejected_sharing_a_clue_pair_with_v1": 19,
+  "K_range": [
+    4,
+    16
+  ],
+  "clues": [
+    2,
+    3
+  ],
+  "mean_K": 6.83,
+  "excluded": "families_v1 (all splits), Experiment 1 starting positions, any >= 2-clue sub-history of a v1 family",
+  "families_v1_sha256": "5eb3438c3ca680f2a3d93c7657a60ab9fb70986d16ac1721938f34f69a8bf15e",
+  "sha256": "e6579429fc8f42778fd4d23e4928bf604950f44fdc6d6d8d79e195d4b0512e02"
+}

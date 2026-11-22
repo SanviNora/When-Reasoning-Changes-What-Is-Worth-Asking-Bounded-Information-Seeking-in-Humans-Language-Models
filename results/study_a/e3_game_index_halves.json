@@ -1,0 +1,38 @@
+{
+  "procedure": "greedy",
+  "participants": 39,
+  "mean_dAIC_static_minus_split": 9.7,
+  "median_dAIC_static_minus_split": 0.7,
+  "participants_favoring_split": 21,
+  "sign_test_p": 0.7493,
+  "wilcoxon_late_minus_early": {
+    "eps": {
+      "median_diff": -0.0592,
+      "p": 0.0562
+    },
+    "alpha": {
+      "median_diff": 0.8479,
+      "p": 0.0414
+    },
+    "lam": {
+      "median_diff": 0.2236,
+      "p": 0.8414
+    },
+    "tau": {
+      "median_diff": -0.0102,
+      "p": 0.2469
+    }
+  },
+  "median_params_early": {
+    "eps": 0.3238,
+    "alpha": 0.934,
+    "lam": 8.7834,
+    "tau": 0.0818
+  },
+  "median_params_late": {
+    "eps": 0.2485,
+    "alpha": 3.3096,
+    "lam": 5.7948,
+    "tau": 0.1203
+  }
+}

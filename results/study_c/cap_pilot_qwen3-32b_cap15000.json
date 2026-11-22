@@ -1,0 +1,28 @@
+{
+  "model": "qwen3-32b",
+  "old_cap": 6144,
+  "new_cap": 15000,
+  "seed": 1,
+  "T3": {
+    "capped_at_old_cap": 768,
+    "rerun": 200,
+    "finished_and_parsed": 0.735,
+    "still_at_new_cap": 0.265,
+    "looping_at_old_cap": 0.405,
+    "finished_among_old_loops": 0.753,
+    "finished_among_old_nonloops": 0.723,
+    "in_branch_among_finished": 0.075,
+    "median_tokens_finished": 3662.0
+  },
+  "T0": {
+    "capped_at_old_cap": 298,
+    "rerun": 60,
+    "finished_and_parsed": 0.917,
+    "still_at_new_cap": 0.083,
+    "looping_at_old_cap": 0.3,
+    "finished_among_old_loops": 0.833,
+    "finished_among_old_nonloops": 0.952,
+    "in_branch_among_finished": 0.109,
+    "median_tokens_finished": 1754.0
+  }
+}

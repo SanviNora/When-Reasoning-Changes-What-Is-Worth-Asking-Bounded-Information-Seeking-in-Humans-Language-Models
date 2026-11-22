@@ -1,0 +1,186 @@
+{
+  "tau_sd": 0.05315320388377518,
+  "noise_sd_at_calibration": 0.06529362738038808,
+  "calibration_samples_per_branch": 4,
+  "branches_per_query": 3.9635416666666665,
+  "smallest_effect_r2": 0.2,
+  "alpha_per_test": 0.0125,
+  "pairs_per_family": 3,
+  "design": [
+    {
+      "samples_per_branch": 4,
+      "families": 40,
+      "power": 0.26,
+      "ci95_halfwidth_over_tau2": 0.241,
+      "usefulness_calls": 7610
+    },
+    {
+      "samples_per_branch": 4,
+      "families": 60,
+      "power": 0.382,
+      "ci95_halfwidth_over_tau2": 0.199,
+      "usefulness_calls": 11415
+    },
+    {
+      "samples_per_branch": 4,
+      "families": 80,
+      "power": 0.503,
+      "ci95_halfwidth_over_tau2": 0.174,
+      "usefulness_calls": 15220
+    },
+    {
+      "samples_per_branch": 4,
+      "families": 120,
+      "power": 0.691,
+      "ci95_halfwidth_over_tau2": 0.142,
+      "usefulness_calls": 22830
+    },
+    {
+      "samples_per_branch": 4,
+      "families": 160,
+      "power": 0.845,
+      "ci95_halfwidth_over_tau2": 0.123,
+      "usefulness_calls": 30440
+    },
+    {
+      "samples_per_branch": 8,
+      "families": 40,
+      "power": 0.391,
+      "ci95_halfwidth_over_tau2": 0.201,
+      "usefulness_calls": 15220
+    },
+    {
+      "samples_per_branch": 8,
+      "families": 60,
+      "power": 0.528,
+      "ci95_halfwidth_over_tau2": 0.165,
+      "usefulness_calls": 22830
+    },
+    {
+      "samples_per_branch": 8,
+      "families": 80,
+      "power": 0.699,
+      "ci95_halfwidth_over_tau2": 0.144,
+      "usefulness_calls": 30440
+    },
+    {
+      "samples_per_branch": 8,
+      "families": 120,
+      "power": 0.864,
+      "ci95_halfwidth_over_tau2": 0.118,
+      "usefulness_calls": 45660
+    },
+    {
+      "samples_per_branch": 8,
+      "families": 160,
+      "power": 0.953,
+      "ci95_halfwidth_over_tau2": 0.102,
+      "usefulness_calls": 60880
+    },
+    {
+      "samples_per_branch": 16,
+      "families": 40,
+      "power": 0.489,
+      "ci95_halfwidth_over_tau2": 0.177,
+      "usefulness_calls": 30440
+    },
+    {
+      "samples_per_branch": 16,
+      "families": 60,
+      "power": 0.693,
+      "ci95_halfwidth_over_tau2": 0.145,
+      "usefulness_calls": 45660
+    },
+    {
+      "samples_per_branch": 16,
+      "families": 80,
+      "power": 0.813,
+      "ci95_halfwidth_over_tau2": 0.126,
+      "usefulness_calls": 60880
+    },
+    {
+      "samples_per_branch": 16,
+      "families": 120,
+      "power": 0.941,
+      "ci95_halfwidth_over_tau2": 0.104,
+      "usefulness_calls": 91320
+    },
+    {
+      "samples_per_branch": 16,
+      "families": 160,
+      "power": 0.99,
+      "ci95_halfwidth_over_tau2": 0.09,
+      "usefulness_calls": 121760
+    },
+    {
+      "samples_per_branch": 24,
+      "families": 40,
+      "power": 0.541,
+      "ci95_halfwidth_over_tau2": 0.17,
+      "usefulness_calls": 45660
+    },
+    {
+      "samples_per_branch": 24,
+      "families": 60,
+      "power": 0.736,
+      "ci95_halfwidth_over_tau2": 0.138,
+      "usefulness_calls": 68490
+    },
+    {
+      "samples_per_branch": 24,
+      "families": 80,
+      "power": 0.87,
+      "ci95_halfwidth_over_tau2": 0.12,
+      "usefulness_calls": 91320
+    },
+    {
+      "samples_per_branch": 24,
+      "families": 120,
+      "power": 0.966,
+      "ci95_halfwidth_over_tau2": 0.099,
+      "usefulness_calls": 136980
+    },
+    {
+      "samples_per_branch": 24,
+      "families": 160,
+      "power": 0.997,
+      "ci95_halfwidth_over_tau2": 0.085,
+      "usefulness_calls": 182640
+    },
+    {
+      "samples_per_branch": 32,
+      "families": 40,
+      "power": 0.556,
+      "ci95_halfwidth_over_tau2": 0.163,
+      "usefulness_calls": 60880
+    },
+    {
+      "samples_per_branch": 32,
+      "families": 60,
+      "power": 0.765,
+      "ci95_halfwidth_over_tau2": 0.135,
+      "usefulness_calls": 91320
+    },
+    {
+      "samples_per_branch": 32,
+      "families": 80,
+      "power": 0.87,
+      "ci95_halfwidth_over_tau2": 0.116,
+      "usefulness_calls": 121760
+    },
+    {
+      "samples_per_branch": 32,
+      "families": 120,
+      "power": 0.97,
+      "ci95_halfwidth_over_tau2": 0.096,
+      "usefulness_calls": 182640
+    },
+    {
+      "samples_per_branch": 32,
+      "families": 160,
+      "power": 0.998,
+      "ci95_halfwidth_over_tau2": 0.083,
+      "usefulness_calls": 243520
+    }
+  ]
+}

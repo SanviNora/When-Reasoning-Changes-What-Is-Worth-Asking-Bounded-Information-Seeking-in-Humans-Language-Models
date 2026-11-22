@@ -1,0 +1,912 @@
+{
+  "measure": "guesses after the supplied history; unsolved = 16",
+  "rule": "inferential results only for models solving >= 50% of free-play games",
+  "humans": {
+    "games": 393,
+    "solve_rate_by_condition": {
+      "Max-EIG": 0.95,
+      "None": 0.944,
+      "Simple": 0.932
+    },
+    "mean_guesses_by_condition": {
+      "Max-EIG": 6.81,
+      "None": 7.64,
+      "Simple": 5.51
+    },
+    "signature_effect_maxeig_minus_simple": 1.29,
+    "ci95": [
+      0.29,
+      2.28
+    ],
+    "maxeig_minus_simple_solved_games_only": 1.58,
+    "unsolved_games": 23,
+    "guesses_made_in_unsolved_games": {
+      "min": 0,
+      "max": 11
+    },
+    "ideal_effect": -0.59,
+    "effect_relative_to_ideal": 1.88,
+    "one_code_subset": {
+      "games": 46,
+      "mean_guesses": 5.87,
+      "solve_rate": 0.957
+    },
+    "hazard_check": {
+      "log_odds_maxeig": -0.468,
+      "se": 0.158,
+      "z": -2.96,
+      "p": 0.003101132465263523,
+      "note": "negative = slower to solve after Max-EIG histories"
+    },
+    "mixed_model": {
+      "maxeig_minus_simple": 1.265,
+      "se": 0.505,
+      "ci95": [
+        0.28,
+        2.25
+      ],
+      "p": 0.012222142898233392,
+      "stimulus_variance": 1.545,
+      "games": 286,
+      "stimuli": 113
+    }
+  },
+  "humans_free_play_E3": {
+    "games": 390,
+    "solve_rate": 0.864,
+    "guesses_to_solve": {
+      "mean": 7.72,
+      "sd": 3.16
+    },
+    "bits_per_guess_mean": 1.611,
+    "entropy_curve_mean": [
+      8.0,
+      5.509,
+      3.389,
+      1.843,
+      1.162,
+      0.566,
+      0.27,
+      0.121
+    ],
+    "consistent_guess_rate": 0.312,
+    "distinct_colors_per_guess": {
+      "1": 0.184,
+      "2": 0.213,
+      "3": 0.421,
+      "4": 0.183
+    },
+    "distinct_colors_first_guess": {
+      "1": 0.454,
+      "2": 0.108,
+      "3": 0.121,
+      "4": 0.318
+    },
+    "eig_relative_to_max_mean": 0.652,
+    "share_at_max_eig": 0.184,
+    "vstar_relative_to_max_mean": 0.635,
+    "share_at_max_vstar": 0.232
+  },
+  "ideal_free_play": {
+    "games": 256,
+    "solve_rate": 1.0,
+    "guesses_to_solve": {
+      "mean": 3.56,
+      "sd": 0.58
+    },
+    "bits_per_guess_mean": 2.825,
+    "entropy_curve_mean": [
+      8.0,
+      4.73,
+      1.562,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "consistent_guess_rate": 0.793,
+    "distinct_colors_per_guess": {
+      "1": 0.004,
+      "2": 0.254,
+      "3": 0.659,
+      "4": 0.082
+    },
+    "distinct_colors_first_guess": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 1.0,
+      "4": 0.0
+    },
+    "eig_relative_to_max_mean": 1.0,
+    "share_at_max_eig": 1.0,
+    "vstar_relative_to_max_mean": 0.998,
+    "share_at_max_vstar": 0.983
+  },
+  "claude-haiku-5-5": {
+    "games": 1320,
+    "solve_rate_by_condition": {
+      "Max-EIG": 1.0,
+      "None": 1.0,
+      "Simple": 1.0
+    },
+    "mean_guesses_by_condition": {
+      "Max-EIG": 2.43,
+      "None": 4.17,
+      "Simple": 2.98
+    },
+    "signature_effect_maxeig_minus_simple": -0.56,
+    "ci95": [
+      -0.9,
+      -0.21
+    ],
+    "maxeig_minus_simple_solved_games_only": -0.56,
+    "unsolved_games": 0,
+    "guesses_made_in_unsolved_games": null,
+    "ideal_effect": -0.59,
+    "effect_relative_to_ideal": 0.03,
+    "one_code_subset": {
+      "games": 190,
+      "mean_guesses": 1.53,
+      "solve_rate": 1.0
+    },
+    "hazard_check": {
+      "log_odds_maxeig": 0.473,
+      "se": 0.173,
+      "z": 2.73,
+      "p": 0.00632983819543948,
+      "note": "negative = slower to solve after Max-EIG histories"
+    },
+    "mixed_model": {
+      "maxeig_minus_simple": -0.556,
+      "se": 0.178,
+      "ci95": [
+        -0.9,
+        -0.21
+      ],
+      "p": 0.0018053822548224,
+      "stimulus_variance": 0.78,
+      "games": 1130,
+      "stimuli": 113
+    },
+    "completions_per_stimulus": 10,
+    "invalid_turn_rate": 0.0,
+    "invalid_turns_by_condition": {
+      "Max-EIG": 0,
+      "None": 0,
+      "Simple": 0
+    },
+    "invalid_turn_rate_by_condition": {
+      "Max-EIG": 0.0,
+      "None": 0.0,
+      "Simple": 0.0
+    },
+    "reask_share_by_condition": {
+      "Max-EIG": 0.001,
+      "None": 0.001,
+      "Simple": 0.001
+    },
+    "turns_played": 3845,
+    "free_play": {
+      "games": 100,
+      "solve_rate": 1.0,
+      "guesses_to_solve": {
+        "mean": 4.48,
+        "sd": 1.49
+      },
+      "bits_per_guess_mean": 2.402,
+      "entropy_curve_mean": [
+        8.0,
+        4.896,
+        2.101,
+        0.47,
+        0.07,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consistent_guess_rate": 0.635,
+      "distinct_colors_per_guess": {
+        "1": 0.007,
+        "2": 0.333,
+        "3": 0.455,
+        "4": 0.205
+      },
+      "distinct_colors_first_guess": {
+        "1": 0.01,
+        "2": 0.68,
+        "3": 0.26,
+        "4": 0.05
+      },
+      "eig_relative_to_max_mean": 0.904,
+      "share_at_max_eig": 0.336,
+      "vstar_relative_to_max_mean": 0.859,
+      "share_at_max_vstar": 0.36,
+      "invalid_turn_rate": 0.0
+    },
+    "eligible_for_inference": true,
+    "difference_from_humans": {
+      "estimate": -1.85,
+      "ci95": [
+        -2.89,
+        -0.79
+      ]
+    },
+    "ratio_to_humans": {
+      "estimate": -0.43,
+      "ci95": [
+        -1.71,
+        -0.13
+      ],
+      "note": "LLM effect / human effect; unstable where the human draw is near 0"
+    }
+  },
+  "claude-opus-5-5": {
+    "games": 1320,
+    "solve_rate_by_condition": {
+      "Max-EIG": 1.0,
+      "None": 1.0,
+      "Simple": 1.0
+    },
+    "mean_guesses_by_condition": {
+      "Max-EIG": 1.88,
+      "None": 3.78,
+      "Simple": 2.66
+    },
+    "signature_effect_maxeig_minus_simple": -0.79,
+    "ci95": [
+      -1.07,
+      -0.51
+    ],
+    "maxeig_minus_simple_solved_games_only": -0.79,
+    "unsolved_games": 0,
+    "guesses_made_in_unsolved_games": null,
+    "ideal_effect": -0.59,
+    "effect_relative_to_ideal": -0.2,
+    "one_code_subset": {
+      "games": 190,
+      "mean_guesses": 1.02,
+      "solve_rate": 1.0
+    },
+    "hazard_check": {
+      "log_odds_maxeig": 1.202,
+      "se": 0.253,
+      "z": 4.75,
+      "p": 2.0265566564224574e-06,
+      "note": "negative = slower to solve after Max-EIG histories"
+    },
+    "mixed_model": {
+      "maxeig_minus_simple": -0.785,
+      "se": 0.144,
+      "ci95": [
+        -1.07,
+        -0.5
+      ],
+      "p": 4.830493812816575e-08,
+      "stimulus_variance": 0.56,
+      "games": 1130,
+      "stimuli": 113
+    },
+    "completions_per_stimulus": 10,
+    "invalid_turn_rate": 0.0,
+    "invalid_turns_by_condition": {
+      "Max-EIG": 0,
+      "None": 0,
+      "Simple": 0
+    },
+    "invalid_turn_rate_by_condition": {
+      "Max-EIG": 0.0,
+      "None": 0.0,
+      "Simple": 0.0
+    },
+    "reask_share_by_condition": {
+      "Max-EIG": 0.003,
+      "None": 0.0,
+      "Simple": 0.001
+    },
+    "turns_played": 3278,
+    "free_play": {
+      "games": 100,
+      "solve_rate": 1.0,
+      "guesses_to_solve": {
+        "mean": 3.69,
+        "sd": 0.71
+      },
+      "bits_per_guess_mean": 2.623,
+      "entropy_curve_mean": [
+        8.0,
+        4.921,
+        1.845,
+        0.213,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consistent_guess_rate": 0.683,
+      "distinct_colors_per_guess": {
+        "1": 0.005,
+        "2": 0.393,
+        "3": 0.463,
+        "4": 0.138
+      },
+      "distinct_colors_first_guess": {
+        "1": 0.0,
+        "2": 0.96,
+        "3": 0.04,
+        "4": 0.0
+      },
+      "eig_relative_to_max_mean": 0.942,
+      "share_at_max_eig": 0.377,
+      "vstar_relative_to_max_mean": 0.885,
+      "share_at_max_vstar": 0.377,
+      "invalid_turn_rate": 0.0
+    },
+    "eligible_for_inference": true,
+    "difference_from_humans": {
+      "estimate": -2.08,
+      "ci95": [
+        -3.11,
+        -1.03
+      ]
+    },
+    "ratio_to_humans": {
+      "estimate": -0.61,
+      "ci95": [
+        -2.37,
+        -0.29
+      ],
+      "note": "LLM effect / human effect; unstable where the human draw is near 0"
+    }
+  },
+  "gpt-oss-120b": {
+    "games": 1320,
+    "solve_rate_by_condition": {
+      "Max-EIG": 0.993,
+      "None": 0.979,
+      "Simple": 1.0
+    },
+    "mean_guesses_by_condition": {
+      "Max-EIG": 3.27,
+      "None": 5.29,
+      "Simple": 3.05
+    },
+    "signature_effect_maxeig_minus_simple": 0.23,
+    "ci95": [
+      -0.23,
+      0.69
+    ],
+    "maxeig_minus_simple_solved_games_only": 0.14,
+    "unsolved_games": 8,
+    "guesses_made_in_unsolved_games": {
+      "min": 15,
+      "max": 15
+    },
+    "ideal_effect": -0.59,
+    "effect_relative_to_ideal": 0.81,
+    "one_code_subset": {
+      "games": 190,
+      "mean_guesses": 2.49,
+      "solve_rate": 0.989
+    },
+    "hazard_check": {
+      "log_odds_maxeig": -0.115,
+      "se": 0.155,
+      "z": -0.74,
+      "p": 0.45875641875031314,
+      "note": "negative = slower to solve after Max-EIG histories"
+    },
+    "mixed_model": {
+      "maxeig_minus_simple": 0.225,
+      "se": 0.239,
+      "ci95": [
+        -0.24,
+        0.69
+      ],
+      "p": 0.34508536993312466,
+      "stimulus_variance": 1.31,
+      "games": 1130,
+      "stimuli": 113
+    },
+    "completions_per_stimulus": 10,
+    "invalid_turn_rate": 0.0,
+    "invalid_turns_by_condition": {
+      "Max-EIG": 0,
+      "None": 0,
+      "Simple": 0
+    },
+    "invalid_turn_rate_by_condition": {
+      "Max-EIG": 0.0,
+      "None": 0.0,
+      "Simple": 0.0
+    },
+    "reask_share_by_condition": {
+      "Max-EIG": 0.0,
+      "None": 0.0,
+      "Simple": 0.0
+    },
+    "turns_played": 4570,
+    "free_play": {
+      "games": 100,
+      "solve_rate": 0.98,
+      "guesses_to_solve": {
+        "mean": 4.64,
+        "sd": 1.63
+      },
+      "bits_per_guess_mean": 2.26,
+      "entropy_curve_mean": [
+        8.0,
+        4.905,
+        2.322,
+        0.648,
+        0.136,
+        0.02,
+        0.0,
+        0.0
+      ],
+      "consistent_guess_rate": 0.504,
+      "distinct_colors_per_guess": {
+        "1": 0.006,
+        "2": 0.445,
+        "3": 0.297,
+        "4": 0.252
+      },
+      "distinct_colors_first_guess": {
+        "1": 0.0,
+        "2": 1.0,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "eig_relative_to_max_mean": 0.848,
+      "share_at_max_eig": 0.195,
+      "vstar_relative_to_max_mean": 0.788,
+      "share_at_max_vstar": 0.195,
+      "invalid_turn_rate": 0.0
+    },
+    "eligible_for_inference": true,
+    "difference_from_humans": {
+      "estimate": -1.07,
+      "ci95": [
+        -2.16,
+        0.03
+      ]
+    },
+    "ratio_to_humans": {
+      "estimate": 0.17,
+      "ci95": [
+        -0.24,
+        0.98
+      ],
+      "note": "LLM effect / human effect; unstable where the human draw is near 0"
+    }
+  },
+  "olmo2-32b": {
+    "games": 1320,
+    "solve_rate_by_condition": {
+      "Max-EIG": 0.075,
+      "None": 0.053,
+      "Simple": 0.095
+    },
+    "mean_guesses_by_condition": {
+      "Max-EIG": 15.35,
+      "None": 15.53,
+      "Simple": 15.33
+    },
+    "unsolved_games": 1214,
+    "guesses_made_in_unsolved_games": {
+      "min": 15,
+      "max": 15
+    },
+    "ideal_effect": -0.59,
+    "one_code_subset": {
+      "games": 190,
+      "mean_guesses": 15.1,
+      "solve_rate": 0.095
+    },
+    "completions_per_stimulus": 10,
+    "invalid_turn_rate": 0.0,
+    "invalid_turns_by_condition": {
+      "Max-EIG": 0,
+      "None": 0,
+      "Simple": 0
+    },
+    "invalid_turn_rate_by_condition": {
+      "Max-EIG": 0.0,
+      "None": 0.0,
+      "Simple": 0.0
+    },
+    "reask_share_by_condition": {
+      "Max-EIG": 0.002,
+      "None": 0.002,
+      "Simple": 0.001
+    },
+    "turns_played": 19071,
+    "free_play": {
+      "games": 100,
+      "solve_rate": 0.03,
+      "guesses_to_solve": {
+        "mean": 10.33,
+        "sd": 7.23
+      },
+      "bits_per_guess_mean": 1.547,
+      "entropy_curve_mean": [
+        8.0,
+        4.881,
+        2.284,
+        1.134,
+        0.551,
+        0.325,
+        0.199,
+        0.128
+      ],
+      "consistent_guess_rate": 0.041,
+      "distinct_colors_per_guess": {
+        "1": 0.048,
+        "2": 0.445,
+        "3": 0.364,
+        "4": 0.143
+      },
+      "distinct_colors_first_guess": {
+        "1": 0.0,
+        "2": 0.91,
+        "3": 0.02,
+        "4": 0.07
+      },
+      "eig_relative_to_max_mean": 0.585,
+      "share_at_max_eig": 0.143,
+      "vstar_relative_to_max_mean": 0.662,
+      "share_at_max_vstar": 0.141,
+      "invalid_turn_rate": 0.0
+    },
+    "eligible_for_inference": false,
+    "descriptive": {
+      "maxeig_minus_simple": 0.02,
+      "maxeig_minus_simple_solved_games_only": -1.55,
+      "hazard_log_odds_maxeig": -0.227,
+      "note": "below the solve-rate rule: point estimates only, no intervals or tests"
+    }
+  },
+  "phi-4": {
+    "games": 1320,
+    "solve_rate_by_condition": {
+      "Max-EIG": 0.182,
+      "None": 0.126,
+      "Simple": 0.327
+    },
+    "mean_guesses_by_condition": {
+      "Max-EIG": 14.45,
+      "None": 14.86,
+      "Simple": 12.51
+    },
+    "unsolved_games": 1009,
+    "guesses_made_in_unsolved_games": {
+      "min": 15,
+      "max": 15
+    },
+    "ideal_effect": -0.59,
+    "one_code_subset": {
+      "games": 190,
+      "mean_guesses": 14.13,
+      "solve_rate": 0.221
+    },
+    "completions_per_stimulus": 10,
+    "invalid_turn_rate": 0.0,
+    "invalid_turns_by_condition": {
+      "Max-EIG": 0,
+      "None": 0,
+      "Simple": 0
+    },
+    "invalid_turn_rate_by_condition": {
+      "Max-EIG": 0.0,
+      "None": 0.0,
+      "Simple": 0.0
+    },
+    "reask_share_by_condition": {
+      "Max-EIG": 0.0,
+      "None": 0.002,
+      "Simple": 0.002
+    },
+    "turns_played": 17054,
+    "free_play": {
+      "games": 100,
+      "solve_rate": 0.19,
+      "guesses_to_solve": {
+        "mean": 8.11,
+        "sd": 3.83
+      },
+      "bits_per_guess_mean": 1.215,
+      "entropy_curve_mean": [
+        8.0,
+        4.962,
+        3.013,
+        1.816,
+        1.134,
+        0.613,
+        0.439,
+        0.348
+      ],
+      "consistent_guess_rate": 0.066,
+      "distinct_colors_per_guess": {
+        "1": 0.002,
+        "2": 0.271,
+        "3": 0.267,
+        "4": 0.46
+      },
+      "distinct_colors_first_guess": {
+        "1": 0.0,
+        "2": 0.53,
+        "3": 0.11,
+        "4": 0.36
+      },
+      "eig_relative_to_max_mean": 0.478,
+      "share_at_max_eig": 0.124,
+      "vstar_relative_to_max_mean": 0.571,
+      "share_at_max_vstar": 0.127,
+      "invalid_turn_rate": 0.0
+    },
+    "eligible_for_inference": false,
+    "descriptive": {
+      "maxeig_minus_simple": 1.94,
+      "maxeig_minus_simple_solved_games_only": 2.18,
+      "hazard_log_odds_maxeig": -0.724,
+      "note": "below the solve-rate rule: point estimates only, no intervals or tests"
+    }
+  },
+  "qwen3-32b": {
+    "games": 1320,
+    "solve_rate_by_condition": {
+      "Max-EIG": 0.414,
+      "None": 0.363,
+      "Simple": 0.564
+    },
+    "mean_guesses_by_condition": {
+      "Max-EIG": 12.37,
+      "None": 13.05,
+      "Simple": 10.5
+    },
+    "unsolved_games": 699,
+    "guesses_made_in_unsolved_games": {
+      "min": 15,
+      "max": 15
+    },
+    "ideal_effect": -0.59,
+    "one_code_subset": {
+      "games": 190,
+      "mean_guesses": 12.18,
+      "solve_rate": 0.421
+    },
+    "completions_per_stimulus": 10,
+    "invalid_turn_rate": 0.0005,
+    "invalid_turns_by_condition": {
+      "Max-EIG": 4,
+      "None": 2,
+      "Simple": 1
+    },
+    "invalid_turn_rate_by_condition": {
+      "Max-EIG": 0.0006,
+      "None": 0.0008,
+      "Simple": 0.0002
+    },
+    "reask_share_by_condition": {
+      "Max-EIG": 0.058,
+      "None": 0.073,
+      "Simple": 0.045
+    },
+    "turns_played": 14710,
+    "free_play": {
+      "games": 100,
+      "solve_rate": 0.44,
+      "guesses_to_solve": {
+        "mean": 7.7,
+        "sd": 3.7
+      },
+      "bits_per_guess_mean": 1.724,
+      "entropy_curve_mean": [
+        8.0,
+        4.964,
+        3.014,
+        1.345,
+        0.57,
+        0.311,
+        0.153,
+        0.066
+      ],
+      "consistent_guess_rate": 0.154,
+      "distinct_colors_per_guess": {
+        "1": 0.006,
+        "2": 0.125,
+        "3": 0.366,
+        "4": 0.503
+      },
+      "distinct_colors_first_guess": {
+        "1": 0.0,
+        "2": 0.09,
+        "3": 0.0,
+        "4": 0.91
+      },
+      "eig_relative_to_max_mean": 0.686,
+      "share_at_max_eig": 0.172,
+      "vstar_relative_to_max_mean": 0.678,
+      "share_at_max_vstar": 0.175,
+      "invalid_turn_rate": 0.0
+    },
+    "eligible_for_inference": false,
+    "descriptive": {
+      "maxeig_minus_simple": 1.86,
+      "maxeig_minus_simple_solved_games_only": 0.97,
+      "hazard_log_odds_maxeig": -0.484,
+      "note": "below the solve-rate rule: point estimates only, no intervals or tests"
+    },
+    "aid_arm_T3": {
+      "games": 1320,
+      "eligible_for_inference": false,
+      "solve_rate_by_condition": {
+        "Max-EIG": 0.267,
+        "None": 0.242,
+        "Simple": 0.411
+      },
+      "mean_guesses_by_condition": {
+        "Max-EIG": 13.18,
+        "None": 13.65,
+        "Simple": 11.64
+      },
+      "maxeig_minus_simple_T3": 1.54,
+      "maxeig_minus_simple_T0": 1.86,
+      "invalid_turn_rate": 0.0034,
+      "invalid_turns_by_condition": {
+        "Max-EIG": 18,
+        "None": 25,
+        "Simple": 11
+      },
+      "invalid_turn_rate_by_condition": {
+        "Max-EIG": 0.0025,
+        "None": 0.0102,
+        "Simple": 0.0018
+      },
+      "reask_share_by_condition": {
+        "Max-EIG": 0.129,
+        "None": 0.145,
+        "Simple": 0.09
+      },
+      "turns_played": 15734
+    }
+  },
+  "capability": {
+    "measure": "free-play mean EIG of a guess relative to the best available query (ideal player = 1)",
+    "note": "descriptive; B1b per-decision dAIC from the B1b summaries (both fitting procedures)",
+    "people": {
+      "eig_relative_to_max": 0.652,
+      "free_play_solve_rate": 0.864,
+      "guesses_to_solve": 7.72,
+      "e1_maxeig_minus_simple": 1.29,
+      "e1_ci95": [
+        0.29,
+        2.28
+      ],
+      "one_code_mean_guesses": 5.87,
+      "first_guess_single_color": 0.454
+    },
+    "ideal": {
+      "eig_relative_to_max": 1.0
+    },
+    "models": [
+      {
+        "model": "phi-4",
+        "eig_relative_to_max": 0.478,
+        "free_play_solve_rate": 0.19,
+        "guesses_to_solve": 8.11,
+        "eligible_for_inference": false,
+        "e1_maxeig_minus_simple": 1.94,
+        "e1_ci95": null,
+        "one_code_mean_guesses": 14.13,
+        "first_guess_single_color": 0.0
+      },
+      {
+        "model": "olmo2-32b",
+        "eig_relative_to_max": 0.585,
+        "free_play_solve_rate": 0.03,
+        "guesses_to_solve": 10.33,
+        "eligible_for_inference": false,
+        "e1_maxeig_minus_simple": 0.02,
+        "e1_ci95": null,
+        "one_code_mean_guesses": 15.1,
+        "first_guess_single_color": 0.0
+      },
+      {
+        "model": "qwen3-32b",
+        "eig_relative_to_max": 0.686,
+        "free_play_solve_rate": 0.44,
+        "guesses_to_solve": 7.7,
+        "eligible_for_inference": false,
+        "e1_maxeig_minus_simple": 1.86,
+        "e1_ci95": null,
+        "one_code_mean_guesses": 12.18,
+        "first_guess_single_color": 0.0
+      },
+      {
+        "model": "gpt-oss-120b",
+        "eig_relative_to_max": 0.848,
+        "free_play_solve_rate": 0.98,
+        "guesses_to_solve": 4.64,
+        "eligible_for_inference": true,
+        "e1_maxeig_minus_simple": 0.23,
+        "e1_ci95": [
+          -0.23,
+          0.69
+        ],
+        "one_code_mean_guesses": 2.49,
+        "first_guess_single_color": 0.0,
+        "b1b_greedy": {
+          "best_model": "unbounded",
+          "dAIC_per_decision": {
+            "vs_unbounded": -0.0324,
+            "vs_leaky": 0.0099
+          }
+        },
+        "b1b_converged": {
+          "best_model": "bounded",
+          "dAIC_per_decision": {
+            "vs_unbounded": 0.1592,
+            "vs_leaky": 0.0405
+          }
+        }
+      },
+      {
+        "model": "claude-haiku-5-5",
+        "eig_relative_to_max": 0.904,
+        "free_play_solve_rate": 1.0,
+        "guesses_to_solve": 4.48,
+        "eligible_for_inference": true,
+        "e1_maxeig_minus_simple": -0.56,
+        "e1_ci95": [
+          -0.9,
+          -0.21
+        ],
+        "one_code_mean_guesses": 1.53,
+        "first_guess_single_color": 0.01,
+        "b1b_greedy": {
+          "best_model": "unbounded",
+          "dAIC_per_decision": {
+            "vs_unbounded": -0.0523,
+            "vs_leaky": -0.0463
+          }
+        },
+        "b1b_converged": {
+          "best_model": "bounded",
+          "dAIC_per_decision": {
+            "vs_unbounded": 0.3644,
+            "vs_leaky": 0.0292
+          }
+        }
+      },
+      {
+        "model": "claude-opus-5-5",
+        "eig_relative_to_max": 0.942,
+        "free_play_solve_rate": 1.0,
+        "guesses_to_solve": 3.69,
+        "eligible_for_inference": true,
+        "e1_maxeig_minus_simple": -0.79,
+        "e1_ci95": [
+          -1.07,
+          -0.51
+        ],
+        "one_code_mean_guesses": 1.02,
+        "first_guess_single_color": 0.0,
+        "b1b_greedy": {
+          "best_model": "bounded",
+          "dAIC_per_decision": {
+            "vs_unbounded": 0.0589,
+            "vs_leaky": 0.0514
+          }
+        },
+        "b1b_converged": {
+          "best_model": "bounded",
+          "dAIC_per_decision": {
+            "vs_unbounded": 0.1604,
+            "vs_leaky": 0.1483
+          }
+        }
+      }
+    ]
+  }
+}

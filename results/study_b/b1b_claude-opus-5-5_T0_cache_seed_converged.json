@@ -1,0 +1,56 @@
+{
+  "model": "claude-opus-5-5",
+  "condition": "T0",
+  "procedure": "converged",
+  "replicate_cache": 2,
+  "decisions": 369,
+  "people": 39,
+  "cache_1": {
+    "best_model": "bounded",
+    "bounded_loglik": -1289.99,
+    "bounded_params": {
+      "eps": 0.020953327305939358,
+      "alpha": 0.02261591032843442,
+      "lam": 4.145356962875786,
+      "tau": 0.1313226043509548
+    },
+    "dAIC_per_decision": {
+      "vs_unbounded": 0.1604,
+      "vs_leaky": 0.1483
+    },
+    "people_best_bounded": 33,
+    "people_dAIC_per_decision_median": {
+      "vs_unbounded": 1.4854,
+      "vs_leaky": 0.2919
+    },
+    "percentile_dAIC_per_decision": {
+      "vs_unbounded": 0.0,
+      "vs_leaky": 0.385
+    },
+    "percentile_alpha": 0.205
+  },
+  "cache_2": {
+    "best_model": "bounded",
+    "bounded_loglik": -1313.67,
+    "bounded_params": {
+      "eps": 0.010028335661585439,
+      "alpha": 0.008730464669631604,
+      "lam": 7.160250365557362,
+      "tau": 0.31162308769617897
+    },
+    "dAIC_per_decision": {
+      "vs_unbounded": 0.032,
+      "vs_leaky": 0.0199
+    },
+    "people_best_bounded": 29,
+    "people_dAIC_per_decision_median": {
+      "vs_unbounded": 1.3755,
+      "vs_leaky": 0.234
+    },
+    "percentile_dAIC_per_decision": {
+      "vs_unbounded": 0.0,
+      "vs_leaky": 0.256
+    },
+    "percentile_alpha": 0.154
+  }
+}

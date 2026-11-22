@@ -1,0 +1,16 @@
+{
+  "model": "qwen3-32b",
+  "calls": 100,
+  "format_compliance": 0.95,
+  "format_by_task": {
+    "classify": 1.0,
+    "identify": 0.9,
+    "guess": 0.95
+  },
+  "classify_balanced_accuracy": 0.674,
+  "identify_accuracy": 0.175,
+  "identify_chance": 0.03,
+  "guess_consistent_rate": 0.45,
+  "median_completion_tokens": 1564.5,
+  "passes_floor": true
+}

@@ -1,0 +1,141 @@
+{
+  "model": "claude-haiku-5-5",
+  "condition": "T0",
+  "include_unsolved": false,
+  "procedure": "greedy",
+  "human_fits": "e3_fits",
+  "games_played": 100,
+  "games_fitted": 100,
+  "decisions": 448,
+  "pooled": {
+    "aic": {
+      "unbounded": 3871.4,
+      "leaky": 3874.1,
+      "bounded": 3894.9
+    },
+    "best_model": "unbounded",
+    "dAIC_bounded_vs_unbounded": -23.4,
+    "dAIC_bounded_vs_leaky": -20.7,
+    "dAIC_per_decision": {
+      "vs_unbounded": -0.0523,
+      "vs_leaky": -0.0463
+    },
+    "params": {
+      "unbounded": {
+        "lam": 4.828422377888245,
+        "tau": 0.6800572492436671
+      },
+      "leaky": {
+        "eps": 0.000552691665577297,
+        "lam": 4.583596562016548,
+        "tau": 0.6411846594502071
+      },
+      "bounded": {
+        "eps": 0.0024767254647380613,
+        "alpha": 0.0001,
+        "lam": 3.7418717944573117,
+        "tau": 0.5343708004334505
+      }
+    }
+  },
+  "human_comparison": {
+    "people": 39,
+    "human_games_fitted": {
+      "min": 5,
+      "median": 9.0,
+      "max": 10
+    },
+    "human_decisions": {
+      "min": 42,
+      "median": 67.0,
+      "max": 88
+    },
+    "percentile_2dLL_per_decision": {
+      "vs_unbounded": 0.0,
+      "vs_leaky": 0.077
+    },
+    "human_dAIC_per_decision_median": {
+      "vs_unbounded": 1.2204,
+      "vs_leaky": 0.8257
+    },
+    "percentile_dAIC_per_decision": {
+      "vs_unbounded": 0.0,
+      "vs_leaky": 0.077
+    },
+    "human_bounded_params_median": {
+      "eps": 0.3016,
+      "alpha": 3.3414,
+      "lam": 9.5272,
+      "tau": 0.0891
+    },
+    "percentile_bounded_params": {
+      "eps": 0.0,
+      "alpha": 0.0,
+      "lam": 0.231,
+      "tau": 0.923
+    }
+  },
+  "blocks_of_10_games": {
+    "blocks": 10,
+    "best_model_counts": {
+      "unbounded": 6,
+      "leaky": 0,
+      "bounded": 4
+    },
+    "favoring_bounded_over_both": 4,
+    "decisions": {
+      "min": 40,
+      "max": 51
+    },
+    "mean_dAIC_vs_unbounded": 1.8,
+    "mean_dAIC_vs_leaky": 4.2,
+    "median_bounded_params": {
+      "eps": 0.0107,
+      "alpha": 0.0382,
+      "lam": 4.6643,
+      "tau": 0.2887
+    },
+    "human_reference": "Study A per-person fits in results/study_a/e3_fits"
+  },
+  "bootstrap_over_games": {
+    "resamples": 200,
+    "dAIC_per_decision_ci95": {
+      "vs_unbounded": [
+        -0.0744,
+        0.2247
+      ],
+      "vs_leaky": [
+        -0.0664,
+        0.2331
+      ]
+    },
+    "bounded_params_ci95": {
+      "eps": [
+        0.0001,
+        0.4672
+      ],
+      "alpha": [
+        0.0001,
+        0.2108
+      ],
+      "lam": [
+        2.7925,
+        126.9107
+      ],
+      "tau": [
+        0.025,
+        0.7436
+      ]
+    },
+    "share_bounded_best": 0.125
+  },
+  "evaluation_cap_reached": {
+    "fits": 211,
+    "unbounded": 0,
+    "leaky": 0,
+    "bounded": 154,
+    "pooled": [
+      "bounded"
+    ]
+  }
+}

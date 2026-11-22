@@ -1,0 +1,40 @@
+{
+  "procedure": "converged",
+  "method": "leave-one-participant-out; per-parameter median of the other 38 participants' fits; solved games",
+  "heldout_loglik_total": {
+    "unbounded": -13283.0,
+    "leaky": -12437.8,
+    "bounded": -12036.0
+  },
+  "heldout_loglik_per_decision": {
+    "unbounded": -5.1049,
+    "leaky": -4.7801,
+    "bounded": -4.6257
+  },
+  "best_heldout_counts": {
+    "unbounded": 6,
+    "leaky": 13,
+    "bounded": 20
+  },
+  "bounded_minus_unbounded": {
+    "total": 1247.0,
+    "ci95": [
+      793.7,
+      1660.5
+    ],
+    "participants_favoring_first": 33
+  },
+  "bounded_minus_leaky": {
+    "total": 401.8,
+    "ci95": [
+      109.7,
+      692.3
+    ],
+    "participants_favoring_first": 26
+  },
+  "game_index_trend_bounded": {
+    "slope_ll_per_decision_per_game": 0.0761,
+    "se": 0.0223,
+    "p": 0.0006
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "participants": 44,
+  "controlled_effect": {
+    "n_supplied_by_condition": {
+      "Simple": [
+        1,
+        2,
+        3
+      ],
+      "Max-EIG": [
+        1,
+        2,
+        3
+      ]
+    },
+    "raw": {
+      "max_eig_minus_simple": 1.29,
+      "ci95": [
+        0.29,
+        2.29
+      ],
+      "p": 0.0111
+    },
+    "controlled": {
+      "max_eig_minus_simple": 2.41,
+      "ci95": [
+        1.34,
+        3.48
+      ],
+      "p": 0.0
+    },
+    "controlled_plus_ideal": {
+      "max_eig_minus_simple": 2.45,
+      "ci95": [
+        1.37,
+        3.53
+      ],
+      "p": 0.0
+    },
+    "paper_specification": {
+      "games": 286,
+      "df_resid": 283,
+      "simple_minus_max_eig": {
+        "B": -2.31,
+        "t": -5.92
+      },
+      "initial_entropy_nats": {
+        "B": 0.62,
+        "t": 4.96
+      },
+      "paper": {
+        "simple_minus_max_eig": {
+          "B": -2.29,
+          "t": -5.89,
+          "df": 283
+        },
+        "initial_entropy": {
+          "B": 0.62,
+          "t": 4.94,
+          "df": 283
+        }
+      }
+    }
+  },
+  "games": 393,
+  "stimuli": 132,
+  "by_condition": {
+    "Simple": {
+      "games": 146,
+      "stimuli": 56,
+      "solve_rate": 0.932,
+      "human_guesses_solved_games": 4.74,
+      "human_guesses_all_games": 4.81,
+      "ideal_guesses": 2.49
+    },
+    "Max-EIG": {
+      "games": 140,
+      "stimuli": 57,
+      "solve_rate": 0.95,
+      "human_guesses_solved_games": 6.32,
+      "human_guesses_all_games": 6.31,
+      "ideal_guesses": 1.91
+    },
+    "None": {
+      "games": 107,
+      "stimuli": 19,
+      "solve_rate": 0.944,
+      "human_guesses_solved_games": 7.15,
+      "human_guesses_all_games": 7.22,
+      "ideal_guesses": 3.68
+    }
+  },
+  "one_code_subset_max_eig": {
+    "games": 46,
+    "solve_rate": 0.957,
+    "human_guesses_solved_games": 5.41,
+    "ideal_guesses": 1,
+    "simple_games_also_one_code": 3
+  }
+}

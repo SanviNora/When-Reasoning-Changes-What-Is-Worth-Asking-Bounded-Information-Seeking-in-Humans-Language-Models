@@ -1,0 +1,21 @@
+{
+ "participant": 20,
+ "uniqueid": "debugSRUx2:debuguZKF1",
+ "games": 4,
+ "decisions": 30,
+ "fits": {
+  "bounded": {
+   "model": "bounded",
+   "params": {
+    "eps": 0.3860146605598287,
+    "alpha": 0.15931410582877129,
+    "lam": 25.94005659030804,
+    "tau": 0.08179458011470898
+   },
+   "loglik": -134.25713822299204,
+   "k": 4,
+   "aic": 276.5142764459841,
+   "evals": 2804
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+  "what": "Qwen3-32B's B1 game replies made under the old 600 s client timeout, set aside before the rerun (Study B, Departures item 13)",
+  "source": "report.json of the quarantine step on the cluster (experiments/hpc/README.md); the cached replies themselves are not in the repository",
+  "date": "2026-11-21",
+  "calls_behind_the_old_records": 32815,
+  "replies_set_aside": 35083,
+  "missing_replies": 0,
+  "replies_by_set": {"e1_T0": 17366, "free_T0": 1272, "e1_T3": 16445},
+  "replies_not_used_by_any_record": {"older_copies_of_turns_the_records_use": 1794, "replies_for_turns_no_final_game_used": 474,
+                                     "note": "2,268 in all (35,083 - 32,815), all from the Nov 17-18 e1 T0 runs"},
+  "replies_over_600_s_by_set": {"e1_T0": 72, "free_T0": 15, "e1_T3": 1417},
+  "reply_cap": 6144,
+  "checks_pass": true
+}

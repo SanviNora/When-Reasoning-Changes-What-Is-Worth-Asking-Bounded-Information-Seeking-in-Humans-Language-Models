@@ -1,0 +1,2433 @@
+[
+ {
+  "stimulus_id": "E1-000",
+  "condition": "Simple",
+  "secret": "2244",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "3333",
+    "black": 0,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 24,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-001",
+  "condition": "Simple",
+  "secret": "2334",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2222",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 24,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-002",
+  "condition": "None",
+  "secret": "1412",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 6
+ },
+ {
+  "stimulus_id": "E1-003",
+  "condition": "Max-EIG",
+  "secret": "4133",
+  "supplied": [
+   {
+    "guess": "3143",
+    "black": 2,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 5,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-004",
+  "condition": "None",
+  "secret": "1222",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 9
+ },
+ {
+  "stimulus_id": "E1-005",
+  "condition": "None",
+  "secret": "3434",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 6
+ },
+ {
+  "stimulus_id": "E1-006",
+  "condition": "Simple",
+  "secret": "4412",
+  "supplied": [
+   {
+    "guess": "4444",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 54,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 6
+ },
+ {
+  "stimulus_id": "E1-007",
+  "condition": "Simple",
+  "secret": "1124",
+  "supplied": [
+   {
+    "guess": "1111",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2444",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 9,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 6
+ },
+ {
+  "stimulus_id": "E1-008",
+  "condition": "None",
+  "secret": "2334",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 10
+ },
+ {
+  "stimulus_id": "E1-009",
+  "condition": "Simple",
+  "secret": "2232",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "2222",
+    "black": 3,
+    "white": 0
+   },
+   {
+    "guess": "1123",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-010",
+  "condition": "Max-EIG",
+  "secret": "1124",
+  "supplied": [
+   {
+    "guess": "2324",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2123",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "4211",
+    "black": 0,
+    "white": 4
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-011",
+  "condition": "Max-EIG",
+  "secret": "2421",
+  "supplied": [
+   {
+    "guess": "4241",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "3122",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "2142",
+    "black": 1,
+    "white": 3
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-012",
+  "condition": "None",
+  "secret": "3241",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 7
+ },
+ {
+  "stimulus_id": "E1-013",
+  "condition": "Max-EIG",
+  "secret": "3424",
+  "supplied": [
+   {
+    "guess": "4344",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 15,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-014",
+  "condition": "Simple",
+  "secret": "3434",
+  "supplied": [
+   {
+    "guess": "1111",
+    "black": 0,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 81,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-015",
+  "condition": "None",
+  "secret": "4223",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 7
+ },
+ {
+  "stimulus_id": "E1-016",
+  "condition": "None",
+  "secret": "4324",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 5
+ },
+ {
+  "stimulus_id": "E1-017",
+  "condition": "Simple",
+  "secret": "4422",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 54,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-018",
+  "condition": "Simple",
+  "secret": "2244",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "3333",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 6,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-019",
+  "condition": "Max-EIG",
+  "secret": "4324",
+  "supplied": [
+   {
+    "guess": "4413",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "1343",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "4142",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-020",
+  "condition": "Simple",
+  "secret": "3241",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "3111",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 12,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-021",
+  "condition": "Simple",
+  "secret": "1124",
+  "supplied": [
+   {
+    "guess": "1111",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2444",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "2242",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 2,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-022",
+  "condition": "Max-EIG",
+  "secret": "4412",
+  "supplied": [
+   {
+    "guess": "4342",
+    "black": 2,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 20,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-023",
+  "condition": "Max-EIG",
+  "secret": "2232",
+  "supplied": [
+   {
+    "guess": "4234",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "4221",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "2133",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-024",
+  "condition": "Max-EIG",
+  "secret": "4422",
+  "supplied": [
+   {
+    "guess": "3324",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "2442",
+    "black": 2,
+    "white": 2
+   },
+   {
+    "guess": "3411",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-025",
+  "condition": "Simple",
+  "secret": "1222",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 0,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 16,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-026",
+  "condition": "None",
+  "secret": "4133",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-027",
+  "condition": "Max-EIG",
+  "secret": "3424",
+  "supplied": [
+   {
+    "guess": "4344",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "4143",
+    "black": 0,
+    "white": 3
+   },
+   {
+    "guess": "2434",
+    "black": 2,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-028",
+  "condition": "Max-EIG",
+  "secret": "1124",
+  "supplied": [
+   {
+    "guess": "2324",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 29,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-029",
+  "condition": "None",
+  "secret": "4411",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 7
+ },
+ {
+  "stimulus_id": "E1-030",
+  "condition": "Simple",
+  "secret": "3431",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "3333",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 12,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-031",
+  "condition": "Max-EIG",
+  "secret": "4223",
+  "supplied": [
+   {
+    "guess": "2311",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "1434",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "2124",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-032",
+  "condition": "None",
+  "secret": "1124",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 5
+ },
+ {
+  "stimulus_id": "E1-033",
+  "condition": "None",
+  "secret": "3431",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-034",
+  "condition": "Max-EIG",
+  "secret": "1222",
+  "supplied": [
+   {
+    "guess": "2421",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "1324",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-035",
+  "condition": "Simple",
+  "secret": "1313",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "3333",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "4344",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-036",
+  "condition": "Max-EIG",
+  "secret": "3434",
+  "supplied": [
+   {
+    "guess": "3314",
+    "black": 2,
+    "white": 1
+   },
+   {
+    "guess": "3442",
+    "black": 2,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 2,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-037",
+  "condition": "Max-EIG",
+  "secret": "2244",
+  "supplied": [
+   {
+    "guess": "2211",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2431",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "1242",
+    "black": 2,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-038",
+  "condition": "Simple",
+  "secret": "4422",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "1111",
+    "black": 0,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 24,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-039",
+  "condition": "Max-EIG",
+  "secret": "3431",
+  "supplied": [
+   {
+    "guess": "2312",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 42,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-040",
+  "condition": "Simple",
+  "secret": "1313",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 0,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 81,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-041",
+  "condition": "Simple",
+  "secret": "2421",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 54,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-042",
+  "condition": "None",
+  "secret": "4422",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-043",
+  "condition": "Max-EIG",
+  "secret": "2334",
+  "supplied": [
+   {
+    "guess": "2441",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "2132",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-044",
+  "condition": "Max-EIG",
+  "secret": "2232",
+  "supplied": [
+   {
+    "guess": "4234",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 29,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 5
+ },
+ {
+  "stimulus_id": "E1-045",
+  "condition": "Max-EIG",
+  "secret": "4422",
+  "supplied": [
+   {
+    "guess": "3324",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "2442",
+    "black": 2,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 2,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-046",
+  "condition": "None",
+  "secret": "1313",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-047",
+  "condition": "Simple",
+  "secret": "2312",
+  "supplied": [
+   {
+    "guess": "1111",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "4414",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 8,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-048",
+  "condition": "Max-EIG",
+  "secret": "1422",
+  "supplied": [
+   {
+    "guess": "2343",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "4311",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "4124",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-049",
+  "condition": "Max-EIG",
+  "secret": "3431",
+  "supplied": [
+   {
+    "guess": "2312",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "4241",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 7,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-050",
+  "condition": "Simple",
+  "secret": "3434",
+  "supplied": [
+   {
+    "guess": "1111",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "3333",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2232",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 5
+ },
+ {
+  "stimulus_id": "E1-051",
+  "condition": "Max-EIG",
+  "secret": "1222",
+  "supplied": [
+   {
+    "guess": "2421",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 40,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-052",
+  "condition": "Max-EIG",
+  "secret": "2312",
+  "supplied": [
+   {
+    "guess": "1143",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 42,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-053",
+  "condition": "Simple",
+  "secret": "1412",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 108,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-054",
+  "condition": "Max-EIG",
+  "secret": "4133",
+  "supplied": [
+   {
+    "guess": "3143",
+    "black": 2,
+    "white": 2
+   },
+   {
+    "guess": "2343",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "3413",
+    "black": 1,
+    "white": 3
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-055",
+  "condition": "None",
+  "secret": "1422",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 6
+ },
+ {
+  "stimulus_id": "E1-056",
+  "condition": "Max-EIG",
+  "secret": "4411",
+  "supplied": [
+   {
+    "guess": "1241",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 40,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-057",
+  "condition": "None",
+  "secret": "2421",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 5
+ },
+ {
+  "stimulus_id": "E1-058",
+  "condition": "Simple",
+  "secret": "4411",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "1114",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-059",
+  "condition": "Simple",
+  "secret": "3241",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 108,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-060",
+  "condition": "Max-EIG",
+  "secret": "4324",
+  "supplied": [
+   {
+    "guess": "4413",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "1343",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 9,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-061",
+  "condition": "Max-EIG",
+  "secret": "1422",
+  "supplied": [
+   {
+    "guess": "2343",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 42,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-062",
+  "condition": "Simple",
+  "secret": "4422",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "1111",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "4433",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 6,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-063",
+  "condition": "Max-EIG",
+  "secret": "3241",
+  "supplied": [
+   {
+    "guess": "2334",
+    "black": 0,
+    "white": 3
+   }
+  ],
+  "codes_remaining": 20,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-064",
+  "condition": "Simple",
+  "secret": "2232",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "2222",
+    "black": 3,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 4,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 5
+ },
+ {
+  "stimulus_id": "E1-065",
+  "condition": "Simple",
+  "secret": "1412",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 48,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 5
+ },
+ {
+  "stimulus_id": "E1-066",
+  "condition": "Max-EIG",
+  "secret": "1313",
+  "supplied": [
+   {
+    "guess": "3122",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "1141",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 6,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-067",
+  "condition": "Max-EIG",
+  "secret": "1124",
+  "supplied": [
+   {
+    "guess": "2324",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2123",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 7,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-068",
+  "condition": "Simple",
+  "secret": "4223",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "4141",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 12,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-069",
+  "condition": "None",
+  "secret": "2232",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 5
+ },
+ {
+  "stimulus_id": "E1-070",
+  "condition": "Max-EIG",
+  "secret": "2312",
+  "supplied": [
+   {
+    "guess": "1143",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "1221",
+    "black": 0,
+    "white": 3
+   },
+   {
+    "guess": "2412",
+    "black": 3,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-071",
+  "condition": "Simple",
+  "secret": "4324",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 108,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-072",
+  "condition": "Max-EIG",
+  "secret": "4223",
+  "supplied": [
+   {
+    "guess": "2311",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 42,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-073",
+  "condition": "Max-EIG",
+  "secret": "1412",
+  "supplied": [
+   {
+    "guess": "4332",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "2414",
+    "black": 2,
+    "white": 1
+   },
+   {
+    "guess": "3143",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-074",
+  "condition": "Max-EIG",
+  "secret": "4412",
+  "supplied": [
+   {
+    "guess": "4342",
+    "black": 2,
+    "white": 1
+   },
+   {
+    "guess": "4321",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "4143",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-075",
+  "condition": "Simple",
+  "secret": "2421",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "1111",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "4442",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-076",
+  "condition": "Simple",
+  "secret": "1222",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 0,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 81,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-077",
+  "condition": "Max-EIG",
+  "secret": "2334",
+  "supplied": [
+   {
+    "guess": "2441",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "2132",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "4323",
+    "black": 1,
+    "white": 3
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-078",
+  "condition": "Max-EIG",
+  "secret": "3424",
+  "supplied": [
+   {
+    "guess": "4344",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "4143",
+    "black": 0,
+    "white": 3
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-079",
+  "condition": "Simple",
+  "secret": "2334",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 54,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-080",
+  "condition": "None",
+  "secret": "2312",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-081",
+  "condition": "Max-EIG",
+  "secret": "1412",
+  "supplied": [
+   {
+    "guess": "4332",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "2414",
+    "black": 2,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 5,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-082",
+  "condition": "Simple",
+  "secret": "1422",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 24,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-083",
+  "condition": "Max-EIG",
+  "secret": "4412",
+  "supplied": [
+   {
+    "guess": "4342",
+    "black": 2,
+    "white": 1
+   },
+   {
+    "guess": "4321",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 5,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-084",
+  "condition": "Simple",
+  "secret": "4324",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "2222",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 48,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-085",
+  "condition": "Max-EIG",
+  "secret": "2312",
+  "supplied": [
+   {
+    "guess": "1143",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "1221",
+    "black": 0,
+    "white": 3
+   }
+  ],
+  "codes_remaining": 2,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-086",
+  "condition": "Max-EIG",
+  "secret": "3431",
+  "supplied": [
+   {
+    "guess": "2312",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "4241",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "1431",
+    "black": 3,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-087",
+  "condition": "Simple",
+  "secret": "4223",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 108,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-088",
+  "condition": "Max-EIG",
+  "secret": "4422",
+  "supplied": [
+   {
+    "guess": "3324",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 46,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 5
+ },
+ {
+  "stimulus_id": "E1-089",
+  "condition": "Simple",
+  "secret": "1313",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "3333",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 24,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-090",
+  "condition": "Simple",
+  "secret": "3241",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "3111",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "3212",
+    "black": 2,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 2,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-091",
+  "condition": "None",
+  "secret": "4412",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 7
+ },
+ {
+  "stimulus_id": "E1-092",
+  "condition": "Max-EIG",
+  "secret": "3434",
+  "supplied": [
+   {
+    "guess": "3314",
+    "black": 2,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 20,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-093",
+  "condition": "Simple",
+  "secret": "4133",
+  "supplied": [
+   {
+    "guess": "4444",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 108,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-094",
+  "condition": "Max-EIG",
+  "secret": "4411",
+  "supplied": [
+   {
+    "guess": "1241",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "1322",
+    "black": 0,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 2,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-095",
+  "condition": "Simple",
+  "secret": "3424",
+  "supplied": [
+   {
+    "guess": "4444",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 54,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-096",
+  "condition": "Max-EIG",
+  "secret": "4133",
+  "supplied": [
+   {
+    "guess": "3143",
+    "black": 2,
+    "white": 2
+   },
+   {
+    "guess": "2343",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 2,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-097",
+  "condition": "Max-EIG",
+  "secret": "4411",
+  "supplied": [
+   {
+    "guess": "1241",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "1322",
+    "black": 0,
+    "white": 1
+   },
+   {
+    "guess": "4111",
+    "black": 3,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-098",
+  "condition": "Max-EIG",
+  "secret": "2334",
+  "supplied": [
+   {
+    "guess": "2441",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 46,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-099",
+  "condition": "Simple",
+  "secret": "1422",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "4111",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-100",
+  "condition": "Max-EIG",
+  "secret": "4324",
+  "supplied": [
+   {
+    "guess": "4413",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 40,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-101",
+  "condition": "Max-EIG",
+  "secret": "2421",
+  "supplied": [
+   {
+    "guess": "4241",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 40,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-102",
+  "condition": "Simple",
+  "secret": "4223",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 24,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-103",
+  "condition": "Max-EIG",
+  "secret": "1313",
+  "supplied": [
+   {
+    "guess": "3122",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "1141",
+    "black": 1,
+    "white": 1
+   },
+   {
+    "guess": "4431",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-104",
+  "condition": "Max-EIG",
+  "secret": "1412",
+  "supplied": [
+   {
+    "guess": "4332",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 46,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-105",
+  "condition": "Max-EIG",
+  "secret": "3241",
+  "supplied": [
+   {
+    "guess": "2334",
+    "black": 0,
+    "white": 3
+   },
+   {
+    "guess": "4213",
+    "black": 1,
+    "white": 3
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-106",
+  "condition": "Simple",
+  "secret": "3424",
+  "supplied": [
+   {
+    "guess": "4444",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2122",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 15,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-107",
+  "condition": "Simple",
+  "secret": "1222",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "2222",
+    "black": 3,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 4,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-108",
+  "condition": "Max-EIG",
+  "secret": "3434",
+  "supplied": [
+   {
+    "guess": "3314",
+    "black": 2,
+    "white": 1
+   },
+   {
+    "guess": "3442",
+    "black": 2,
+    "white": 1
+   },
+   {
+    "guess": "3144",
+    "black": 2,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-109",
+  "condition": "Simple",
+  "secret": "1422",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 54,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-110",
+  "condition": "Simple",
+  "secret": "2244",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 54,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 4
+ },
+ {
+  "stimulus_id": "E1-111",
+  "condition": "Simple",
+  "secret": "4133",
+  "supplied": [
+   {
+    "guess": "4444",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "3313",
+    "black": 1,
+    "white": 2
+   },
+   {
+    "guess": "2124",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 2,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-112",
+  "condition": "Max-EIG",
+  "secret": "3241",
+  "supplied": [
+   {
+    "guess": "2334",
+    "black": 0,
+    "white": 3
+   },
+   {
+    "guess": "4213",
+    "black": 1,
+    "white": 3
+   },
+   {
+    "guess": "2432",
+    "black": 0,
+    "white": 3
+   }
+  ],
+  "codes_remaining": 1,
+  "ideal_guesses_to_solve": 1,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-113",
+  "condition": "Simple",
+  "secret": "3424",
+  "supplied": [
+   {
+    "guess": "4444",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2122",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "2223",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 4,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-114",
+  "condition": "Simple",
+  "secret": "4133",
+  "supplied": [
+   {
+    "guess": "4444",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "3313",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 6,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-115",
+  "condition": "Simple",
+  "secret": "4324",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "2222",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "2444",
+    "black": 1,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 6,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-116",
+  "condition": "Max-EIG",
+  "secret": "1422",
+  "supplied": [
+   {
+    "guess": "2343",
+    "black": 0,
+    "white": 2
+   },
+   {
+    "guess": "4311",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 5,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-117",
+  "condition": "Simple",
+  "secret": "4411",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 24,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-118",
+  "condition": "Simple",
+  "secret": "3431",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 32,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-119",
+  "condition": "Simple",
+  "secret": "3434",
+  "supplied": [
+   {
+    "guess": "1111",
+    "black": 0,
+    "white": 0
+   },
+   {
+    "guess": "3333",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 24,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-120",
+  "condition": "Simple",
+  "secret": "4412",
+  "supplied": [
+   {
+    "guess": "4444",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "4333",
+    "black": 1,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 12,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-121",
+  "condition": "Simple",
+  "secret": "1124",
+  "supplied": [
+   {
+    "guess": "1111",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 54,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-122",
+  "condition": "Simple",
+  "secret": "2334",
+  "supplied": [
+   {
+    "guess": "3333",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2222",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "4442",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 3,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-123",
+  "condition": "Simple",
+  "secret": "4411",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 0,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 81,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-124",
+  "condition": "Max-EIG",
+  "secret": "2244",
+  "supplied": [
+   {
+    "guess": "2211",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 34,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-125",
+  "condition": "Simple",
+  "secret": "1412",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "4444",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "1113",
+    "black": 2,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 12,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-126",
+  "condition": "Max-EIG",
+  "secret": "2244",
+  "supplied": [
+   {
+    "guess": "2211",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "2431",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 8,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 1
+ },
+ {
+  "stimulus_id": "E1-127",
+  "condition": "None",
+  "secret": "3424",
+  "supplied": [],
+  "codes_remaining": 256,
+  "ideal_guesses_to_solve": 4,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-128",
+  "condition": "Max-EIG",
+  "secret": "2232",
+  "supplied": [
+   {
+    "guess": "4234",
+    "black": 2,
+    "white": 0
+   },
+   {
+    "guess": "4221",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 8,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-129",
+  "condition": "Simple",
+  "secret": "3431",
+  "supplied": [
+   {
+    "guess": "2222",
+    "black": 0,
+    "white": 0
+   }
+  ],
+  "codes_remaining": 81,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 3
+ },
+ {
+  "stimulus_id": "E1-130",
+  "condition": "Simple",
+  "secret": "2312",
+  "supplied": [
+   {
+    "guess": "1111",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "4414",
+    "black": 1,
+    "white": 0
+   },
+   {
+    "guess": "4323",
+    "black": 1,
+    "white": 1
+   }
+  ],
+  "codes_remaining": 2,
+  "ideal_guesses_to_solve": 2,
+  "n_human_games": 2
+ },
+ {
+  "stimulus_id": "E1-131",
+  "condition": "Max-EIG",
+  "secret": "1313",
+  "supplied": [
+   {
+    "guess": "3122",
+    "black": 0,
+    "white": 2
+   }
+  ],
+  "codes_remaining": 42,
+  "ideal_guesses_to_solve": 3,
+  "n_human_games": 1
+ }
+]

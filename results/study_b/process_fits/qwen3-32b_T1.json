@@ -1,0 +1,108 @@
+{
+  "model": "qwen3-32b",
+  "condition": "T1",
+  "items_calibration": 988,
+  "items_heldout": 1293,
+  "format": {
+    "answered": 2281,
+    "unparsed": 31
+  },
+  "fits": {
+    "M0": {
+      "model": "M0",
+      "params": {
+        "zeta": 0.5233713820596554
+      },
+      "loglik": -6764.790446797151,
+      "k": 1,
+      "aic": 13531.580893594302,
+      "heldout_loglik": -9250.083087460482,
+      "boundary": []
+    },
+    "M1": {
+      "model": "M1",
+      "params": {
+        "nu": 0.4463989809768668,
+        "zeta": 0.09458287560395222
+      },
+      "loglik": -6467.289479144676,
+      "k": 2,
+      "aic": 12938.578958289352,
+      "heldout_loglik": -8904.04471705062,
+      "boundary": []
+    },
+    "M2c": {
+      "model": "M2c",
+      "params": {
+        "alpha": 0.0008055403275332274,
+        "nu": 0.4464010430664907,
+        "zeta": 0.0945532618795278
+      },
+      "loglik": -6467.291567772191,
+      "k": 3,
+      "aic": 12940.583135544382,
+      "heldout_loglik": -8904.07773188861,
+      "boundary": [
+        "alpha at or near its lower bound (<= 1e-3), but the representation is not exact (max gap 0.26): with the distance weight fixed at 1, near-exact approximations keep some weight as alpha -> 0 (false retentions)"
+      ]
+    },
+    "M2s": {
+      "model": "M2s",
+      "params": {
+        "alpha": 0.00010103940183709342,
+        "nu": 0.4406911623298238,
+        "zeta": 0.09862604522494925
+      },
+      "loglik": -6471.046827551274,
+      "k": 3,
+      "aic": 12948.093655102548,
+      "heldout_loglik": -8901.262102354201,
+      "boundary": [
+        "alpha at or near its lower bound (<= 1e-3), but the representation is not exact (max gap 0.81): with the distance weight fixed at 1, near-exact approximations keep some weight as alpha -> 0 (false exclusions and retentions)"
+      ]
+    },
+    "M3": {
+      "model": "M3",
+      "params": {
+        "k0": 2.808724858770164,
+        "k1": -1.2033458350400732,
+        "zeta": 0.49235397454001734
+      },
+      "loglik": -6716.824161471501,
+      "k": 3,
+      "aic": 13439.648322943001,
+      "heldout_loglik": -9179.791945963962,
+      "boundary": []
+    },
+    "M1a": {
+      "model": "M1a",
+      "params": {
+        "nu_x": 0.28884602550970484,
+        "nu_r": 0.07503325426161594,
+        "zeta": 0.21767713800087568
+      },
+      "loglik": -6277.0785436105525,
+      "k": 3,
+      "aic": 12560.157087221105,
+      "heldout_loglik": -8701.482432359539,
+      "boundary": []
+    }
+  },
+  "planned_models": [
+    "M0",
+    "M1",
+    "M2c",
+    "M2s",
+    "M3"
+  ],
+  "best_aic": "M1",
+  "best_heldout": "M2s",
+  "exploratory": {
+    "models": [
+      "M1a"
+    ],
+    "note": "added after the planned comparison, motivated by the error profile; confirmation test on the reserve families: `confirm`",
+    "best_aic_all": "M1a",
+    "best_heldout_all": "M1a"
+  }
+}

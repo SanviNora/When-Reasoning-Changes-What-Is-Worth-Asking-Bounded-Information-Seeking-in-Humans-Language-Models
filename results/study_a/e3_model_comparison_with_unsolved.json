@@ -1,0 +1,39 @@
+{
+  "procedure": "greedy",
+  "participants": 39,
+  "mean_dAIC_bounded_vs_unbounded": 98.4,
+  "mean_dAIC_bounded_vs_leaky": 90.2,
+  "participants_favoring_bounded_over_both": 37,
+  "best_model_counts": {
+    "unbounded": 0,
+    "leaky": 2,
+    "bounded": 37
+  },
+  "paper": {
+    "dAIC_vs_unbounded": 82.5,
+    "dAIC_vs_leaky": 72.3,
+    "favor_bounded": "37/39"
+  },
+  "median_params": {
+    "unbounded": {
+      "lam": 31.8678,
+      "tau": 7.9857
+    },
+    "leaky": {
+      "eps": 0.1275,
+      "lam": 4.1491,
+      "tau": 0.9691
+    },
+    "bounded": {
+      "eps": 0.2669,
+      "alpha": 4.4395,
+      "lam": 9.4566,
+      "tau": 0.1082
+    }
+  },
+  "evaluation_cap_reached": {
+    "unbounded": 0,
+    "leaky": 0,
+    "bounded": 4
+  }
+}

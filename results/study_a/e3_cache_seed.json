@@ -1,0 +1,44 @@
+{
+  "procedure": "greedy",
+  "participants": 39,
+  "replicate": 2,
+  "cache_1": {
+    "mean_dAIC_bounded_vs_unbounded": 104.6,
+    "mean_dAIC_bounded_vs_leaky": 83.5,
+    "best_model_counts": {
+      "unbounded": 0,
+      "leaky": 5,
+      "bounded": 34
+    }
+  },
+  "cache_2": {
+    "mean_dAIC_bounded_vs_unbounded": 108.4,
+    "mean_dAIC_bounded_vs_leaky": 87.2,
+    "best_model_counts": {
+      "unbounded": 0,
+      "leaky": 4,
+      "bounded": 35
+    }
+  },
+  "bounded_aic_difference": {
+    "mean": -3.8,
+    "median_abs": 11.4,
+    "max_abs": 97.9,
+    "pearson_r": 0.9862
+  },
+  "alpha_spearman": 0.546,
+  "median_bounded_params": {
+    "cache_1": {
+      "eps": 0.3016,
+      "alpha": 3.3414,
+      "lam": 9.5272,
+      "tau": 0.0891
+    },
+    "cache_2": {
+      "eps": 0.3336,
+      "alpha": 3.1368,
+      "lam": 6.2344,
+      "tau": 0.0948
+    }
+  }
+}

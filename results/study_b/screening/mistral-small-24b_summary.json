@@ -1,0 +1,16 @@
+{
+  "model": "mistral-small-24b",
+  "calls": 100,
+  "format_compliance": 0.57,
+  "format_by_task": {
+    "classify": 0.425,
+    "identify": 0.575,
+    "guess": 0.85
+  },
+  "classify_balanced_accuracy": 0.283,
+  "identify_accuracy": 0.275,
+  "identify_chance": 0.03,
+  "guess_consistent_rate": 0.45,
+  "median_completion_tokens": 5640.5,
+  "passes_floor": false
+}

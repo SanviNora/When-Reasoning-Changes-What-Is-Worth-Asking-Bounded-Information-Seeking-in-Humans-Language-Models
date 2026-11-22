@@ -1,0 +1,27 @@
+{
+  "procedure": "converged",
+  "participants": 39,
+  "confusion_rows_generating_cols_best": {
+    "unbounded": {
+      "unbounded": 29,
+      "leaky": 7,
+      "bounded": 3
+    },
+    "leaky": {
+      "unbounded": 0,
+      "leaky": 34,
+      "bounded": 5
+    },
+    "bounded": {
+      "unbounded": 0,
+      "leaky": 7,
+      "bounded": 32
+    }
+  },
+  "recovery_rate": {
+    "unbounded": 0.744,
+    "leaky": 0.872,
+    "bounded": 0.821
+  },
+  "alpha_recovery_spearman": 0.95
+}

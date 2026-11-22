@@ -1,0 +1,40 @@
+{
+  "model": "qwen3-32b",
+  "cap": 6144,
+  "splits": [
+    "c_confirmation"
+  ],
+  "pairs": 360,
+  "families": 120,
+  "choices_parsed": {
+    "T0": 2818,
+    "T3": 2720
+  },
+  "mean_p_choose_q1": {
+    "T0": 0.4749007936507937,
+    "T3": 0.45164351851851847
+  },
+  "mean_choice_shift_logit": -0.1007373085955064,
+  "primary_measured_gamma": {
+    "slope": -0.6312018793799886,
+    "ci95": [
+      -2.500088449742897,
+      1.3170869969641388
+    ],
+    "p_one_sided": 0.7457,
+    "spearman": -0.0008338541706854734
+  },
+  "gamma_reliability": {
+    "split_half_r": 0.1737977945897399,
+    "spearman_brown": 0.2961290187983099,
+    "slope_corrected_for_reliability": -2.1315097113460975
+  },
+  "secondary_predicted_gamma": {
+    "slope": 5.276093428503842,
+    "ci95": [
+      -51.13729025740643,
+      62.53940610668561
+    ],
+    "p_one_sided": 0.4432
+  }
+}

@@ -1,0 +1,5205 @@
+{
+ "locked_at_utc": "2026-11-20T19:01:42+00:00",
+ "model": "qwen3-32b",
+ "conditions": [
+  "T0",
+  "T3"
+ ],
+ "design": {
+  "reply_cap": 6144,
+  "branch_samples": 8,
+  "choice_samples": 8,
+  "families": 120,
+  "pairs": 360,
+  "split": "c_confirmation"
+ },
+ "primary": "support_map",
+ "secondary": [
+  "fitted_M2s",
+  "fitted_M1a"
+ ],
+ "rivals": [
+  "difficulty_regression",
+  "reporting_only",
+  "uniform_gain",
+  "ideal_noise"
+ ],
+ "primary_endpoint": "family-level MSPE of Gamma; MSPE(rival) - MSPE(support_map) for each rival, cluster bootstrap over families; Holm across the four rivals at alpha 0.05; H3 is supported if support_map beats every rival",
+ "hashes": {
+  "experiments/study_c/prediction_test.py": "8bd6bd3ebec511d219df7546f532bf0e34edf499b3027997337150e898c60897",
+  "experiments/study_c/choice_shift.py": "1cf6f8376e3b7cd1cc826c69bebde914b9f9281ba7b00299bdd8c6383688f61b",
+  "mastermind/usefulness.py": "4391f8d6bfac6af9e662fca0a754f7d6c2ceb1c959686a4f1f8116bc92973395",
+  "mastermind/process_models.py": "8923b630a216aa7daf23dc8402359106d260f84750b8f2af1a3fe05d5dfd6ad5",
+  "experiments/study_b/usefulness_choice.py": "1a3ec50fd48b05fa56e160a6a4f7be7d35570d248b542bc8ba05ffc332c29b24",
+  "mastermind/prompts.py": "b2a483cec907155dbbc40f856067319c779628c9d8efbac800697818f5110e4e",
+  "families_v1": "5eb3438c3ca680f2a3d93c7657a60ab9fb70986d16ac1721938f34f69a8bf15e",
+  "families_c_v1": "e6579429fc8f42778fd4d23e4928bf604950f44fdc6d6d8d79e195d4b0512e02",
+  "manifest_c_v1": "f5722a4b77e0ece0a0311cc01fc1b4cba9c65f0501f0cb103d8607a04939be4e",
+  "pairs": "5696fe87356c7f87aae77e6d5a4bc8e11a82e2b03bef716dbff55c505c2b6532",
+  "calibration": "e999444f258a5cb63f6bd7bb5ef93d432daf881020baba2bec52906fc4738dcf",
+  "analysis_plan": "8b63bb13dfdd6af85b8994fff7d25a18644b2f9d430f392750b08a0705ff06cd",
+  "prompt_freeze_v1": "f8676d2d5dde2549d6bf6678057ddf13931ba6e379c994133539007204631be5",
+  "model_registry": "194bb1b6a1976bb4464b9169d566a05d8950ddc65dc276ffa947435502b5f37b"
+ },
+ "calibration": {
+  "model": "qwen3-32b",
+  "cap": 6144,
+  "process_model": "M2s",
+  "theta": {
+   "T0": {
+    "M2s": {
+     "alpha": 0.00010103940183709342,
+     "nu": 0.4155748650238582,
+     "zeta": 0.11072796139243382
+    },
+    "M1a": {
+     "nu_x": 0.2764826345744155,
+     "nu_r": 0.06742981298507023,
+     "zeta": 0.22412697537748524
+    }
+   },
+   "T3": {
+    "M2s": {
+     "alpha": 0.007344597522125378,
+     "nu": 0.5164565216602268,
+     "zeta": 0.04687751640278207
+    },
+    "M1a": {
+     "nu_x": 0.3123782721995862,
+     "nu_r": 0.09670751933343906,
+     "zeta": 0.22089665101586656
+    }
+   }
+  },
+  "unfinished": {
+   "T0": 0.09789750328515112,
+   "T3": 0.25229960578186594
+  },
+  "support_map": {
+   "delta": -0.14826501269692507,
+   "at_bound": false,
+   "zeta": 0.11072796139243382,
+   "loglik": -6044.568883352571,
+   "loglik_delta0": -6057.95706783584
+  },
+  "reporting_only": {
+   "zeta_T0": 0.11072796139243382,
+   "zeta_T3": 0.2782928083103311
+  },
+  "ideal_noise": {
+   "zeta_T0": 0.9173841988461823,
+   "zeta_T3": 0.9057234077961245
+  },
+  "difficulty_regression": {
+   "features": [
+    "vstar",
+    "eig",
+    "K",
+    "n_clues",
+    "distinct_digits",
+    "pred_U_T0"
+   ],
+   "mean": [
+    0.5974407464641839,
+    1.75850197559556,
+    7.208333333333333,
+    2.1458333333333335,
+    2.4947916666666665,
+    0.0743005598713783
+   ],
+   "sd": [
+    0.2135209805194582,
+    0.5656479670262098,
+    3.2593348844350736,
+    0.35293904887802907,
+    0.58627883576423,
+    0.027755509593238404
+   ],
+   "beta": [
+    0.0001015116249491219,
+    0.00039487854286878246,
+    0.0013030328320913118,
+    0.00067418709884115,
+    -0.0008599212535288855,
+    0.0009731088489682334,
+    -0.00016076463171757393
+   ],
+   "ridge_lambda": 1000.0,
+   "cv_mse": {
+    "0.01": 0.003922020644080224,
+    "0.1": 0.0039201706198634615,
+    "1.0": 0.0039042647932264855,
+    "10.0": 0.0038428788930501977,
+    "100.0": 0.0037810062552901848,
+    "1000.0": 0.003738518466822062,
+    "10000.0": 0.0037451901296168904
+   },
+   "queries": 192
+  },
+  "observed_gamma": {
+   "pairs": 96,
+   "mean": -0.01612169659044659,
+   "sd": 0.08419335401086678,
+   "noise_sd": 0.06529362738038808,
+   "true_sd": 0.05315320388377518,
+   "samples_per_branch": 4,
+   "branches_per_query": 3.9635416666666665
+  },
+  "data": {
+   "answers_T3_support": 1173,
+   "answers_T0_support": 1455,
+   "files": {
+    "qwen3-32b_T0_support_calibration": "b082fc64f315733e52511bb5f7ddba222182463347a079e166f3b6b69c5cb0a2",
+    "qwen3-32b_T0_choice_calibration": "71168421bdb72456e73389410689b359f8841898eceaedc8783363f9265c9d48",
+    "qwen3-32b_T3_support_calibration": "04f27a6ece2bb795b284d2092aed3e9190651d1c489de60e096b573ab54af196",
+    "qwen3-32b_T3_choice_calibration": "284419fa33dcfad305d20f1b2fbd953d251c4db5c7592ffdf89541defdb34126"
+   },
+   "fits": {
+    "T0": "176a2a687a374925e85028280f2c73d314b64c6fe7db1524d21af3385c8aac55",
+    "T3": "96889a51d943a311259cbe9219181a732e56ed7b4d019c0de8a2a76a300558a2"
+   }
+  }
+ },
+ "predictions": [
+  {
+   "pair_id": "C000:a0",
+   "family_id": "C000",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0089868,
+    "fitted_M2s": 0.01177453,
+    "fitted_M1a": 0.01789458,
+    "difficulty_regression": -0.00157,
+    "reporting_only": 0.00457836,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C000:b0",
+   "family_id": "C000",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00891184,
+    "fitted_M2s": 0.0106404,
+    "fitted_M1a": 0.02052179,
+    "difficulty_regression": 0.00300116,
+    "reporting_only": 0.00592847,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C000:c0",
+   "family_id": "C000",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.036e-05,
+    "fitted_M2s": 9.46e-06,
+    "fitted_M1a": 0.0,
+    "difficulty_regression": 1.4e-07,
+    "reporting_only": 7.03e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C001:a0",
+   "family_id": "C001",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00767844,
+    "fitted_M2s": 0.00910623,
+    "fitted_M1a": 0.02977016,
+    "difficulty_regression": -0.00027336,
+    "reporting_only": 0.00379475,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C001:b0",
+   "family_id": "C001",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00473714,
+    "fitted_M2s": 0.00561438,
+    "fitted_M1a": 0.01449867,
+    "difficulty_regression": 0.00135223,
+    "reporting_only": 0.00205028,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C001:c0",
+   "family_id": "C001",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.164e-05,
+    "fitted_M2s": 2.082e-05,
+    "fitted_M1a": -0.0,
+    "difficulty_regression": 1.6e-07,
+    "reporting_only": 8.23e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C002:a0",
+   "family_id": "C002",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00602518,
+    "fitted_M2s": 0.00836337,
+    "fitted_M1a": 0.01152195,
+    "difficulty_regression": -0.0015766,
+    "reporting_only": 0.00424184,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C002:b0",
+   "family_id": "C002",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00553725,
+    "fitted_M2s": 0.00743746,
+    "fitted_M1a": 0.00959324,
+    "difficulty_regression": -0.0015822,
+    "reporting_only": 0.00395653,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C002:c0",
+   "family_id": "C002",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.741e-05,
+    "fitted_M2s": -0.00016397,
+    "fitted_M1a": 0.02740854,
+    "difficulty_regression": -0.00328013,
+    "reporting_only": -0.0003148,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  },
+  {
+   "pair_id": "C003:a0",
+   "family_id": "C003",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00231317,
+    "fitted_M2s": 0.00318134,
+    "fitted_M1a": 0.00398521,
+    "difficulty_regression": -0.00018012,
+    "reporting_only": 0.00189903,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C003:b0",
+   "family_id": "C003",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00224999,
+    "fitted_M2s": 0.0028746,
+    "fitted_M1a": -0.00236599,
+    "difficulty_regression": -0.00128097,
+    "reporting_only": 0.00179753,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00050466
+   }
+  },
+  {
+   "pair_id": "C003:c0",
+   "family_id": "C003",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.34e-06,
+    "fitted_M2s": 0.00011324,
+    "fitted_M1a": -0.00500741,
+    "difficulty_regression": 0.00246399,
+    "reporting_only": -0.0001473,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00050466
+   }
+  },
+  {
+   "pair_id": "C004:a0",
+   "family_id": "C004",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00412793,
+    "fitted_M2s": 0.00452458,
+    "fitted_M1a": 0.00798729,
+    "difficulty_regression": -0.00190103,
+    "reporting_only": 0.00247768,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C004:b0",
+   "family_id": "C004",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00407277,
+    "fitted_M2s": 0.00468056,
+    "fitted_M1a": 0.00634429,
+    "difficulty_regression": -0.0016179,
+    "reporting_only": 0.00213659,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C004:c0",
+   "family_id": "C004",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00025924,
+    "fitted_M2s": 0.00169442,
+    "fitted_M1a": -0.02201593,
+    "difficulty_regression": 0.00109424,
+    "reporting_only": 0.00092483,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00067288
+   }
+  },
+  {
+   "pair_id": "C005:a0",
+   "family_id": "C005",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00316584,
+    "fitted_M2s": 0.00422564,
+    "fitted_M1a": 0.00939341,
+    "difficulty_regression": 4.237e-05,
+    "reporting_only": 0.00216027,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C005:b0",
+   "family_id": "C005",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00242674,
+    "fitted_M2s": 0.00318524,
+    "fitted_M1a": 0.01264314,
+    "difficulty_regression": -0.00163181,
+    "reporting_only": 0.00142707,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C005:c0",
+   "family_id": "C005",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 7.36e-06,
+    "fitted_M2s": -0.00353565,
+    "fitted_M1a": -0.00737649,
+    "difficulty_regression": 0.0010767,
+    "reporting_only": 3.08e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00067288
+   }
+  },
+  {
+   "pair_id": "C006:a0",
+   "family_id": "C006",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00739503,
+    "fitted_M2s": 0.0092534,
+    "fitted_M1a": 0.03984872,
+    "difficulty_regression": 0.0017512,
+    "reporting_only": 0.00465919,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C006:b0",
+   "family_id": "C006",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00613795,
+    "fitted_M2s": 0.00752822,
+    "fitted_M1a": 0.01549418,
+    "difficulty_regression": 0.00174077,
+    "reporting_only": 0.00412756,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C006:c0",
+   "family_id": "C006",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00019083,
+    "fitted_M2s": 0.00068548,
+    "fitted_M1a": 0.0053646,
+    "difficulty_regression": -0.00165693,
+    "reporting_only": 0.00014674,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C007:a0",
+   "family_id": "C007",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00826359,
+    "fitted_M2s": 0.01014361,
+    "fitted_M1a": 0.01276946,
+    "difficulty_regression": -0.00319755,
+    "reporting_only": 0.00622264,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C007:b0",
+   "family_id": "C007",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00782353,
+    "fitted_M2s": 0.0091497,
+    "fitted_M1a": 0.02545739,
+    "difficulty_regression": 0.00175088,
+    "reporting_only": 0.00464292,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C007:c0",
+   "family_id": "C007",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.202e-05,
+    "fitted_M2s": -1.904e-05,
+    "fitted_M1a": 0.00913825,
+    "difficulty_regression": -0.00166787,
+    "reporting_only": -0.00041104,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C008:a0",
+   "family_id": "C008",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00296707,
+    "fitted_M2s": 0.00370275,
+    "fitted_M1a": 0.01633176,
+    "difficulty_regression": -0.00162205,
+    "reporting_only": 0.00192464,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C008:b0",
+   "family_id": "C008",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00283204,
+    "fitted_M2s": 0.00341622,
+    "fitted_M1a": 0.01436636,
+    "difficulty_regression": -0.0016232,
+    "reporting_only": 0.00186599,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C008:c0",
+   "family_id": "C008",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.199e-05,
+    "fitted_M2s": 6.989e-05,
+    "fitted_M1a": 0.01013717,
+    "difficulty_regression": -0.00295175,
+    "reporting_only": -3.188e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00080746
+   }
+  },
+  {
+   "pair_id": "C009:a0",
+   "family_id": "C009",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00871222,
+    "fitted_M2s": 0.01083309,
+    "fitted_M1a": 0.00325202,
+    "difficulty_regression": -0.00320036,
+    "reporting_only": 0.00607955,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C009:b0",
+   "family_id": "C009",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00825685,
+    "fitted_M2s": 0.02111915,
+    "fitted_M1a": 0.00766196,
+    "difficulty_regression": 0.00175842,
+    "reporting_only": 0.00502745,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C009:c0",
+   "family_id": "C009",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.71e-06,
+    "fitted_M2s": -8.63e-06,
+    "fitted_M1a": 0.0003201,
+    "difficulty_regression": 0.00165519,
+    "reporting_only": -0.00023542,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C010:a0",
+   "family_id": "C010",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00107585,
+    "fitted_M2s": 0.00107231,
+    "fitted_M1a": 0.0053378,
+    "difficulty_regression": -0.00054995,
+    "reporting_only": 0.00055175,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C010:b0",
+   "family_id": "C010",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00078577,
+    "fitted_M2s": -0.0014863,
+    "fitted_M1a": 0.00108874,
+    "difficulty_regression": -0.00122825,
+    "reporting_only": 0.00043228,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C010:c0",
+   "family_id": "C010",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.0,
+    "fitted_M2s": -0.0,
+    "fitted_M1a": 0.0,
+    "difficulty_regression": 0.0,
+    "reporting_only": 0.0,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C011:a0",
+   "family_id": "C011",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00702869,
+    "fitted_M2s": 0.00887609,
+    "fitted_M1a": 0.01312487,
+    "difficulty_regression": -0.00203477,
+    "reporting_only": 0.00525525,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C011:b0",
+   "family_id": "C011",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00612914,
+    "fitted_M2s": 0.00768872,
+    "fitted_M1a": 0.01469259,
+    "difficulty_regression": -0.00323873,
+    "reporting_only": 0.00412317,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C011:c0",
+   "family_id": "C011",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 5.954e-05,
+    "fitted_M2s": 0.00013646,
+    "fitted_M1a": -0.03457906,
+    "difficulty_regression": 0.00050115,
+    "reporting_only": 0.00044653,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00134576
+   }
+  },
+  {
+   "pair_id": "C012:a0",
+   "family_id": "C012",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00484506,
+    "fitted_M2s": 0.00597059,
+    "fitted_M1a": 0.00934997,
+    "difficulty_regression": 6.694e-05,
+    "reporting_only": 0.00341265,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C012:b0",
+   "family_id": "C012",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00440764,
+    "fitted_M2s": 0.00535036,
+    "fitted_M1a": 0.01633277,
+    "difficulty_regression": 0.00142679,
+    "reporting_only": 0.00289648,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C012:c0",
+   "family_id": "C012",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.482e-05,
+    "fitted_M2s": 0.00011726,
+    "fitted_M1a": -0.00137651,
+    "difficulty_regression": 2.86e-06,
+    "reporting_only": 0.00014597,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C013:a0",
+   "family_id": "C013",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00470483,
+    "fitted_M2s": 0.00582907,
+    "fitted_M1a": 0.00949664,
+    "difficulty_regression": 0.00186333,
+    "reporting_only": 0.00317944,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C013:b0",
+   "family_id": "C013",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00372333,
+    "fitted_M2s": 0.0041629,
+    "fitted_M1a": 0.00410711,
+    "difficulty_regression": 0.00170453,
+    "reporting_only": 0.00228009,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C013:c0",
+   "family_id": "C013",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00019089,
+    "fitted_M2s": 0.00064775,
+    "fitted_M1a": 0.02616969,
+    "difficulty_regression": -0.00197338,
+    "reporting_only": -3.582e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  },
+  {
+   "pair_id": "C014:a0",
+   "family_id": "C014",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00480906,
+    "fitted_M2s": 0.00630644,
+    "fitted_M1a": 0.00989129,
+    "difficulty_regression": -0.00325599,
+    "reporting_only": 0.00324364,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C014:b0",
+   "family_id": "C014",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00400066,
+    "fitted_M2s": 0.00507489,
+    "fitted_M1a": 0.01732054,
+    "difficulty_regression": -0.00160989,
+    "reporting_only": 0.00254492,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C014:c0",
+   "family_id": "C014",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.676e-05,
+    "fitted_M2s": -9.189e-05,
+    "fitted_M1a": -0.01511745,
+    "difficulty_regression": 0.00129286,
+    "reporting_only": 7.851e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00080746
+   }
+  },
+  {
+   "pair_id": "C015:a0",
+   "family_id": "C015",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00989705,
+    "fitted_M2s": 0.01267248,
+    "fitted_M1a": 0.00907964,
+    "difficulty_regression": -0.00188046,
+    "reporting_only": 0.00648147,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C015:b0",
+   "family_id": "C015",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00653424,
+    "fitted_M2s": 0.00825125,
+    "fitted_M1a": 0.0034962,
+    "difficulty_regression": -0.00156628,
+    "reporting_only": 0.00476785,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C015:c0",
+   "family_id": "C015",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 5.819e-05,
+    "fitted_M2s": 9.94e-05,
+    "fitted_M1a": -0.0047545,
+    "difficulty_regression": 0.00058234,
+    "reporting_only": 0.00044307,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C016:a0",
+   "family_id": "C016",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00258181,
+    "fitted_M2s": 0.00329144,
+    "fitted_M1a": 0.00876019,
+    "difficulty_regression": -0.00037836,
+    "reporting_only": 0.00160025,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C016:b0",
+   "family_id": "C016",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00147876,
+    "fitted_M2s": 0.00173958,
+    "fitted_M1a": 0.01230224,
+    "difficulty_regression": -0.00189551,
+    "reporting_only": 0.00064865,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C016:c0",
+   "family_id": "C016",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 5.917e-05,
+    "fitted_M2s": 6.351e-05,
+    "fitted_M1a": -0.01160576,
+    "difficulty_regression": 0.00184642,
+    "reporting_only": 8.576e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00115351
+   }
+  },
+  {
+   "pair_id": "C017:a0",
+   "family_id": "C017",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00460212,
+    "fitted_M2s": 0.00571893,
+    "fitted_M1a": 0.02010074,
+    "difficulty_regression": -0.00326332,
+    "reporting_only": 0.00286979,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C017:b0",
+   "family_id": "C017",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00379775,
+    "fitted_M2s": 0.00477257,
+    "fitted_M1a": 0.01175981,
+    "difficulty_regression": -0.00161065,
+    "reporting_only": 0.00250586,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C017:c0",
+   "family_id": "C017",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00012041,
+    "fitted_M2s": 2.646e-05,
+    "fitted_M1a": 0.02506249,
+    "difficulty_regression": 1.479e-05,
+    "reporting_only": -0.00030117,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00080746
+   }
+  },
+  {
+   "pair_id": "C018:a0",
+   "family_id": "C018",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00877559,
+    "fitted_M2s": 0.01101566,
+    "fitted_M1a": 0.02532886,
+    "difficulty_regression": -0.00320692,
+    "reporting_only": 0.00574496,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C018:b0",
+   "family_id": "C018",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00581875,
+    "fitted_M2s": 0.00724724,
+    "fitted_M1a": 0.00459198,
+    "difficulty_regression": -0.00280104,
+    "reporting_only": 0.00427357,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C018:c0",
+   "family_id": "C018",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.528e-05,
+    "fitted_M2s": 0.00023515,
+    "fitted_M1a": -0.0280062,
+    "difficulty_regression": 0.0004031,
+    "reporting_only": 0.00071441,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00100932
+   }
+  },
+  {
+   "pair_id": "C019:a0",
+   "family_id": "C019",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00170991,
+    "fitted_M2s": 0.00344587,
+    "fitted_M1a": 0.00331673,
+    "difficulty_regression": 0.00157972,
+    "reporting_only": 0.001151,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C019:b0",
+   "family_id": "C019",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00155461,
+    "fitted_M2s": 0.00182986,
+    "fitted_M1a": 0.00700726,
+    "difficulty_regression": 0.00152096,
+    "reporting_only": 0.0009811,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C019:c0",
+   "family_id": "C019",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.268e-05,
+    "fitted_M2s": -0.0003538,
+    "fitted_M1a": -0.00847611,
+    "difficulty_regression": 0.00298817,
+    "reporting_only": -0.00018597,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00073405
+   }
+  },
+  {
+   "pair_id": "C020:a0",
+   "family_id": "C020",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00501318,
+    "fitted_M2s": 0.00617048,
+    "fitted_M1a": 0.02709536,
+    "difficulty_regression": 5.459e-05,
+    "reporting_only": 0.00278297,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C020:b0",
+   "family_id": "C020",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00499287,
+    "fitted_M2s": 0.00619136,
+    "fitted_M1a": 0.0265387,
+    "difficulty_regression": -0.00159838,
+    "reporting_only": 0.00313143,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C020:c0",
+   "family_id": "C020",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.49e-05,
+    "fitted_M2s": -0.00049737,
+    "fitted_M1a": 0.02403289,
+    "difficulty_regression": -0.00205656,
+    "reporting_only": -0.00039133,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  },
+  {
+   "pair_id": "C021:a0",
+   "family_id": "C021",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00560453,
+    "fitted_M2s": 0.00636103,
+    "fitted_M1a": 0.01827588,
+    "difficulty_regression": 0.00172269,
+    "reporting_only": 0.00320605,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C021:b0",
+   "family_id": "C021",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00335415,
+    "fitted_M2s": 0.00415325,
+    "fitted_M1a": 0.00863855,
+    "difficulty_regression": 0.00170582,
+    "reporting_only": 0.00234603,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C021:c0",
+   "family_id": "C021",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00013846,
+    "fitted_M2s": 0.0001242,
+    "fitted_M1a": 0.00034979,
+    "difficulty_regression": 0.00018928,
+    "reporting_only": 5.411e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C022:a0",
+   "family_id": "C022",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00594285,
+    "fitted_M2s": 0.00783444,
+    "fitted_M1a": 0.02431367,
+    "difficulty_regression": 7.514e-05,
+    "reporting_only": 0.00383074,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C022:b0",
+   "family_id": "C022",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00532613,
+    "fitted_M2s": 0.00717921,
+    "fitted_M1a": 0.02100801,
+    "difficulty_regression": -0.00159175,
+    "reporting_only": 0.00346954,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C022:c0",
+   "family_id": "C022",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00041315,
+    "fitted_M2s": 0.00047581,
+    "fitted_M1a": 0.00512172,
+    "difficulty_regression": -8e-08,
+    "reporting_only": -3.9e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C023:a0",
+   "family_id": "C023",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00367842,
+    "fitted_M2s": 0.00288501,
+    "fitted_M1a": 0.0143109,
+    "difficulty_regression": 0.00169362,
+    "reporting_only": 0.00172404,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C023:b0",
+   "family_id": "C023",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00296294,
+    "fitted_M2s": 0.00405707,
+    "fitted_M1a": 0.01658698,
+    "difficulty_regression": -0.00162307,
+    "reporting_only": 0.00187293,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C023:c0",
+   "family_id": "C023",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.58e-05,
+    "fitted_M2s": 7.668e-05,
+    "fitted_M1a": -0.01118812,
+    "difficulty_regression": -4.541e-05,
+    "reporting_only": 1.248e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00100932
+   }
+  },
+  {
+   "pair_id": "C024:a0",
+   "family_id": "C024",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00329057,
+    "fitted_M2s": 0.00415506,
+    "fitted_M1a": 0.00768429,
+    "difficulty_regression": 0.00170358,
+    "reporting_only": 0.00223185,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C024:b0",
+   "family_id": "C024",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00249305,
+    "fitted_M2s": 0.0031004,
+    "fitted_M1a": 0.01019992,
+    "difficulty_regression": 0.00169368,
+    "reporting_only": 0.00172674,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C024:c0",
+   "family_id": "C024",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.503e-05,
+    "fitted_M2s": -1.593e-05,
+    "fitted_M1a": 0.00524076,
+    "difficulty_regression": 0.0005831,
+    "reporting_only": -3.102e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00067288
+   }
+  },
+  {
+   "pair_id": "C025:a0",
+   "family_id": "C025",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0045758,
+    "fitted_M2s": 0.0054428,
+    "fitted_M1a": 0.02390318,
+    "difficulty_regression": -0.00029673,
+    "reporting_only": 0.00260343,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C025:b0",
+   "family_id": "C025",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00408012,
+    "fitted_M2s": 0.00342646,
+    "fitted_M1a": 0.00940829,
+    "difficulty_regression": 0.00336487,
+    "reporting_only": 0.00230742,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C025:c0",
+   "family_id": "C025",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00011885,
+    "fitted_M2s": 0.00050542,
+    "fitted_M1a": -0.00158163,
+    "difficulty_regression": 1.281e-05,
+    "reporting_only": 0.00065321,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C026:a0",
+   "family_id": "C026",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00279448,
+    "fitted_M2s": 0.00343115,
+    "fitted_M1a": 0.01171101,
+    "difficulty_regression": -0.00018319,
+    "reporting_only": 0.00174232,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C026:b0",
+   "family_id": "C026",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00251508,
+    "fitted_M2s": 0.00309611,
+    "fitted_M1a": 0.00841824,
+    "difficulty_regression": 0.00299456,
+    "reporting_only": 0.00170695,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C026:c0",
+   "family_id": "C026",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 7.356e-05,
+    "fitted_M2s": 7.633e-05,
+    "fitted_M1a": -0.00028308,
+    "difficulty_regression": 1.01e-06,
+    "reporting_only": 5.155e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C027:a0",
+   "family_id": "C027",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00302228,
+    "fitted_M2s": 0.00387114,
+    "fitted_M1a": 0.00971205,
+    "difficulty_regression": 0.00169692,
+    "reporting_only": 0.0018921,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C027:b0",
+   "family_id": "C027",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00176396,
+    "fitted_M2s": 0.00257509,
+    "fitted_M1a": 0.0025588,
+    "difficulty_regression": -0.00163211,
+    "reporting_only": 0.00141199,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C027:c0",
+   "family_id": "C027",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.473e-05,
+    "fitted_M2s": 5.201e-05,
+    "fitted_M1a": -0.01231729,
+    "difficulty_regression": 0.00108072,
+    "reporting_only": 0.00023545,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00067288
+   }
+  },
+  {
+   "pair_id": "C028:a0",
+   "family_id": "C028",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0047724,
+    "fitted_M2s": 0.00480192,
+    "fitted_M1a": 0.02337357,
+    "difficulty_regression": -0.00161839,
+    "reporting_only": 0.00211132,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C028:b0",
+   "family_id": "C028",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00407106,
+    "fitted_M2s": 0.00405552,
+    "fitted_M1a": 0.01155437,
+    "difficulty_regression": -0.00160987,
+    "reporting_only": 0.0025457,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C028:c0",
+   "family_id": "C028",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00012093,
+    "fitted_M2s": 0.00014972,
+    "fitted_M1a": 0.00382579,
+    "difficulty_regression": 0.0016579,
+    "reporting_only": -9.724e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C029:a0",
+   "family_id": "C029",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00108305,
+    "fitted_M2s": 0.00119752,
+    "fitted_M1a": 0.00480475,
+    "difficulty_regression": 0.00143082,
+    "reporting_only": 0.00051166,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C029:b0",
+   "family_id": "C029",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00076475,
+    "fitted_M2s": 0.00104408,
+    "fitted_M1a": 0.00050822,
+    "difficulty_regression": 0.00206415,
+    "reporting_only": 0.00057128,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00033644
+   }
+  },
+  {
+   "pair_id": "C029:c0",
+   "family_id": "C029",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00012596,
+    "fitted_M2s": 0.00029659,
+    "fitted_M1a": -0.00114701,
+    "difficulty_regression": -0.00115205,
+    "reporting_only": 0.00012784,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C030:a0",
+   "family_id": "C030",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00209411,
+    "fitted_M2s": 0.00281892,
+    "fitted_M1a": 0.01140837,
+    "difficulty_regression": -0.00185711,
+    "reporting_only": 0.00102303,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C030:b0",
+   "family_id": "C030",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00178017,
+    "fitted_M2s": 0.00179447,
+    "fitted_M1a": 0.00579438,
+    "difficulty_regression": 0.00143358,
+    "reporting_only": 0.00101473,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C030:c0",
+   "family_id": "C030",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.222e-05,
+    "fitted_M2s": 0.000121,
+    "fitted_M1a": 0.00243155,
+    "difficulty_regression": -0.00165979,
+    "reporting_only": 8.6e-07,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C031:a0",
+   "family_id": "C031",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00213731,
+    "fitted_M2s": 0.00274719,
+    "fitted_M1a": 0.00891731,
+    "difficulty_regression": -0.00080271,
+    "reporting_only": 0.00146856,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C031:b0",
+   "family_id": "C031",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00106591,
+    "fitted_M2s": 0.00131362,
+    "fitted_M1a": 0.00491836,
+    "difficulty_regression": 0.0014766,
+    "reporting_only": 0.00069848,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C031:c0",
+   "family_id": "C031",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00017866,
+    "fitted_M2s": 0.00021689,
+    "fitted_M1a": -0.00880888,
+    "difficulty_regression": 0.00231496,
+    "reporting_only": 0.0004843,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00040373
+   }
+  },
+  {
+   "pair_id": "C032:a0",
+   "family_id": "C032",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00367425,
+    "fitted_M2s": 0.00453871,
+    "fitted_M1a": 0.01102848,
+    "difficulty_regression": 0.00076743,
+    "reporting_only": 0.00240073,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C032:b0",
+   "family_id": "C032",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00235808,
+    "fitted_M2s": 0.00278971,
+    "fitted_M1a": 0.0035914,
+    "difficulty_regression": -0.00187993,
+    "reporting_only": 0.00144275,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C032:c0",
+   "family_id": "C032",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 9.558e-05,
+    "fitted_M2s": 0.00022011,
+    "fitted_M1a": -0.0034462,
+    "difficulty_regression": 3.8e-06,
+    "reporting_only": 0.00019385,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C033:a0",
+   "family_id": "C033",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00338408,
+    "fitted_M2s": 0.00474426,
+    "fitted_M1a": 0.00328772,
+    "difficulty_regression": -0.00207993,
+    "reporting_only": 0.00256138,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C033:b0",
+   "family_id": "C033",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00137301,
+    "fitted_M2s": 0.00204664,
+    "fitted_M1a": 0.00129193,
+    "difficulty_regression": -0.00318653,
+    "reporting_only": 0.00102763,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C033:c0",
+   "family_id": "C033",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.84e-05,
+    "fitted_M2s": -6.441e-05,
+    "fitted_M1a": 0.01074684,
+    "difficulty_regression": -0.00114828,
+    "reporting_only": -0.0004717,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00040373
+   }
+  },
+  {
+   "pair_id": "C034:a0",
+   "family_id": "C034",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00543038,
+    "fitted_M2s": 0.00671494,
+    "fitted_M1a": 0.02183148,
+    "difficulty_regression": 0.00138128,
+    "reporting_only": 0.00353156,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C034:b0",
+   "family_id": "C034",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00528231,
+    "fitted_M2s": 0.00639001,
+    "fitted_M1a": 0.01625516,
+    "difficulty_regression": 0.00172073,
+    "reporting_only": 0.00310592,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C034:c0",
+   "family_id": "C034",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 8.084e-05,
+    "fitted_M2s": 0.00011126,
+    "fitted_M1a": -0.01174326,
+    "difficulty_regression": 0.00129414,
+    "reporting_only": 0.00014403,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00080746
+   }
+  },
+  {
+   "pair_id": "C035:a0",
+   "family_id": "C035",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00428511,
+    "fitted_M2s": 0.00523458,
+    "fitted_M1a": 0.01119508,
+    "difficulty_regression": 0.00142591,
+    "reporting_only": 0.00285131,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C035:b0",
+   "family_id": "C035",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00359585,
+    "fitted_M2s": 0.00376549,
+    "fitted_M1a": 0.00449728,
+    "difficulty_regression": -0.00160193,
+    "reporting_only": 0.00295064,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C035:c0",
+   "family_id": "C035",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 7.167e-05,
+    "fitted_M2s": 8.527e-05,
+    "fitted_M1a": 0.00165389,
+    "difficulty_regression": 5.7e-07,
+    "reporting_only": 2.927e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C036:a0",
+   "family_id": "C036",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00379355,
+    "fitted_M2s": 0.00899965,
+    "fitted_M1a": 0.01034356,
+    "difficulty_regression": -0.00068731,
+    "reporting_only": 0.00243226,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C036:b0",
+   "family_id": "C036",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00181277,
+    "fitted_M2s": 0.0022761,
+    "fitted_M1a": 0.00693707,
+    "difficulty_regression": 0.00110146,
+    "reporting_only": 0.00145873,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00036703
+   }
+  },
+  {
+   "pair_id": "C036:c0",
+   "family_id": "C036",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00014152,
+    "fitted_M2s": 8.254e-05,
+    "fitted_M1a": -0.00107449,
+    "difficulty_regression": 0.00166324,
+    "reporting_only": 0.00017528,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C037:a0",
+   "family_id": "C037",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00517882,
+    "fitted_M2s": 0.0061814,
+    "fitted_M1a": 0.01881326,
+    "difficulty_regression": -0.00241662,
+    "reporting_only": 0.00332493,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C037:b0",
+   "family_id": "C037",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00274004,
+    "fitted_M2s": 0.00331346,
+    "fitted_M1a": 0.0030358,
+    "difficulty_regression": -0.00136806,
+    "reporting_only": 0.00232571,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C037:c0",
+   "family_id": "C037",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00011083,
+    "fitted_M2s": 0.00012718,
+    "fitted_M1a": -0.00118691,
+    "difficulty_regression": 0.00014437,
+    "reporting_only": 0.00016364,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C038:a0",
+   "family_id": "C038",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00810668,
+    "fitted_M2s": 0.01025465,
+    "fitted_M1a": 0.02122309,
+    "difficulty_regression": -0.00321457,
+    "reporting_only": 0.00535513,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C038:b0",
+   "family_id": "C038",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00558931,
+    "fitted_M2s": 0.00709499,
+    "fitted_M1a": 0.01739597,
+    "difficulty_regression": -0.00158618,
+    "reporting_only": 0.00375352,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C038:c0",
+   "family_id": "C038",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.805e-05,
+    "fitted_M2s": 7.687e-05,
+    "fitted_M1a": 0.00699311,
+    "difficulty_regression": -0.00122829,
+    "reporting_only": -0.0001645,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C039:a0",
+   "family_id": "C039",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00548606,
+    "fitted_M2s": 0.00679394,
+    "fitted_M1a": 0.01722112,
+    "difficulty_regression": -0.00324234,
+    "reporting_only": 0.00393929,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C039:b0",
+   "family_id": "C039",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.0045383,
+    "fitted_M2s": 0.00051327,
+    "fitted_M1a": 0.02151409,
+    "difficulty_regression": -0.00160689,
+    "reporting_only": 0.00269783,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C039:c0",
+   "family_id": "C039",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 8.4e-07,
+    "fitted_M2s": -0.00010697,
+    "fitted_M1a": 0.01980985,
+    "difficulty_regression": -0.00162002,
+    "reporting_only": -0.00029916,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  },
+  {
+   "pair_id": "C040:a0",
+   "family_id": "C040",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00302863,
+    "fitted_M2s": 0.00373103,
+    "fitted_M1a": 0.01101733,
+    "difficulty_regression": -0.00053711,
+    "reporting_only": 0.00197777,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C040:b0",
+   "family_id": "C040",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00269112,
+    "fitted_M2s": 0.00360983,
+    "fitted_M1a": 0.00080363,
+    "difficulty_regression": 0.00170261,
+    "reporting_only": 0.00218246,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C040:c0",
+   "family_id": "C040",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.0,
+    "fitted_M2s": 0.0,
+    "fitted_M1a": -0.0,
+    "difficulty_regression": 0.0,
+    "reporting_only": 0.0,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C041:a0",
+   "family_id": "C041",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00106631,
+    "fitted_M2s": 0.00104777,
+    "fitted_M1a": 0.00483073,
+    "difficulty_regression": -0.00025007,
+    "reporting_only": 0.00054438,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C041:b0",
+   "family_id": "C041",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00104098,
+    "fitted_M2s": 0.00148401,
+    "fitted_M1a": 0.00525463,
+    "difficulty_regression": 0.00109026,
+    "reporting_only": 0.00088816,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00036703
+   }
+  },
+  {
+   "pair_id": "C041:c0",
+   "family_id": "C041",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.28e-06,
+    "fitted_M2s": 9.6e-05,
+    "fitted_M1a": -0.00395991,
+    "difficulty_regression": 0.00224801,
+    "reporting_only": 6.356e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00036703
+   }
+  },
+  {
+   "pair_id": "C042:a0",
+   "family_id": "C042",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00947744,
+    "fitted_M2s": 0.01128204,
+    "fitted_M1a": 0.02094411,
+    "difficulty_regression": -0.00152828,
+    "reporting_only": 0.00670544,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C042:b0",
+   "family_id": "C042",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00529665,
+    "fitted_M2s": 0.00649056,
+    "fitted_M1a": 0.0126092,
+    "difficulty_regression": 0.00172823,
+    "reporting_only": 0.00348842,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C042:c0",
+   "family_id": "C042",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.492e-05,
+    "fitted_M2s": 0.00011396,
+    "fitted_M1a": 0.01814236,
+    "difficulty_regression": 3.725e-05,
+    "reporting_only": -0.00042882,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  },
+  {
+   "pair_id": "C043:a0",
+   "family_id": "C043",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00247801,
+    "fitted_M2s": 0.00302604,
+    "fitted_M1a": 0.00645056,
+    "difficulty_regression": 0.00169423,
+    "reporting_only": 0.00175477,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C043:b0",
+   "family_id": "C043",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.0023435,
+    "fitted_M2s": 0.00303186,
+    "fitted_M1a": 0.0101864,
+    "difficulty_regression": -0.00187713,
+    "reporting_only": 0.00158573,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C043:c0",
+   "family_id": "C043",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.704e-05,
+    "fitted_M2s": 0.0001844,
+    "fitted_M1a": 0.01520192,
+    "difficulty_regression": -0.00018661,
+    "reporting_only": -8.531e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00115351
+   }
+  },
+  {
+   "pair_id": "C044:a0",
+   "family_id": "C044",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00290761,
+    "fitted_M2s": 0.0035737,
+    "fitted_M1a": 0.00643234,
+    "difficulty_regression": 0.0012162,
+    "reporting_only": 0.00204547,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C044:b0",
+   "family_id": "C044",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00105927,
+    "fitted_M2s": 0.00090963,
+    "fitted_M1a": 0.00194331,
+    "difficulty_regression": -0.00165127,
+    "reporting_only": 0.00043532,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C044:c0",
+   "family_id": "C044",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 7.79e-05,
+    "fitted_M2s": 0.00013807,
+    "fitted_M1a": -0.0192114,
+    "difficulty_regression": 0.00353793,
+    "reporting_only": 0.00067086,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00080746
+   }
+  },
+  {
+   "pair_id": "C045:a0",
+   "family_id": "C045",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00264988,
+    "fitted_M2s": 0.00303348,
+    "fitted_M1a": 0.00810608,
+    "difficulty_regression": 3.613e-05,
+    "reporting_only": 0.00184177,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C045:b0",
+   "family_id": "C045",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00227715,
+    "fitted_M2s": 0.00179313,
+    "fitted_M1a": 0.01110187,
+    "difficulty_regression": 0.00152126,
+    "reporting_only": 0.00116139,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C045:c0",
+   "family_id": "C045",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.902e-05,
+    "fitted_M2s": -1.639e-05,
+    "fitted_M1a": -0.00521128,
+    "difficulty_regression": -0.00073889,
+    "reporting_only": -7.437e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00057675
+   }
+  },
+  {
+   "pair_id": "C046:a0",
+   "family_id": "C046",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00489123,
+    "fitted_M2s": 0.00649594,
+    "fitted_M1a": 0.00076288,
+    "difficulty_regression": -0.00014656,
+    "reporting_only": 0.00361003,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C046:b0",
+   "family_id": "C046",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.0029947,
+    "fitted_M2s": 0.00324707,
+    "fitted_M1a": -0.00058444,
+    "difficulty_regression": -0.00160756,
+    "reporting_only": 0.00266373,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C046:c0",
+   "family_id": "C046",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00010927,
+    "fitted_M2s": 0.00204335,
+    "fitted_M1a": -0.00092588,
+    "difficulty_regression": 0.00167908,
+    "reporting_only": 0.00098265,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C047:a0",
+   "family_id": "C047",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0049228,
+    "fitted_M2s": 0.00606233,
+    "fitted_M1a": 0.01604943,
+    "difficulty_regression": -0.00022855,
+    "reporting_only": 0.00312378,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C047:b0",
+   "family_id": "C047",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00355022,
+    "fitted_M2s": 0.00206603,
+    "fitted_M1a": 0.00545914,
+    "difficulty_regression": -0.00190083,
+    "reporting_only": 0.00248797,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C047:c0",
+   "family_id": "C047",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 9.975e-05,
+    "fitted_M2s": 0.00027385,
+    "fitted_M1a": -0.00855334,
+    "difficulty_regression": 0.00108102,
+    "reporting_only": 0.00025102,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00067288
+   }
+  },
+  {
+   "pair_id": "C048:a0",
+   "family_id": "C048",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00249088,
+    "fitted_M2s": 0.00309496,
+    "fitted_M1a": 0.00580402,
+    "difficulty_regression": -0.00016036,
+    "reporting_only": 0.00167521,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C048:b0",
+   "family_id": "C048",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00225184,
+    "fitted_M2s": 0.00264698,
+    "fitted_M1a": 0.00214217,
+    "difficulty_regression": -0.00360994,
+    "reporting_only": 0.0014459,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C048:c0",
+   "family_id": "C048",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.914e-05,
+    "fitted_M2s": 7.032e-05,
+    "fitted_M1a": -0.00350551,
+    "difficulty_regression": 0.00166018,
+    "reporting_only": 1.893e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C049:a0",
+   "family_id": "C049",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00348877,
+    "fitted_M2s": 0.0043499,
+    "fitted_M1a": 0.01245355,
+    "difficulty_regression": -0.00161476,
+    "reporting_only": 0.00229629,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C049:b0",
+   "family_id": "C049",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00275592,
+    "fitted_M2s": 0.00342273,
+    "fitted_M1a": 0.01266777,
+    "difficulty_regression": -0.00191572,
+    "reporting_only": 0.00172876,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C049:c0",
+   "family_id": "C049",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.005e-05,
+    "fitted_M2s": 0.00149541,
+    "fitted_M1a": -0.00855125,
+    "difficulty_regression": -0.00163974,
+    "reporting_only": 0.001023,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C050:a0",
+   "family_id": "C050",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00828183,
+    "fitted_M2s": 0.01075754,
+    "fitted_M1a": 0.00499939,
+    "difficulty_regression": -0.00198339,
+    "reporting_only": 0.00566668,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C050:b0",
+   "family_id": "C050",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00562608,
+    "fitted_M2s": 0.00722626,
+    "fitted_M1a": -0.00191659,
+    "difficulty_regression": 0.00174464,
+    "reporting_only": 0.00432511,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C050:c0",
+   "family_id": "C050",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.35e-06,
+    "fitted_M2s": -5.385e-05,
+    "fitted_M1a": 0.02891293,
+    "difficulty_regression": -0.00161811,
+    "reporting_only": -0.00020212,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  },
+  {
+   "pair_id": "C051:a0",
+   "family_id": "C051",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00296784,
+    "fitted_M2s": 0.00393845,
+    "fitted_M1a": 0.00595238,
+    "difficulty_regression": -0.00039172,
+    "reporting_only": 0.00219351,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C051:b0",
+   "family_id": "C051",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00191691,
+    "fitted_M2s": -0.00017806,
+    "fitted_M1a": 0.00595458,
+    "difficulty_regression": -0.00163329,
+    "reporting_only": 0.00135184,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C051:c0",
+   "family_id": "C051",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 8.5e-07,
+    "fitted_M2s": 1.46e-06,
+    "fitted_M1a": 0.0,
+    "difficulty_regression": 2e-08,
+    "reporting_only": 1.15e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C052:a0",
+   "family_id": "C052",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00334698,
+    "fitted_M2s": 0.00426207,
+    "fitted_M1a": 0.0073744,
+    "difficulty_regression": -0.00161942,
+    "reporting_only": 0.00205883,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C052:b0",
+   "family_id": "C052",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.0010281,
+    "fitted_M2s": 0.00133404,
+    "fitted_M1a": 0.00528361,
+    "difficulty_regression": -0.00164757,
+    "reporting_only": 0.00062392,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C052:c0",
+   "family_id": "C052",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.273e-05,
+    "fitted_M2s": 3.88e-05,
+    "fitted_M1a": -0.01236471,
+    "difficulty_regression": -0.00036771,
+    "reporting_only": 3.974e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00080746
+   }
+  },
+  {
+   "pair_id": "C053:a0",
+   "family_id": "C053",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00356522,
+    "fitted_M2s": 0.00422193,
+    "fitted_M1a": 0.00268712,
+    "difficulty_regression": 4.485e-05,
+    "reporting_only": 0.00228633,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C053:b0",
+   "family_id": "C053",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00355434,
+    "fitted_M2s": 0.00449879,
+    "fitted_M1a": 0.00544022,
+    "difficulty_regression": -0.00161068,
+    "reporting_only": 0.00250447,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C053:c0",
+   "family_id": "C053",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.286e-05,
+    "fitted_M2s": 0.00435258,
+    "fitted_M1a": -0.00941645,
+    "difficulty_regression": 0.00092657,
+    "reporting_only": 0.00021438,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00057675
+   }
+  },
+  {
+   "pair_id": "C054:a0",
+   "family_id": "C054",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00524628,
+    "fitted_M2s": 0.00649761,
+    "fitted_M1a": 0.02397366,
+    "difficulty_regression": -0.00159341,
+    "reporting_only": 0.00338506,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C054:b0",
+   "family_id": "C054",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00448604,
+    "fitted_M2s": 0.00552105,
+    "fitted_M1a": 0.02367983,
+    "difficulty_regression": -0.00160233,
+    "reporting_only": 0.00293036,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C054:c0",
+   "family_id": "C054",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.0,
+    "fitted_M2s": -0.0,
+    "fitted_M1a": -0.0,
+    "difficulty_regression": 0.0,
+    "reporting_only": 0.0,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C055:a0",
+   "family_id": "C055",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0039364,
+    "fitted_M2s": 0.00562206,
+    "fitted_M1a": 0.00687133,
+    "difficulty_regression": -0.0011169,
+    "reporting_only": 0.00316654,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C055:b0",
+   "family_id": "C055",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00227943,
+    "fitted_M2s": 0.00351546,
+    "fitted_M1a": 0.00173737,
+    "difficulty_regression": -0.00202265,
+    "reporting_only": 0.00205233,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C055:c0",
+   "family_id": "C055",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 7.44e-06,
+    "fitted_M2s": 9.24e-06,
+    "fitted_M1a": -0.0,
+    "difficulty_regression": 1e-07,
+    "reporting_only": 5.06e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C056:a0",
+   "family_id": "C056",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00542819,
+    "fitted_M2s": 0.00701838,
+    "fitted_M1a": 0.01236055,
+    "difficulty_regression": 0.00151596,
+    "reporting_only": 0.00374831,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C056:b0",
+   "family_id": "C056",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00450132,
+    "fitted_M2s": 0.00615192,
+    "fitted_M1a": 0.00755825,
+    "difficulty_regression": 0.00294794,
+    "reporting_only": 0.00321526,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C056:c0",
+   "family_id": "C056",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.6e-07,
+    "fitted_M2s": -0.00017628,
+    "fitted_M1a": 0.0,
+    "difficulty_regression": 0.0,
+    "reporting_only": 1e-07,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C057:a0",
+   "family_id": "C057",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00417941,
+    "fitted_M2s": 0.00505671,
+    "fitted_M1a": 0.00568059,
+    "difficulty_regression": -0.00411846,
+    "reporting_only": 0.003472,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C057:b0",
+   "family_id": "C057",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00207971,
+    "fitted_M2s": 0.0016849,
+    "fitted_M1a": 0.00472881,
+    "difficulty_regression": -0.0032893,
+    "reporting_only": 0.00154522,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C057:c0",
+   "family_id": "C057",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.374e-05,
+    "fitted_M2s": 0.00025175,
+    "fitted_M1a": -0.00511756,
+    "difficulty_regression": -0.00130074,
+    "reporting_only": 0.00023801,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C058:a0",
+   "family_id": "C058",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00689719,
+    "fitted_M2s": 0.01037922,
+    "fitted_M1a": 0.00739146,
+    "difficulty_regression": -0.00155442,
+    "reporting_only": 0.00537245,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C058:b0",
+   "family_id": "C058",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00518143,
+    "fitted_M2s": 0.0070118,
+    "fitted_M1a": 0.00254269,
+    "difficulty_regression": -0.001588,
+    "reporting_only": 0.00366078,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C058:c0",
+   "family_id": "C058",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.225e-05,
+    "fitted_M2s": 0.00034867,
+    "fitted_M1a": 0.00112378,
+    "difficulty_regression": 2.63e-06,
+    "reporting_only": 0.00013423,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C059:a0",
+   "family_id": "C059",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00448241,
+    "fitted_M2s": 0.00535169,
+    "fitted_M1a": 0.01445397,
+    "difficulty_regression": -0.00160244,
+    "reporting_only": 0.00292444,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C059:b0",
+   "family_id": "C059",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00330342,
+    "fitted_M2s": 0.00446866,
+    "fitted_M1a": 0.00112607,
+    "difficulty_regression": -0.00179797,
+    "reporting_only": 0.00255158,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C059:c0",
+   "family_id": "C059",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.88e-06,
+    "fitted_M2s": -0.00046462,
+    "fitted_M1a": 0.00184931,
+    "difficulty_regression": -0.00019089,
+    "reporting_only": -0.00013665,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C060:a0",
+   "family_id": "C060",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00418338,
+    "fitted_M2s": 0.00519231,
+    "fitted_M1a": 0.01930372,
+    "difficulty_regression": 0.00170459,
+    "reporting_only": 0.0022831,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C060:b0",
+   "family_id": "C060",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00360859,
+    "fitted_M2s": 0.00443878,
+    "fitted_M1a": 0.00491351,
+    "difficulty_regression": 0.00337212,
+    "reporting_only": 0.00267721,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C060:c0",
+   "family_id": "C060",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00079606,
+    "fitted_M2s": 0.00101142,
+    "fitted_M1a": -0.01193055,
+    "difficulty_regression": 0.00296584,
+    "reporting_only": 0.00075036,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00080746
+   }
+  },
+  {
+   "pair_id": "C061:a0",
+   "family_id": "C061",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00256257,
+    "fitted_M2s": 0.00317434,
+    "fitted_M1a": 0.00976634,
+    "difficulty_regression": 0.00335348,
+    "reporting_only": 0.00172644,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C061:b0",
+   "family_id": "C061",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00173347,
+    "fitted_M2s": 0.00263753,
+    "fitted_M1a": 0.00900062,
+    "difficulty_regression": -0.00163856,
+    "reporting_only": 0.00108307,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C061:c0",
+   "family_id": "C061",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.871e-05,
+    "fitted_M2s": 0.00010008,
+    "fitted_M1a": 0.0,
+    "difficulty_regression": 1.32e-06,
+    "reporting_only": 6.751e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C062:a0",
+   "family_id": "C062",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0028676,
+    "fitted_M2s": 0.00351426,
+    "fitted_M1a": 0.00986521,
+    "difficulty_regression": -0.00032151,
+    "reporting_only": 0.00188749,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C062:b0",
+   "family_id": "C062",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00261702,
+    "fitted_M2s": 0.00327152,
+    "fitted_M1a": 0.00415187,
+    "difficulty_regression": -0.001952,
+    "reporting_only": 0.00191577,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C062:c0",
+   "family_id": "C062",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 5.914e-05,
+    "fitted_M2s": -7.116e-05,
+    "fitted_M1a": -0.00139644,
+    "difficulty_regression": 1.18e-06,
+    "reporting_only": 6.041e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C063:a0",
+   "family_id": "C063",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00581532,
+    "fitted_M2s": 0.00727344,
+    "fitted_M1a": 0.01765668,
+    "difficulty_regression": 0.00173394,
+    "reporting_only": 0.00377929,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C063:b0",
+   "family_id": "C063",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00508944,
+    "fitted_M2s": 0.00612413,
+    "fitted_M1a": 0.01211079,
+    "difficulty_regression": 0.00172526,
+    "reporting_only": 0.00333677,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C063:c0",
+   "family_id": "C063",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00012057,
+    "fitted_M2s": 0.0001258,
+    "fitted_M1a": -0.00280879,
+    "difficulty_regression": 0.00166416,
+    "reporting_only": 0.00022193,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C064:a0",
+   "family_id": "C064",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00334174,
+    "fitted_M2s": 0.00017085,
+    "fitted_M1a": 0.0160551,
+    "difficulty_regression": -0.00327885,
+    "reporting_only": 0.00207792,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C064:b0",
+   "family_id": "C064",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00322836,
+    "fitted_M2s": 0.00387844,
+    "fitted_M1a": 0.00536064,
+    "difficulty_regression": -0.00127094,
+    "reporting_only": 0.00209402,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C064:c0",
+   "family_id": "C064",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.114e-05,
+    "fitted_M2s": -0.0002363,
+    "fitted_M1a": -0.0058647,
+    "difficulty_regression": 0.00294973,
+    "reporting_only": -7.079e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00080746
+   }
+  },
+  {
+   "pair_id": "C065:a0",
+   "family_id": "C065",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0040682,
+    "fitted_M2s": 0.00487659,
+    "fitted_M1a": 0.01094364,
+    "difficulty_regression": 0.00170814,
+    "reporting_only": 0.00246393,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C065:b0",
+   "family_id": "C065",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00399426,
+    "fitted_M2s": 0.00486491,
+    "fitted_M1a": 0.00455941,
+    "difficulty_regression": -0.00325635,
+    "reporting_only": 0.00322511,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C065:c0",
+   "family_id": "C065",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 9.459e-05,
+    "fitted_M2s": 0.00244212,
+    "fitted_M1a": 0.00113319,
+    "difficulty_regression": 0.00165958,
+    "reporting_only": -1.163e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C066:a0",
+   "family_id": "C066",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00181664,
+    "fitted_M2s": 0.0011854,
+    "fitted_M1a": 0.00690082,
+    "difficulty_regression": -0.00223362,
+    "reporting_only": 0.00122468,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C066:b0",
+   "family_id": "C066",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00247783,
+    "fitted_M2s": 0.00364463,
+    "fitted_M1a": 0.00141164,
+    "difficulty_regression": 0.0022852,
+    "reporting_only": 0.0019592,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00036703
+   }
+  },
+  {
+   "pair_id": "C066:c0",
+   "family_id": "C066",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.052e-05,
+    "fitted_M2s": 4.151e-05,
+    "fitted_M1a": -0.00034921,
+    "difficulty_regression": 0.00015845,
+    "reporting_only": 1.853e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C067:a0",
+   "family_id": "C067",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0050685,
+    "fitted_M2s": 0.00606844,
+    "fitted_M1a": 0.01199609,
+    "difficulty_regression": 0.00295365,
+    "reporting_only": 0.00350639,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C067:b0",
+   "family_id": "C067",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00438163,
+    "fitted_M2s": 0.00400855,
+    "fitted_M1a": 0.02024227,
+    "difficulty_regression": 0.00169641,
+    "reporting_only": 0.00186609,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C067:c0",
+   "family_id": "C067",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00016608,
+    "fitted_M2s": 0.00020305,
+    "fitted_M1a": 0.01623935,
+    "difficulty_regression": 4.682e-05,
+    "reporting_only": 5.932e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  },
+  {
+   "pair_id": "C068:a0",
+   "family_id": "C068",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00158501,
+    "fitted_M2s": 0.00196118,
+    "fitted_M1a": 0.00582202,
+    "difficulty_regression": -0.00151687,
+    "reporting_only": 0.00096184,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C068:b0",
+   "family_id": "C068",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00216865,
+    "fitted_M2s": 0.00269463,
+    "fitted_M1a": 0.00871153,
+    "difficulty_regression": 0.00281318,
+    "reporting_only": 0.00161192,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00033644
+   }
+  },
+  {
+   "pair_id": "C068:c0",
+   "family_id": "C068",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.714e-05,
+    "fitted_M2s": 0.00250254,
+    "fitted_M1a": -0.00324409,
+    "difficulty_regression": 0.00250639,
+    "reporting_only": -2.356e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00033644
+   }
+  },
+  {
+   "pair_id": "C069:a0",
+   "family_id": "C069",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00385058,
+    "fitted_M2s": 0.00481269,
+    "fitted_M1a": 0.00417024,
+    "difficulty_regression": 5.295e-05,
+    "reporting_only": 0.00269956,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C069:b0",
+   "family_id": "C069",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00251842,
+    "fitted_M2s": 0.00313,
+    "fitted_M1a": 0.00325271,
+    "difficulty_regression": 0.00313989,
+    "reporting_only": 0.00191945,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C069:c0",
+   "family_id": "C069",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.88e-06,
+    "fitted_M2s": 1.007e-05,
+    "fitted_M1a": 0.0,
+    "difficulty_regression": 1e-07,
+    "reporting_only": 4.98e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C070:a0",
+   "family_id": "C070",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00282374,
+    "fitted_M2s": 0.00344982,
+    "fitted_M1a": 0.0101817,
+    "difficulty_regression": 3.289e-05,
+    "reporting_only": 0.00167672,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C070:b0",
+   "family_id": "C070",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00138595,
+    "fitted_M2s": 0.00181422,
+    "fitted_M1a": -8.137e-05,
+    "difficulty_regression": -0.0016335,
+    "reporting_only": 0.00134119,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C070:c0",
+   "family_id": "C070",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.0,
+    "fitted_M2s": -0.0,
+    "fitted_M1a": 0.0,
+    "difficulty_regression": 0.0,
+    "reporting_only": 0.0,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C071:a0",
+   "family_id": "C071",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00120074,
+    "fitted_M2s": 0.00148547,
+    "fitted_M1a": 0.00602252,
+    "difficulty_regression": -0.00178637,
+    "reporting_only": 0.0007442,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C071:b0",
+   "family_id": "C071",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00085991,
+    "fitted_M2s": 0.0010987,
+    "fitted_M1a": 0.00255868,
+    "difficulty_regression": -0.00200601,
+    "reporting_only": 0.00062828,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C071:c0",
+   "family_id": "C071",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 5.162e-05,
+    "fitted_M2s": 7.114e-05,
+    "fitted_M1a": 0.00079513,
+    "difficulty_regression": -0.00166041,
+    "reporting_only": -3.077e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C072:a0",
+   "family_id": "C072",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00514112,
+    "fitted_M2s": -0.00627717,
+    "fitted_M1a": 0.01591641,
+    "difficulty_regression": -0.00159129,
+    "reporting_only": 0.0034929,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C072:b0",
+   "family_id": "C072",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00499542,
+    "fitted_M2s": 0.00629775,
+    "fitted_M1a": 0.02326511,
+    "difficulty_regression": 0.00172124,
+    "reporting_only": 0.00313199,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C072:c0",
+   "family_id": "C072",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.24e-06,
+    "fitted_M2s": 0.00041446,
+    "fitted_M1a": 0.00221492,
+    "difficulty_regression": 0.00165928,
+    "reporting_only": -2.662e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C073:a0",
+   "family_id": "C073",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00562402,
+    "fitted_M2s": 0.00698985,
+    "fitted_M1a": 0.02480826,
+    "difficulty_regression": 6.909e-05,
+    "reporting_only": 0.00352203,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C073:b0",
+   "family_id": "C073",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00459932,
+    "fitted_M2s": 0.00117105,
+    "fitted_M1a": 0.01857632,
+    "difficulty_regression": -0.00160106,
+    "reporting_only": 0.00299499,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C073:c0",
+   "family_id": "C073",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 7.525e-05,
+    "fitted_M2s": 7.974e-05,
+    "fitted_M1a": 0.01938859,
+    "difficulty_regression": 0.00126504,
+    "reporting_only": -0.00028984,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  },
+  {
+   "pair_id": "C074:a0",
+   "family_id": "C074",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0032166,
+    "fitted_M2s": 0.00397323,
+    "fitted_M1a": 0.01851673,
+    "difficulty_regression": 0.00169612,
+    "reporting_only": 0.00185123,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C074:b0",
+   "family_id": "C074",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00314269,
+    "fitted_M2s": 0.00385333,
+    "fitted_M1a": 0.01003524,
+    "difficulty_regression": 0.00301466,
+    "reporting_only": 0.00218414,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C074:c0",
+   "family_id": "C074",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00015551,
+    "fitted_M2s": 0.00019608,
+    "fitted_M1a": -0.01192326,
+    "difficulty_regression": 0.00295559,
+    "reporting_only": 0.00022785,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00080746
+   }
+  },
+  {
+   "pair_id": "C075:a0",
+   "family_id": "C075",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00182097,
+    "fitted_M2s": 0.00249532,
+    "fitted_M1a": 0.00727628,
+    "difficulty_regression": -0.00163845,
+    "reporting_only": 0.00108864,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C075:b0",
+   "family_id": "C075",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00179684,
+    "fitted_M2s": 0.00238465,
+    "fitted_M1a": 0.00572168,
+    "difficulty_regression": -0.00182769,
+    "reporting_only": 0.00129138,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C075:c0",
+   "family_id": "C075",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00014058,
+    "fitted_M2s": 0.00014396,
+    "fitted_M1a": 0.01045631,
+    "difficulty_regression": -0.00404041,
+    "reporting_only": -0.00017347,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00044859
+   }
+  },
+  {
+   "pair_id": "C076:a0",
+   "family_id": "C076",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00217072,
+    "fitted_M2s": 0.00333229,
+    "fitted_M1a": 0.00735493,
+    "difficulty_regression": 0.00049416,
+    "reporting_only": 0.00135052,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C076:b0",
+   "family_id": "C076",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00168963,
+    "fitted_M2s": 0.00226887,
+    "fitted_M1a": 0.00248041,
+    "difficulty_regression": -0.00164462,
+    "reporting_only": 0.00120997,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00028838
+   }
+  },
+  {
+   "pair_id": "C076:c0",
+   "family_id": "C076",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.35e-05,
+    "fitted_M2s": 0.00024595,
+    "fitted_M1a": -0.00406276,
+    "difficulty_regression": 0.00046224,
+    "reporting_only": 5.392e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00028838
+   }
+  },
+  {
+   "pair_id": "C077:a0",
+   "family_id": "C077",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00686766,
+    "fitted_M2s": 0.00840196,
+    "fitted_M1a": 0.0222985,
+    "difficulty_regression": -0.0035703,
+    "reporting_only": 0.00495031,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C077:b0",
+   "family_id": "C077",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00203688,
+    "fitted_M2s": 0.00252791,
+    "fitted_M1a": 0.00780756,
+    "difficulty_regression": 0.00168757,
+    "reporting_only": 0.00141546,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C077:c0",
+   "family_id": "C077",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.2e-07,
+    "fitted_M2s": -0.00015527,
+    "fitted_M1a": 0.00152903,
+    "difficulty_regression": -2.79e-06,
+    "reporting_only": -0.00014212,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C078:a0",
+   "family_id": "C078",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00441168,
+    "fitted_M2s": 0.00539136,
+    "fitted_M1a": 0.01028633,
+    "difficulty_regression": 0.00285314,
+    "reporting_only": 0.00322406,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C078:b0",
+   "family_id": "C078",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.0030331,
+    "fitted_M2s": 0.00372693,
+    "fitted_M1a": 0.00679892,
+    "difficulty_regression": 0.00170165,
+    "reporting_only": 0.00213344,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C078:c0",
+   "family_id": "C078",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.236e-05,
+    "fitted_M2s": 0.00010731,
+    "fitted_M1a": -0.00831714,
+    "difficulty_regression": 0.00133398,
+    "reporting_only": 9.457e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00057675
+   }
+  },
+  {
+   "pair_id": "C079:a0",
+   "family_id": "C079",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00280403,
+    "fitted_M2s": 0.00371558,
+    "fitted_M1a": 0.01590812,
+    "difficulty_regression": -0.00162857,
+    "reporting_only": 0.00159239,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C079:b0",
+   "family_id": "C079",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00203236,
+    "fitted_M2s": 0.00248571,
+    "fitted_M1a": 0.00050479,
+    "difficulty_regression": 0.002278,
+    "reporting_only": 0.00145276,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00050466
+   }
+  },
+  {
+   "pair_id": "C079:c0",
+   "family_id": "C079",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.69e-06,
+    "fitted_M2s": 0.00024068,
+    "fitted_M1a": -0.01067644,
+    "difficulty_regression": -0.00027186,
+    "reporting_only": 0.00025329,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00050466
+   }
+  },
+  {
+   "pair_id": "C080:a0",
+   "family_id": "C080",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00351118,
+    "fitted_M2s": 0.00440311,
+    "fitted_M1a": 0.01138053,
+    "difficulty_regression": 0.00094001,
+    "reporting_only": 0.00228861,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C080:b0",
+   "family_id": "C080",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00138849,
+    "fitted_M2s": 0.00169175,
+    "fitted_M1a": 0.01116963,
+    "difficulty_regression": -0.00197349,
+    "reporting_only": 0.00063854,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00036703
+   }
+  },
+  {
+   "pair_id": "C080:c0",
+   "family_id": "C080",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00011064,
+    "fitted_M2s": 3.913e-05,
+    "fitted_M1a": 0.00119387,
+    "difficulty_regression": 0.00025706,
+    "reporting_only": -0.00018807,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C081:a0",
+   "family_id": "C081",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.004491,
+    "fitted_M2s": 0.00511091,
+    "fitted_M1a": 0.01629512,
+    "difficulty_regression": -0.0016058,
+    "reporting_only": 0.00275303,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C081:b0",
+   "family_id": "C081",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00391598,
+    "fitted_M2s": 0.00533006,
+    "fitted_M1a": 0.01721948,
+    "difficulty_regression": -0.00327046,
+    "reporting_only": 0.00250557,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C081:c0",
+   "family_id": "C081",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.76e-06,
+    "fitted_M2s": 9.932e-05,
+    "fitted_M1a": -0.02678081,
+    "difficulty_regression": 0.00162009,
+    "reporting_only": 0.00030303,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00100932
+   }
+  },
+  {
+   "pair_id": "C082:a0",
+   "family_id": "C082",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00590936,
+    "fitted_M2s": 0.00724941,
+    "fitted_M1a": 0.01921129,
+    "difficulty_regression": 6.857e-05,
+    "reporting_only": 0.00349589,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C082:b0",
+   "family_id": "C082",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00499019,
+    "fitted_M2s": 0.00605919,
+    "fitted_M1a": 0.01379571,
+    "difficulty_regression": 0.00142191,
+    "reporting_only": 0.00264765,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C082:c0",
+   "family_id": "C082",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 9.02e-06,
+    "fitted_M2s": 0.00019395,
+    "fitted_M1a": -0.01990279,
+    "difficulty_regression": 0.00215864,
+    "reporting_only": 0.00032829,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00134576
+   }
+  },
+  {
+   "pair_id": "C083:a0",
+   "family_id": "C083",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00239294,
+    "fitted_M2s": 0.00219317,
+    "fitted_M1a": 0.01002438,
+    "difficulty_regression": 2.556e-05,
+    "reporting_only": 0.00130298,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C083:b0",
+   "family_id": "C083",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00215816,
+    "fitted_M2s": 0.00264016,
+    "fitted_M1a": 0.00328801,
+    "difficulty_regression": 0.00335205,
+    "reporting_only": 0.00165371,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C083:c0",
+   "family_id": "C083",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.0,
+    "fitted_M2s": -0.0,
+    "fitted_M1a": 0.0,
+    "difficulty_regression": 0.0,
+    "reporting_only": 0.0,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C084:a0",
+   "family_id": "C084",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00423148,
+    "fitted_M2s": 0.00586263,
+    "fitted_M1a": 0.01462767,
+    "difficulty_regression": 0.00127364,
+    "reporting_only": 0.00247648,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C084:b0",
+   "family_id": "C084",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00361659,
+    "fitted_M2s": 0.00532585,
+    "fitted_M1a": -6.884e-05,
+    "difficulty_regression": -0.00282648,
+    "reporting_only": 0.00297658,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C084:c0",
+   "family_id": "C084",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.51e-05,
+    "fitted_M2s": 0.00023842,
+    "fitted_M1a": -0.0049821,
+    "difficulty_regression": 0.00165831,
+    "reporting_only": -7.602e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C085:a0",
+   "family_id": "C085",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0012485,
+    "fitted_M2s": 0.00153968,
+    "fitted_M1a": 0.00232624,
+    "difficulty_regression": 0.00143162,
+    "reporting_only": 0.00096935,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C085:b0",
+   "family_id": "C085",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00121397,
+    "fitted_M2s": 0.00154152,
+    "fitted_M1a": 0.00244497,
+    "difficulty_regression": 0.00132975,
+    "reporting_only": 0.00090453,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C085:c0",
+   "family_id": "C085",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.11e-05,
+    "fitted_M2s": -0.00124479,
+    "fitted_M1a": 0.00037595,
+    "difficulty_regression": 2.1e-07,
+    "reporting_only": 1.088e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C086:a0",
+   "family_id": "C086",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00281127,
+    "fitted_M2s": 0.00380454,
+    "fitted_M1a": 0.00322349,
+    "difficulty_regression": 0.00169687,
+    "reporting_only": 0.00188954,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C086:b0",
+   "family_id": "C086",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00240544,
+    "fitted_M2s": 0.0032666,
+    "fitted_M1a": 0.00597446,
+    "difficulty_regression": -0.00163161,
+    "reporting_only": 0.00143733,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C086:c0",
+   "family_id": "C086",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.96e-05,
+    "fitted_M2s": 7.224e-05,
+    "fitted_M1a": 0.02095653,
+    "difficulty_regression": -0.00136986,
+    "reporting_only": -0.00020049,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00067288
+   }
+  },
+  {
+   "pair_id": "C087:a0",
+   "family_id": "C087",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0028006,
+    "fitted_M2s": 0.0035504,
+    "fitted_M1a": 0.00871917,
+    "difficulty_regression": -0.0018428,
+    "reporting_only": 0.00175238,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C087:b0",
+   "family_id": "C087",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00172958,
+    "fitted_M2s": 0.00217602,
+    "fitted_M1a": -0.00046316,
+    "difficulty_regression": -0.00163428,
+    "reporting_only": 0.00130129,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C087:c0",
+   "family_id": "C087",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.143e-05,
+    "fitted_M2s": 6.115e-05,
+    "fitted_M1a": -0.00139255,
+    "difficulty_regression": 0.001661,
+    "reporting_only": 6.114e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C088:a0",
+   "family_id": "C088",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00231843,
+    "fitted_M2s": 0.00275449,
+    "fitted_M1a": 0.00921346,
+    "difficulty_regression": -0.0018822,
+    "reporting_only": 0.00132693,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C088:b0",
+   "family_id": "C088",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00191638,
+    "fitted_M2s": 0.0023475,
+    "fitted_M1a": 0.00778365,
+    "difficulty_regression": 0.00334161,
+    "reporting_only": 0.00112149,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C088:c0",
+   "family_id": "C088",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.341e-05,
+    "fitted_M2s": 8.413e-05,
+    "fitted_M1a": 0.00313488,
+    "difficulty_regression": 0.00166066,
+    "reporting_only": 4.371e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C089:a0",
+   "family_id": "C089",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00332977,
+    "fitted_M2s": 0.00522661,
+    "fitted_M1a": 0.00696472,
+    "difficulty_regression": -0.00161355,
+    "reporting_only": 0.00235798,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C089:b0",
+   "family_id": "C089",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00240688,
+    "fitted_M2s": -0.00112168,
+    "fitted_M1a": 0.00754623,
+    "difficulty_regression": -0.00163071,
+    "reporting_only": 0.00148336,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C089:c0",
+   "family_id": "C089",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 5.515e-05,
+    "fitted_M2s": 0.00016688,
+    "fitted_M1a": 0.00363504,
+    "difficulty_regression": -2.95e-06,
+    "reporting_only": -0.00015026,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C090:a0",
+   "family_id": "C090",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00503629,
+    "fitted_M2s": 0.00414859,
+    "fitted_M1a": 0.01200593,
+    "difficulty_regression": 6.212e-05,
+    "reporting_only": 0.00316677,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C090:b0",
+   "family_id": "C090",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00410151,
+    "fitted_M2s": 0.00540826,
+    "fitted_M1a": 0.01254223,
+    "difficulty_regression": 0.00171003,
+    "reporting_only": 0.00256053,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C090:c0",
+   "family_id": "C090",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.03e-05,
+    "fitted_M2s": 0.00041782,
+    "fitted_M1a": -0.01649944,
+    "difficulty_regression": 0.00324449,
+    "reporting_only": 0.00021132,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00057675
+   }
+  },
+  {
+   "pair_id": "C091:a0",
+   "family_id": "C091",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00126661,
+    "fitted_M2s": 0.00155661,
+    "fitted_M1a": 0.002446,
+    "difficulty_regression": 1.525e-05,
+    "reporting_only": 0.00077745,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C091:b0",
+   "family_id": "C091",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00094673,
+    "fitted_M2s": 0.00201777,
+    "fitted_M1a": -0.00209597,
+    "difficulty_regression": -0.00163435,
+    "reporting_only": 0.00129779,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C091:c0",
+   "family_id": "C091",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 8.61e-06,
+    "fitted_M2s": -3.657e-05,
+    "fitted_M1a": -0.00032904,
+    "difficulty_regression": 1.1e-07,
+    "reporting_only": 5.67e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C092:a0",
+   "family_id": "C092",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00110059,
+    "fitted_M2s": 0.00135711,
+    "fitted_M1a": 0.00405718,
+    "difficulty_regression": -0.00052301,
+    "reporting_only": 0.00075365,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C092:b0",
+   "family_id": "C092",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00036922,
+    "fitted_M2s": 0.00042993,
+    "fitted_M1a": -0.00059047,
+    "difficulty_regression": 0.00347425,
+    "reporting_only": 0.00040026,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C092:c0",
+   "family_id": "C092",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.408e-05,
+    "fitted_M2s": 0.0023835,
+    "fitted_M1a": 0.00329953,
+    "difficulty_regression": 0.00107869,
+    "reporting_only": 8.589e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00025233
+   }
+  },
+  {
+   "pair_id": "C093:a0",
+   "family_id": "C093",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00473235,
+    "fitted_M2s": 0.00626971,
+    "fitted_M1a": 0.01592976,
+    "difficulty_regression": -0.00034722,
+    "reporting_only": 0.00318765,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C093:b0",
+   "family_id": "C093",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00348329,
+    "fitted_M2s": 0.00461262,
+    "fitted_M1a": 0.01204056,
+    "difficulty_regression": 0.00146126,
+    "reporting_only": 0.00254267,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C093:c0",
+   "family_id": "C093",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.548e-05,
+    "fitted_M2s": 5.239e-05,
+    "fitted_M1a": 0.00062897,
+    "difficulty_regression": -0.00165978,
+    "reporting_only": 1.48e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C094:a0",
+   "family_id": "C094",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00366782,
+    "fitted_M2s": 0.00459256,
+    "fitted_M1a": 0.00304766,
+    "difficulty_regression": -0.00326433,
+    "reporting_only": 0.00281834,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C094:b0",
+   "family_id": "C094",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00244909,
+    "fitted_M2s": 0.00299765,
+    "fitted_M1a": 0.00340717,
+    "difficulty_regression": -0.00162545,
+    "reporting_only": 0.00175163,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C094:c0",
+   "family_id": "C094",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.023e-05,
+    "fitted_M2s": 3.941e-05,
+    "fitted_M1a": -0.00063487,
+    "difficulty_regression": -0.00144291,
+    "reporting_only": -2.418e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C095:a0",
+   "family_id": "C095",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0015138,
+    "fitted_M2s": 0.00178271,
+    "fitted_M1a": 0.00108832,
+    "difficulty_regression": -0.00490875,
+    "reporting_only": 0.00132826,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.0
+   }
+  },
+  {
+   "pair_id": "C095:b0",
+   "family_id": "C095",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00095646,
+    "fitted_M2s": 0.00127101,
+    "fitted_M1a": -0.00262002,
+    "difficulty_regression": 0.00210872,
+    "reporting_only": 0.00094198,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00026915
+   }
+  },
+  {
+   "pair_id": "C095:c0",
+   "family_id": "C095",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 5.232e-05,
+    "fitted_M2s": -0.00058393,
+    "fitted_M1a": -0.00533636,
+    "difficulty_regression": -0.00093526,
+    "reporting_only": 0.00011698,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00026915
+   }
+  },
+  {
+   "pair_id": "C096:a0",
+   "family_id": "C096",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00816219,
+    "fitted_M2s": 0.00999977,
+    "fitted_M1a": 0.03315223,
+    "difficulty_regression": -0.0032074,
+    "reporting_only": 0.00572046,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C096:b0",
+   "family_id": "C096",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00412817,
+    "fitted_M2s": 0.00486973,
+    "fitted_M1a": 0.0231262,
+    "difficulty_regression": -0.00160634,
+    "reporting_only": 0.00272583,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C096:c0",
+   "family_id": "C096",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 7.658e-05,
+    "fitted_M2s": 0.0001884,
+    "fitted_M1a": -0.01491189,
+    "difficulty_regression": 0.00162091,
+    "reporting_only": 0.00034496,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00100932
+   }
+  },
+  {
+   "pair_id": "C097:a0",
+   "family_id": "C097",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00808646,
+    "fitted_M2s": 0.01051259,
+    "fitted_M1a": 0.02068692,
+    "difficulty_regression": -0.00155193,
+    "reporting_only": 0.00549973,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C097:b0",
+   "family_id": "C097",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00530306,
+    "fitted_M2s": 0.00649735,
+    "fitted_M1a": 0.00996495,
+    "difficulty_regression": -0.00202172,
+    "reporting_only": 0.00371303,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C097:c0",
+   "family_id": "C097",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.0,
+    "fitted_M2s": 0.0,
+    "fitted_M1a": -0.0,
+    "difficulty_regression": -0.0,
+    "reporting_only": 0.0,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C098:a0",
+   "family_id": "C098",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00349286,
+    "fitted_M2s": 0.00454122,
+    "fitted_M1a": 0.00690687,
+    "difficulty_regression": -0.00161496,
+    "reporting_only": 0.00228628,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C098:b0",
+   "family_id": "C098",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.0023351,
+    "fitted_M2s": 0.00281046,
+    "fitted_M1a": 0.00705952,
+    "difficulty_regression": -0.00163083,
+    "reporting_only": 0.00147716,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C098:c0",
+   "family_id": "C098",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 7.03e-06,
+    "fitted_M2s": -4.001e-05,
+    "fitted_M1a": 0.01312647,
+    "difficulty_regression": -0.00302946,
+    "reporting_only": -0.00019027,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00067288
+   }
+  },
+  {
+   "pair_id": "C099:a0",
+   "family_id": "C099",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00209119,
+    "fitted_M2s": 0.00573794,
+    "fitted_M1a": 0.00462453,
+    "difficulty_regression": -0.00163045,
+    "reporting_only": 0.00149681,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C099:b0",
+   "family_id": "C099",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00205734,
+    "fitted_M2s": 0.00290257,
+    "fitted_M1a": 0.00794904,
+    "difficulty_regression": -0.00209347,
+    "reporting_only": 0.00137932,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C099:c0",
+   "family_id": "C099",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 8.92e-06,
+    "fitted_M2s": 7.556e-05,
+    "fitted_M1a": -0.00046197,
+    "difficulty_regression": -0.00119672,
+    "reporting_only": -0.00044224,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00040373
+   }
+  },
+  {
+   "pair_id": "C100:a0",
+   "family_id": "C100",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00447452,
+    "fitted_M2s": 0.00564433,
+    "fitted_M1a": 0.01623771,
+    "difficulty_regression": 5.586e-05,
+    "reporting_only": 0.00284773,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C100:b0",
+   "family_id": "C100",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00364381,
+    "fitted_M2s": 0.00465625,
+    "fitted_M1a": 0.00738409,
+    "difficulty_regression": 0.0014213,
+    "reporting_only": 0.00261655,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C100:c0",
+   "family_id": "C100",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.708e-05,
+    "fitted_M2s": 0.00013548,
+    "fitted_M1a": 0.00110476,
+    "difficulty_regression": 1.72e-06,
+    "reporting_only": 8.773e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C101:a0",
+   "family_id": "C101",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00621489,
+    "fitted_M2s": 0.00778472,
+    "fitted_M1a": 0.01608128,
+    "difficulty_regression": 0.00172904,
+    "reporting_only": 0.00352946,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C101:b0",
+   "family_id": "C101",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00566163,
+    "fitted_M2s": 0.00817111,
+    "fitted_M1a": 0.00959571,
+    "difficulty_regression": -0.00201637,
+    "reporting_only": 0.00398563,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C101:c0",
+   "family_id": "C101",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00013785,
+    "fitted_M2s": 8.665e-05,
+    "fitted_M1a": 0.03089394,
+    "difficulty_regression": -0.00205818,
+    "reporting_only": -0.00047352,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  },
+  {
+   "pair_id": "C102:a0",
+   "family_id": "C102",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.01156576,
+    "fitted_M2s": 0.01487946,
+    "fitted_M1a": -0.00034228,
+    "difficulty_regression": -0.00315483,
+    "reporting_only": 0.00840062,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C102:b0",
+   "family_id": "C102",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.01091746,
+    "fitted_M2s": 0.01395401,
+    "fitted_M1a": 0.00223978,
+    "difficulty_regression": -0.00358949,
+    "reporting_only": 0.00840483,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C102:c0",
+   "family_id": "C102",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00043829,
+    "fitted_M2s": 0.00056579,
+    "fitted_M1a": 0.00493399,
+    "difficulty_regression": 0.00165093,
+    "reporting_only": -0.00045249,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C103:a0",
+   "family_id": "C103",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00419735,
+    "fitted_M2s": 0.00532176,
+    "fitted_M1a": 0.01293217,
+    "difficulty_regression": 5.462e-05,
+    "reporting_only": 0.00278457,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C103:b0",
+   "family_id": "C103",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00371772,
+    "fitted_M2s": 0.00458521,
+    "fitted_M1a": 0.01193514,
+    "difficulty_regression": 0.00170743,
+    "reporting_only": 0.002428,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C103:c0",
+   "family_id": "C103",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.471e-05,
+    "fitted_M2s": 0.00017338,
+    "fitted_M1a": 0.00316116,
+    "difficulty_regression": -5.8e-07,
+    "reporting_only": -2.947e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C104:a0",
+   "family_id": "C104",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00245145,
+    "fitted_M2s": 0.00243437,
+    "fitted_M1a": 0.00565287,
+    "difficulty_regression": 0.00121373,
+    "reporting_only": 0.00162947,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C104:b0",
+   "family_id": "C104",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.0008518,
+    "fitted_M2s": 0.00093133,
+    "fitted_M1a": 0.00424158,
+    "difficulty_regression": -0.00193992,
+    "reporting_only": 0.00049529,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C104:c0",
+   "family_id": "C104",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00013421,
+    "fitted_M2s": 0.00017793,
+    "fitted_M1a": 0.00221165,
+    "difficulty_regression": 2.61e-06,
+    "reporting_only": 0.00013331,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C105:a0",
+   "family_id": "C105",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00322476,
+    "fitted_M2s": 0.00420926,
+    "fitted_M1a": 0.01303345,
+    "difficulty_regression": 0.00170411,
+    "reporting_only": 0.00225845,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C105:b0",
+   "family_id": "C105",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00287198,
+    "fitted_M2s": 0.00359926,
+    "fitted_M1a": 0.0161745,
+    "difficulty_regression": -0.00162863,
+    "reporting_only": 0.00158915,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C105:c0",
+   "family_id": "C105",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 7.61e-06,
+    "fitted_M2s": 8.372e-05,
+    "fitted_M1a": -0.00424896,
+    "difficulty_regression": 2.12e-06,
+    "reporting_only": 0.00010829,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C106:a0",
+   "family_id": "C106",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00238314,
+    "fitted_M2s": 0.00293557,
+    "fitted_M1a": 0.00882662,
+    "difficulty_regression": 0.00168652,
+    "reporting_only": 0.00136183,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C106:b0",
+   "family_id": "C106",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00304551,
+    "fitted_M2s": 0.00390634,
+    "fitted_M1a": 0.01178717,
+    "difficulty_regression": -0.00220984,
+    "reporting_only": 0.00202251,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00050466
+   }
+  },
+  {
+   "pair_id": "C106:c0",
+   "family_id": "C106",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.292e-05,
+    "fitted_M2s": 0.00020082,
+    "fitted_M1a": -0.00179194,
+    "difficulty_regression": 2.31e-06,
+    "reporting_only": 0.00011765,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C107:a0",
+   "family_id": "C107",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00249718,
+    "fitted_M2s": 0.00385298,
+    "fitted_M1a": 0.00502418,
+    "difficulty_regression": 0.00364995,
+    "reporting_only": 0.0018967,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C107:b0",
+   "family_id": "C107",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00242315,
+    "fitted_M2s": 0.00296331,
+    "fitted_M1a": 0.00172546,
+    "difficulty_regression": 0.0018225,
+    "reporting_only": 0.00189738,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C107:c0",
+   "family_id": "C107",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.236e-05,
+    "fitted_M2s": 0.00010659,
+    "fitted_M1a": -0.00554589,
+    "difficulty_regression": 0.00071946,
+    "reporting_only": 0.00010503,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00044859
+   }
+  },
+  {
+   "pair_id": "C108:a0",
+   "family_id": "C108",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00365753,
+    "fitted_M2s": 0.00450283,
+    "fitted_M1a": 0.01351716,
+    "difficulty_regression": 0.00123016,
+    "reporting_only": 0.00246722,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C108:b0",
+   "family_id": "C108",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00330745,
+    "fitted_M2s": 0.00405831,
+    "fitted_M1a": 0.01339085,
+    "difficulty_regression": 0.00336393,
+    "reporting_only": 0.00225923,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C108:c0",
+   "family_id": "C108",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.345e-05,
+    "fitted_M2s": 5.081e-05,
+    "fitted_M1a": -0.01460195,
+    "difficulty_regression": 0.00137037,
+    "reporting_only": 0.00022681,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00067288
+   }
+  },
+  {
+   "pair_id": "C109:a0",
+   "family_id": "C109",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00187329,
+    "fitted_M2s": 0.00232937,
+    "fitted_M1a": 0.00190028,
+    "difficulty_regression": -0.00030306,
+    "reporting_only": 0.00173471,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C109:b0",
+   "family_id": "C109",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00144278,
+    "fitted_M2s": 0.00193868,
+    "fitted_M1a": 0.00017896,
+    "difficulty_regression": 0.00168696,
+    "reporting_only": 0.00138422,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C109:c0",
+   "family_id": "C109",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.382e-05,
+    "fitted_M2s": 3.464e-05,
+    "fitted_M1a": 0.0,
+    "difficulty_regression": 1.09e-06,
+    "reporting_only": 5.571e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C110:a0",
+   "family_id": "C110",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0018113,
+    "fitted_M2s": 0.00196174,
+    "fitted_M1a": 0.00387885,
+    "difficulty_regression": 0.00269957,
+    "reporting_only": 0.00137688,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C110:b0",
+   "family_id": "C110",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00151154,
+    "fitted_M2s": 0.00158069,
+    "fitted_M1a": 0.00392106,
+    "difficulty_regression": 0.00145806,
+    "reporting_only": 0.00096278,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C110:c0",
+   "family_id": "C110",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.089e-05,
+    "fitted_M2s": -0.00028476,
+    "fitted_M1a": 0.00618405,
+    "difficulty_regression": 0.00089276,
+    "reporting_only": -0.00014549,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00031056
+   }
+  },
+  {
+   "pair_id": "C111:a0",
+   "family_id": "C111",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.01187906,
+    "fitted_M2s": 0.01469118,
+    "fitted_M1a": 0.02379966,
+    "difficulty_regression": -0.00315471,
+    "reporting_only": 0.00840658,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C111:b0",
+   "family_id": "C111",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00998233,
+    "fitted_M2s": 0.01258705,
+    "fitted_M1a": 0.03370626,
+    "difficulty_regression": 0.00178428,
+    "reporting_only": 0.00634563,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C111:c0",
+   "family_id": "C111",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.371e-05,
+    "fitted_M2s": 3.427e-05,
+    "fitted_M1a": 0.00815917,
+    "difficulty_regression": 0.00165651,
+    "reporting_only": -0.00016792,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C112:a0",
+   "family_id": "C112",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00308623,
+    "fitted_M2s": 0.00341586,
+    "fitted_M1a": 0.00784896,
+    "difficulty_regression": 0.00272688,
+    "reporting_only": 0.0021355,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C112:b0",
+   "family_id": "C112",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00265802,
+    "fitted_M2s": 0.00328416,
+    "fitted_M1a": 0.00747084,
+    "difficulty_regression": 0.00158368,
+    "reporting_only": 0.00187649,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C112:c0",
+   "family_id": "C112",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.007e-05,
+    "fitted_M2s": 9.55e-05,
+    "fitted_M1a": 0.00416745,
+    "difficulty_regression": -0.00064205,
+    "reporting_only": 0.00018375,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00040373
+   }
+  },
+  {
+   "pair_id": "C113:a0",
+   "family_id": "C113",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.003304,
+    "fitted_M2s": 0.00410368,
+    "fitted_M1a": 0.01587165,
+    "difficulty_regression": -0.00161702,
+    "reporting_only": 0.00218103,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C113:b0",
+   "family_id": "C113",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00266054,
+    "fitted_M2s": 0.00363645,
+    "fitted_M1a": 0.01668001,
+    "difficulty_regression": -0.00162675,
+    "reporting_only": 0.00168508,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C113:c0",
+   "family_id": "C113",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 2.9e-07,
+    "fitted_M2s": 6.366e-05,
+    "fitted_M1a": -0.02315499,
+    "difficulty_regression": -4.169e-05,
+    "reporting_only": 0.00020251,
+    "uniform_gain": 0.0,
+    "ideal_noise": -0.00100932
+   }
+  },
+  {
+   "pair_id": "C114:a0",
+   "family_id": "C114",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.0075054,
+    "fitted_M2s": 0.00925443,
+    "fitted_M1a": 0.00699053,
+    "difficulty_regression": -0.00320834,
+    "reporting_only": 0.00567249,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C114:b0",
+   "family_id": "C114",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00563698,
+    "fitted_M2s": 0.00702661,
+    "fitted_M1a": 0.01019971,
+    "difficulty_regression": -0.00187871,
+    "reporting_only": 0.00361585,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C114:c0",
+   "family_id": "C114",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.31e-06,
+    "fitted_M2s": 4.114e-05,
+    "fitted_M1a": -0.0044981,
+    "difficulty_regression": 0.00166659,
+    "reporting_only": 0.0003459,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C115:a0",
+   "family_id": "C115",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00830886,
+    "fitted_M2s": 0.01010489,
+    "fitted_M1a": 0.02296657,
+    "difficulty_regression": -0.00154472,
+    "reporting_only": 0.00586693,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C115:b0",
+   "family_id": "C115",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00589778,
+    "fitted_M2s": 0.00655722,
+    "fitted_M1a": 0.01631722,
+    "difficulty_regression": 0.00295521,
+    "reporting_only": 0.00358581,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C115:c0",
+   "family_id": "C115",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 6.536e-05,
+    "fitted_M2s": 7.062e-05,
+    "fitted_M1a": 0.00265995,
+    "difficulty_regression": 1.3e-07,
+    "reporting_only": 6.78e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C116:a0",
+   "family_id": "C116",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00832387,
+    "fitted_M2s": 0.0096461,
+    "fitted_M1a": 0.00781615,
+    "difficulty_regression": -0.00024146,
+    "reporting_only": 0.00542099,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C116:b0",
+   "family_id": "C116",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00730933,
+    "fitted_M2s": 0.0090857,
+    "fitted_M1a": 0.00481181,
+    "difficulty_regression": 0.00141161,
+    "reporting_only": 0.00507762,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C116:c0",
+   "family_id": "C116",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 1.894e-05,
+    "fitted_M2s": -2.679e-05,
+    "fitted_M1a": 0.00100831,
+    "difficulty_regression": 8.3e-07,
+    "reporting_only": 4.207e-05,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C117:a0",
+   "family_id": "C117",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00469343,
+    "fitted_M2s": 0.00617988,
+    "fitted_M1a": 0.00406929,
+    "difficulty_regression": 0.00025494,
+    "reporting_only": 0.00340187,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C117:b0",
+   "family_id": "C117",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00299157,
+    "fitted_M2s": 0.00378172,
+    "fitted_M1a": 0.00424593,
+    "difficulty_regression": 0.00170175,
+    "reporting_only": 0.00213841,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C117:c0",
+   "family_id": "C117",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 0.00019069,
+    "fitted_M2s": 0.00027244,
+    "fitted_M1a": -0.00010649,
+    "difficulty_regression": 2.72e-06,
+    "reporting_only": 0.00013872,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C118:a0",
+   "family_id": "C118",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00761657,
+    "fitted_M2s": 0.0093205,
+    "fitted_M1a": 0.0218175,
+    "difficulty_regression": -0.0032124,
+    "reporting_only": 0.00546596,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C118:b0",
+   "family_id": "C118",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00727978,
+    "fitted_M2s": 0.00888914,
+    "fitted_M1a": 0.02036355,
+    "difficulty_regression": -0.0032167,
+    "reporting_only": 0.0052465,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C118:c0",
+   "family_id": "C118",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 4.33e-06,
+    "fitted_M2s": 6.11e-06,
+    "fitted_M1a": 2.155e-05,
+    "difficulty_regression": 7e-08,
+    "reporting_only": 3.37e-06,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C119:a0",
+   "family_id": "C119",
+   "stratum": "a_matched_vstar",
+   "gamma_hat": {
+    "support_map": 0.00730659,
+    "fitted_M2s": 0.00894286,
+    "fitted_M1a": 0.0218483,
+    "difficulty_regression": -0.0032133,
+    "reporting_only": 0.00541973,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C119:b0",
+   "family_id": "C119",
+   "stratum": "b_similar_eig_diff_burden",
+   "gamma_hat": {
+    "support_map": 0.00335584,
+    "fitted_M2s": 0.00282,
+    "fitted_M1a": 0.02161619,
+    "difficulty_regression": 0.00334369,
+    "reporting_only": 0.00122732,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.0
+   }
+  },
+  {
+   "pair_id": "C119:c0",
+   "family_id": "C119",
+   "stratum": "c_predicted_zero",
+   "gamma_hat": {
+    "support_map": 3.677e-05,
+    "fitted_M2s": -0.0014504,
+    "fitted_M1a": 0.02726093,
+    "difficulty_regression": -0.00163284,
+    "reporting_only": -0.00095297,
+    "uniform_gain": 0.0,
+    "ideal_noise": 0.00100932
+   }
+  }
+ ]
+}

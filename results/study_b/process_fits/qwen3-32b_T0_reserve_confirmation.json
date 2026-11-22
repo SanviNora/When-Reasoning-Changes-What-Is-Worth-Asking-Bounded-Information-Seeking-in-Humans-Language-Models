@@ -1,0 +1,192 @@
+{
+  "model": "qwen3-32b",
+  "condition": "T0",
+  "split": "reserve",
+  "families": 40,
+  "items": 649,
+  "format": {
+    "answered": 649,
+    "unparsed": 15
+  },
+  "parameters_from": "qwen3-32b_T0.json",
+  "parameters_sha256": "01f1ca5fcddac14c2c198992f4d1d3b421ce9d5b0e06d9dc384a95b7505b1332",
+  "heldout_loglik": {
+    "M0": -4461.67,
+    "M1": -4271.97,
+    "M2c": -4271.97,
+    "M2s": -4270.88,
+    "M3": -4461.68,
+    "M1a": -4137.91
+  },
+  "best_planned": "M2s",
+  "M1a_minus_planned": {
+    "M0": {
+      "difference": 323.75,
+      "ci95": [
+        227.34,
+        418.24
+      ],
+      "families_favoring_M1a": 36
+    },
+    "M1": {
+      "difference": 134.06,
+      "ci95": [
+        81.04,
+        191.2
+      ],
+      "families_favoring_M1a": 31
+    },
+    "M2c": {
+      "difference": 134.06,
+      "ci95": [
+        81.05,
+        191.2
+      ],
+      "families_favoring_M1a": 31
+    },
+    "M2s": {
+      "difference": 132.97,
+      "ci95": [
+        80.19,
+        188.66
+      ],
+      "families_favoring_M1a": 32
+    },
+    "M3": {
+      "difference": 323.76,
+      "ci95": [
+        227.35,
+        418.24
+      ],
+      "families_favoring_M1a": 36
+    }
+  },
+  "bootstrap": {
+    "resamples": 2000,
+    "unit": "family",
+    "seed": 20261118
+  },
+  "confirmed": true,
+  "error_rates": {
+    "classify:far": {
+      "n": 632,
+      "observed": 0.127,
+      "M0": 0.256,
+      "M1": 0.099,
+      "M2c": 0.099,
+      "M2s": 0.099,
+      "M3": 0.256,
+      "M1a": 0.118
+    },
+    "classify:near": {
+      "n": 887,
+      "observed": 0.24,
+      "M0": 0.256,
+      "M1": 0.2,
+      "M2c": 0.2,
+      "M2s": 0.198,
+      "M3": 0.256,
+      "M1a": 0.149
+    },
+    "classify:possible": {
+      "n": 813,
+      "observed": 0.526,
+      "M0": 0.256,
+      "M1": 0.407,
+      "M2c": 0.407,
+      "M2s": 0.404,
+      "M3": 0.256,
+      "M1a": 0.496
+    },
+    "classify_single:near": {
+      "n": 2064,
+      "observed": 0.105,
+      "M0": 0.256,
+      "M1": 0.243,
+      "M2c": 0.243,
+      "M2s": 0.24,
+      "M3": 0.256,
+      "M1a": 0.164
+    },
+    "classify_single:possible": {
+      "n": 2064,
+      "observed": 0.339,
+      "M0": 0.256,
+      "M1": 0.243,
+      "M2c": 0.243,
+      "M2s": 0.244,
+      "M3": 0.256,
+      "M1a": 0.327
+    }
+  },
+  "M3_corrected_check": {
+    "note": "not part of the pre-stated test (frozen parameters); M3 refitted with the corrected likelihood (`refit_m3`), compared with M1a on the same reserve families",
+    "heldout_loglik_M3_corrected": -4442.5,
+    "M1a_minus_M3_corrected": {
+      "difference": 304.59,
+      "ci95": [
+        195.42,
+        412.41
+      ],
+      "families_favoring_M1a": 35
+    }
+  },
+  "robustness_multi_clue_unrelated": {
+    "note": "not part of the pre-stated test: reserve families sharing no sub-history of >= 2 clues with a family of any other split, multi-clue replies only (single clues recur across splits)",
+    "families_excluded_as_related": [
+      "F212",
+      "F217",
+      "F223",
+      "F227",
+      "F242"
+    ],
+    "families": 35,
+    "items": 266,
+    "single_clue_probes": {
+      "distinct_single_clues": 27,
+      "also_probed_alone_in_reference_splits": 26
+    },
+    "M1a_minus_planned": {
+      "M0": {
+        "difference": 155.87,
+        "ci95": [
+          89.73,
+          219.24
+        ],
+        "families_favoring_first": 27
+      },
+      "M1": {
+        "difference": 0.62,
+        "ci95": [
+          -21.03,
+          24.37
+        ],
+        "families_favoring_first": 18
+      },
+      "M2c": {
+        "difference": 0.61,
+        "ci95": [
+          -21.08,
+          24.35
+        ],
+        "families_favoring_first": 18
+      },
+      "M2s": {
+        "difference": 2.02,
+        "ci95": [
+          -19.4,
+          25.38
+        ],
+        "families_favoring_first": 19
+      },
+      "M3": {
+        "difference": 155.9,
+        "ci95": [
+          89.75,
+          219.27
+        ],
+        "families_favoring_first": 27
+      }
+    }
+  }
+}

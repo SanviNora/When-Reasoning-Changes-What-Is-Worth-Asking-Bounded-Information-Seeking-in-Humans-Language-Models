@@ -1,0 +1,38 @@
+{
+  "procedure": "converged",
+  "participants": 39,
+  "mean_dAIC_static_minus_split": 13.6,
+  "median_dAIC_static_minus_split": 3.6,
+  "participants_favoring_split": 29,
+  "sign_test_p": 0.0034,
+  "wilcoxon_late_minus_early": {
+    "eps": {
+      "median_diff": -0.0188,
+      "p": 0.019
+    },
+    "alpha": {
+      "median_diff": 0.0007,
+      "p": 0.4105
+    },
+    "lam": {
+      "median_diff": 0.1254,
+      "p": 0.4852
+    },
+    "tau": {
+      "median_diff": 0.0,
+      "p": 0.3042
+    }
+  },
+  "median_params_early": {
+    "eps": 0.4407,
+    "alpha": 0.4681,
+    "lam": 1.0723,
+    "tau": 0.001
+  },
+  "median_params_late": {
+    "eps": 0.4229,
+    "alpha": 0.1836,
+    "lam": 1.3719,
+    "tau": 0.001
+  }
+}

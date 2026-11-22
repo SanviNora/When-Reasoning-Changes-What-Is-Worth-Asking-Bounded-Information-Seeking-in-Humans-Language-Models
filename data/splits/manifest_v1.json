@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "seed": 20261117,
+  "families": 252,
+  "candidates_drawn": 671,
+  "splits": {
+    "development": 24,
+    "processing_calibration": 60,
+    "choice_calibration": 24,
+    "support_calibration": 24,
+    "confirmation": 80,
+    "reserve": 40
+  },
+  "K_range": [
+    4,
+    16
+  ],
+  "clues": [
+    2,
+    3
+  ],
+  "excluded_e1_equivalents": 66,
+  "sha256": "5eb3438c3ca680f2a3d93c7657a60ab9fb70986d16ac1721938f34f69a8bf15e",
+  "K_by_split": {
+    "development": 8.0,
+    "processing_calibration": 7.02,
+    "choice_calibration": 6.67,
+    "support_calibration": 7.75,
+    "confirmation": 7.9,
+    "reserve": 6.88
+  }
+}

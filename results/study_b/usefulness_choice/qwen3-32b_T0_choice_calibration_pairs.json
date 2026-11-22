@@ -1,0 +1,914 @@
+[
+ {
+  "pair_id": "F084:P0",
+  "family_id": "F084",
+  "split": "choice_calibration",
+  "q_simple": "1122",
+  "q_complex": "2132",
+  "eig": [
+   1.2244,
+   1.3516
+  ],
+  "vstar": [
+   0.3333,
+   0.3333
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F084:P1",
+  "family_id": "F084",
+  "split": "choice_calibration",
+  "q_simple": "2122",
+  "q_complex": "4241",
+  "eig": [
+   1.3516,
+   1.8911
+  ],
+  "vstar": [
+   0.3333,
+   0.4444
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F085:P0",
+  "family_id": "F085",
+  "split": "choice_calibration",
+  "q_simple": "1211",
+  "q_complex": "1214",
+  "eig": [
+   1.5219,
+   1.9219
+  ],
+  "vstar": [
+   0.6,
+   0.8
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F085:P1",
+  "family_id": "F085",
+  "split": "choice_calibration",
+  "q_simple": "2332",
+  "q_complex": "1143",
+  "eig": [
+   1.371,
+   1.9219
+  ],
+  "vstar": [
+   0.6,
+   0.8
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F086:P0",
+  "family_id": "F086",
+  "split": "choice_calibration",
+  "q_simple": "2424",
+  "q_complex": "1241",
+  "eig": [
+   1.5219,
+   1.9219
+  ],
+  "vstar": [
+   0.6,
+   0.8
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F086:P1",
+  "family_id": "F086",
+  "split": "choice_calibration",
+  "q_simple": "3333",
+  "q_complex": "2321",
+  "eig": [
+   0.7219,
+   1.371
+  ],
+  "vstar": [
+   0.4,
+   0.6
+  ],
+  "distinct_digits": [
+   1,
+   3
+  ]
+ },
+ {
+  "pair_id": "F087:P0",
+  "family_id": "F087",
+  "split": "choice_calibration",
+  "q_simple": "1111",
+  "q_complex": "3341",
+  "eig": [
+   0.971,
+   1.371
+  ],
+  "vstar": [
+   0.4,
+   0.6
+  ],
+  "distinct_digits": [
+   1,
+   3
+  ]
+ },
+ {
+  "pair_id": "F087:P1",
+  "family_id": "F087",
+  "split": "choice_calibration",
+  "q_simple": "4441",
+  "q_complex": "3211",
+  "eig": [
+   1.9219,
+   2.3219
+  ],
+  "vstar": [
+   0.8,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F088:P0",
+  "family_id": "F088",
+  "split": "choice_calibration",
+  "q_simple": "4222",
+  "q_complex": "1142",
+  "eig": [
+   2.2516,
+   2.4183
+  ],
+  "vstar": [
+   0.5,
+   0.5
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F088:P1",
+  "family_id": "F088",
+  "split": "choice_calibration",
+  "q_simple": "4414",
+  "q_complex": "1314",
+  "eig": [
+   2.1887,
+   2.585
+  ],
+  "vstar": [
+   0.4167,
+   0.5833
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F089:P0",
+  "family_id": "F089",
+  "split": "choice_calibration",
+  "q_simple": "4442",
+  "q_complex": "1132",
+  "eig": [
+   1.5,
+   2.0
+  ],
+  "vstar": [
+   0.75,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F089:P1",
+  "family_id": "F089",
+  "split": "choice_calibration",
+  "q_simple": "4343",
+  "q_complex": "3242",
+  "eig": [
+   1.5,
+   2.0
+  ],
+  "vstar": [
+   0.75,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F090:P0",
+  "family_id": "F090",
+  "split": "choice_calibration",
+  "q_simple": "4144",
+  "q_complex": "4112",
+  "eig": [
+   1.5,
+   2.0
+  ],
+  "vstar": [
+   0.75,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F090:P1",
+  "family_id": "F090",
+  "split": "choice_calibration",
+  "q_simple": "2121",
+  "q_complex": "2412",
+  "eig": [
+   1.0,
+   2.0
+  ],
+  "vstar": [
+   0.5,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F091:P0",
+  "family_id": "F091",
+  "split": "choice_calibration",
+  "q_simple": "4414",
+  "q_complex": "2433",
+  "eig": [
+   1.5,
+   2.0
+  ],
+  "vstar": [
+   0.75,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F091:P1",
+  "family_id": "F091",
+  "split": "choice_calibration",
+  "q_simple": "2332",
+  "q_complex": "3321",
+  "eig": [
+   1.5,
+   2.0
+  ],
+  "vstar": [
+   0.75,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F092:P0",
+  "family_id": "F092",
+  "split": "choice_calibration",
+  "q_simple": "2111",
+  "q_complex": "2113",
+  "eig": [
+   1.2516,
+   1.4591
+  ],
+  "vstar": [
+   0.5,
+   0.5
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F092:P1",
+  "family_id": "F092",
+  "split": "choice_calibration",
+  "q_simple": "3433",
+  "q_complex": "1443",
+  "eig": [
+   0.9183,
+   1.7925
+  ],
+  "vstar": [
+   0.3333,
+   0.6667
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F093:P0",
+  "family_id": "F093",
+  "split": "choice_calibration",
+  "q_simple": "2442",
+  "q_complex": "4342",
+  "eig": [
+   1.4591,
+   1.585
+  ],
+  "vstar": [
+   0.5,
+   0.5
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F093:P1",
+  "family_id": "F093",
+  "split": "choice_calibration",
+  "q_simple": "3233",
+  "q_complex": "2214",
+  "eig": [
+   0.9183,
+   1.4591
+  ],
+  "vstar": [
+   0.3333,
+   0.5
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F094:P0",
+  "family_id": "F094",
+  "split": "choice_calibration",
+  "q_simple": "4422",
+  "q_complex": "4211",
+  "eig": [
+   0.8631,
+   1.6645
+  ],
+  "vstar": [
+   0.2857,
+   0.5714
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F094:P1",
+  "family_id": "F094",
+  "split": "choice_calibration",
+  "q_simple": "3343",
+  "q_complex": "4134",
+  "eig": [
+   2.1281,
+   2.1281
+  ],
+  "vstar": [
+   0.7143,
+   0.7143
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F095:P0",
+  "family_id": "F095",
+  "split": "choice_calibration",
+  "q_simple": "1331",
+  "q_complex": "3324",
+  "eig": [
+   2.2246,
+   2.5306
+  ],
+  "vstar": [
+   0.375,
+   0.4375
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F095:P1",
+  "family_id": "F095",
+  "split": "choice_calibration",
+  "q_simple": "3333",
+  "q_complex": "3134",
+  "eig": [
+   0.9544,
+   1.2718
+  ],
+  "vstar": [
+   0.125,
+   0.1875
+  ],
+  "distinct_digits": [
+   1,
+   3
+  ]
+ },
+ {
+  "pair_id": "F096:P0",
+  "family_id": "F096",
+  "split": "choice_calibration",
+  "q_simple": "3444",
+  "q_complex": "4142",
+  "eig": [
+   1.0,
+   2.585
+  ],
+  "vstar": [
+   0.3333,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F096:P1",
+  "family_id": "F096",
+  "split": "choice_calibration",
+  "q_simple": "2422",
+  "q_complex": "1244",
+  "eig": [
+   1.9183,
+   1.9183
+  ],
+  "vstar": [
+   0.6667,
+   0.6667
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F097:P0",
+  "family_id": "F097",
+  "split": "choice_calibration",
+  "q_simple": "2233",
+  "q_complex": "3342",
+  "eig": [
+   0.8113,
+   1.0
+  ],
+  "vstar": [
+   0.5,
+   0.5
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F097:P1",
+  "family_id": "F097",
+  "split": "choice_calibration",
+  "q_simple": "1133",
+  "q_complex": "3441",
+  "eig": [
+   0.8113,
+   1.0
+  ],
+  "vstar": [
+   0.5,
+   0.5
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F098:P0",
+  "family_id": "F098",
+  "split": "choice_calibration",
+  "q_simple": "1113",
+  "q_complex": "3413",
+  "eig": [
+   0.9957,
+   2.6235
+  ],
+  "vstar": [
+   0.1538,
+   0.5385
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F098:P1",
+  "family_id": "F098",
+  "split": "choice_calibration",
+  "q_simple": "1114",
+  "q_complex": "4143",
+  "eig": [
+   1.3143,
+   2.4493
+  ],
+  "vstar": [
+   0.2308,
+   0.4615
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F099:P0",
+  "family_id": "F099",
+  "split": "choice_calibration",
+  "q_simple": "4333",
+  "q_complex": "4113",
+  "eig": [
+   1.5219,
+   1.9219
+  ],
+  "vstar": [
+   0.6,
+   0.8
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F099:P1",
+  "family_id": "F099",
+  "split": "choice_calibration",
+  "q_simple": "1222",
+  "q_complex": "1231",
+  "eig": [
+   0.7219,
+   1.5219
+  ],
+  "vstar": [
+   0.4,
+   0.6
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F100:P0",
+  "family_id": "F100",
+  "split": "choice_calibration",
+  "q_simple": "3322",
+  "q_complex": "4232",
+  "eig": [
+   1.7925,
+   2.2516
+  ],
+  "vstar": [
+   0.6667,
+   0.8333
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F100:P1",
+  "family_id": "F100",
+  "split": "choice_calibration",
+  "q_simple": "3334",
+  "q_complex": "2434",
+  "eig": [
+   1.0,
+   2.2516
+  ],
+  "vstar": [
+   0.3333,
+   0.8333
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F101:P0",
+  "family_id": "F101",
+  "split": "choice_calibration",
+  "q_simple": "2112",
+  "q_complex": "1433",
+  "eig": [
+   1.4591,
+   2.2516
+  ],
+  "vstar": [
+   0.5,
+   0.8333
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F101:P1",
+  "family_id": "F101",
+  "split": "choice_calibration",
+  "q_simple": "3444",
+  "q_complex": "3112",
+  "eig": [
+   1.9183,
+   2.2516
+  ],
+  "vstar": [
+   0.6667,
+   0.8333
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F102:P0",
+  "family_id": "F102",
+  "split": "choice_calibration",
+  "q_simple": "2233",
+  "q_complex": "4322",
+  "eig": [
+   1.5219,
+   1.9219
+  ],
+  "vstar": [
+   0.6,
+   0.8
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F102:P1",
+  "family_id": "F102",
+  "split": "choice_calibration",
+  "q_simple": "4333",
+  "q_complex": "4324",
+  "eig": [
+   0.971,
+   2.3219
+  ],
+  "vstar": [
+   0.4,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F103:P0",
+  "family_id": "F103",
+  "split": "choice_calibration",
+  "q_simple": "2422",
+  "q_complex": "3321",
+  "eig": [
+   1.5,
+   2.0
+  ],
+  "vstar": [
+   0.75,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F103:P1",
+  "family_id": "F103",
+  "split": "choice_calibration",
+  "q_simple": "4144",
+  "q_complex": "1132",
+  "eig": [
+   0.8113,
+   1.5
+  ],
+  "vstar": [
+   0.5,
+   0.75
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F104:P0",
+  "family_id": "F104",
+  "split": "choice_calibration",
+  "q_simple": "2222",
+  "q_complex": "1434",
+  "eig": [
+   1.5,
+   2.1556
+  ],
+  "vstar": [
+   0.375,
+   0.625
+  ],
+  "distinct_digits": [
+   1,
+   3
+  ]
+ },
+ {
+  "pair_id": "F104:P1",
+  "family_id": "F104",
+  "split": "choice_calibration",
+  "q_simple": "1112",
+  "q_complex": "1422",
+  "eig": [
+   1.5,
+   2.4056
+  ],
+  "vstar": [
+   0.375,
+   0.75
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F105:P0",
+  "family_id": "F105",
+  "split": "choice_calibration",
+  "q_simple": "4424",
+  "q_complex": "2324",
+  "eig": [
+   1.0,
+   1.5
+  ],
+  "vstar": [
+   0.5,
+   0.75
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F105:P1",
+  "family_id": "F105",
+  "split": "choice_calibration",
+  "q_simple": "1131",
+  "q_complex": "4113",
+  "eig": [
+   1.0,
+   2.0
+  ],
+  "vstar": [
+   0.5,
+   1.0
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F106:P0",
+  "family_id": "F106",
+  "split": "choice_calibration",
+  "q_simple": "2122",
+  "q_complex": "2141",
+  "eig": [
+   1.4056,
+   2.1556
+  ],
+  "vstar": [
+   0.375,
+   0.625
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F106:P1",
+  "family_id": "F106",
+  "split": "choice_calibration",
+  "q_simple": "3111",
+  "q_complex": "2311",
+  "eig": [
+   2.5,
+   2.75
+  ],
+  "vstar": [
+   0.75,
+   0.875
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F107:P0",
+  "family_id": "F107",
+  "split": "choice_calibration",
+  "q_simple": "2112",
+  "q_complex": "4212",
+  "eig": [
+   1.8113,
+   2.75
+  ],
+  "vstar": [
+   0.5,
+   0.875
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ },
+ {
+  "pair_id": "F107:P1",
+  "family_id": "F107",
+  "split": "choice_calibration",
+  "q_simple": "2442",
+  "q_complex": "4212",
+  "eig": [
+   2.0,
+   2.75
+  ],
+  "vstar": [
+   0.625,
+   0.875
+  ],
+  "distinct_digits": [
+   2,
+   3
+  ]
+ }
+]

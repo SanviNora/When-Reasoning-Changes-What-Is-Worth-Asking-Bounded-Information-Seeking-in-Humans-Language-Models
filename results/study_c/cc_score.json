@@ -1,0 +1,267 @@
+{
+  "pairs_locked": 360,
+  "pairs_scored": 360,
+  "missing_pairs": [],
+  "families": 120,
+  "observed_gamma": {
+    "mean": 0.0015072991244866243,
+    "sd": 0.07207356249697244,
+    "noise_sd": 0.05798099714952155
+  },
+  "primary_vs_rivals": {
+    "difficulty_regression": {
+      "mspe_rival_minus_model": -5.942759756774739e-05,
+      "ci95": [
+        -0.0001708934890358854,
+        4.148356164070422e-05
+      ],
+      "p_one_sided": 0.8713,
+      "families_favoring_model": 52,
+      "p_holm": 1.0
+    },
+    "reporting_only": {
+      "mspe_rival_minus_model": -1.551522257581368e-05,
+      "ci95": [
+        -4.251215105942357e-05,
+        1.0410079611837581e-05
+      ],
+      "p_one_sided": 0.8776,
+      "families_favoring_model": 53,
+      "p_holm": 1.0
+    },
+    "uniform_gain": {
+      "mspe_rival_minus_model": -4.292617956534995e-05,
+      "ci95": [
+        -0.00012902833695430292,
+        3.687714658135249e-05
+      ],
+      "p_one_sided": 0.8473,
+      "families_favoring_model": 55,
+      "p_holm": 1.0
+    },
+    "ideal_noise": {
+      "mspe_rival_minus_model": -4.227680559741788e-05,
+      "ci95": [
+        -0.00012935324712525623,
+        3.8245397142186295e-05
+      ],
+      "p_one_sided": 0.8412,
+      "families_favoring_model": 55,
+      "p_holm": 1.0
+    }
+  },
+  "secondary_vs_rivals": {
+    "fitted_M2s": {
+      "difficulty_regression": {
+        "mspe_rival_minus_model": -8.223166631350331e-05,
+        "ci95": [
+          -0.0002141044037159704,
+          3.796973081353498e-05
+        ],
+        "p_one_sided": 0.905,
+        "families_favoring_model": 53,
+        "p_holm": 1.0
+      },
+      "reporting_only": {
+        "mspe_rival_minus_model": -3.83192913215696e-05,
+        "ci95": [
+          -8.7608611364264e-05,
+          7.683373727668613e-06
+        ],
+        "p_one_sided": 0.9429,
+        "families_favoring_model": 49,
+        "p_holm": 1.0
+      },
+      "uniform_gain": {
+        "mspe_rival_minus_model": -6.573024831110587e-05,
+        "ci95": [
+          -0.00017410246189676406,
+          3.4315746200755855e-05
+        ],
+        "p_one_sided": 0.8963,
+        "families_favoring_model": 55,
+        "p_holm": 1.0
+      },
+      "ideal_noise": {
+        "mspe_rival_minus_model": -6.508087434317377e-05,
+        "ci95": [
+          -0.00017361960647395024,
+          3.559446647194655e-05
+        ],
+        "p_one_sided": 0.8922,
+        "families_favoring_model": 55,
+        "p_holm": 1.0
+      }
+    },
+    "fitted_M1a": {
+      "difficulty_regression": {
+        "mspe_rival_minus_model": -0.00022537721644780523,
+        "ci95": [
+          -0.00048131528340524215,
+          1.7459101857859878e-05
+        ],
+        "p_one_sided": 0.9654,
+        "families_favoring_model": 52,
+        "p_holm": 1.0
+      },
+      "reporting_only": {
+        "mspe_rival_minus_model": -0.00018146484145587158,
+        "ci95": [
+          -0.00038515158193555283,
+          1.4526787820845359e-05
+        ],
+        "p_one_sided": 0.9664,
+        "families_favoring_model": 49,
+        "p_holm": 1.0
+      },
+      "uniform_gain": {
+        "mspe_rival_minus_model": -0.00020887579844540785,
+        "ci95": [
+          -0.0004465290037534113,
+          1.7521375395235595e-05
+        ],
+        "p_one_sided": 0.9645,
+        "families_favoring_model": 50,
+        "p_holm": 1.0
+      },
+      "ideal_noise": {
+        "mspe_rival_minus_model": -0.00020822642447747576,
+        "ci95": [
+          -0.0004435839062791003,
+          1.6901609094823786e-05
+        ],
+        "p_one_sided": 0.9652,
+        "families_favoring_model": 50,
+        "p_holm": 1.0
+      }
+    }
+  },
+  "by_predictor": {
+    "support_map": {
+      "mspe": 0.00523979654122102,
+      "mspe_noise_corrected": 0.0018780005107681941,
+      "bias": 0.001121769653291154,
+      "calibration_slope": -2.8626972948529343,
+      "calibration_slope_ci95": [
+        -7.14660163689766,
+        1.5170258534169214
+      ],
+      "sign_accuracy_large_effects": 0.5408163265306123
+    },
+    "fitted_M2s": {
+      "mspe": 0.005262600609966776,
+      "mspe_noise_corrected": 0.0019008045795139501,
+      "bias": 0.0017334477921800429,
+      "calibration_slope": -2.33917361081609,
+      "calibration_slope_ci95": [
+        -5.706901355411376,
+        0.85528723609208
+      ],
+      "sign_accuracy_large_effects": 0.5102040816326531
+    },
+    "fitted_M1a": {
+      "mspe": 0.0054057461601010786,
+      "mspe_noise_corrected": 0.0020439501296482527,
+      "bias": 0.005291917597735597,
+      "calibration_slope": -0.3685851534724939,
+      "calibration_slope_ci95": [
+        -1.2318438443169215,
+        0.4652516923307172
+      ],
+      "sign_accuracy_large_effects": 0.45918367346938777
+    },
+    "difficulty_regression": {
+      "mspe": 0.005180368943653273,
+      "mspe_noise_corrected": 0.0018185729132004472,
+      "bias": -0.0016459104578199577,
+      "calibration_slope": 3.0569590452965114,
+      "calibration_slope_ci95": [
+        -1.2486392193496492,
+        7.71019108991089
+      ],
+      "sign_accuracy_large_effects": 0.5408163265306123
+    },
+    "reporting_only": {
+      "mspe": 0.0052242813186452065,
+      "mspe_noise_corrected": 0.0018624852881923806,
+      "bias": 0.00025178681995782,
+      "calibration_slope": -4.393489017850306,
+      "calibration_slope_ci95": [
+        -10.681748530613243,
+        2.1588377737622193
+      ],
+      "sign_accuracy_large_effects": 0.4897959183673469
+    },
+    "uniform_gain": {
+      "mspe": 0.00519687036165567,
+      "mspe_noise_corrected": 0.0018350743312028441,
+      "bias": -0.0015072991244866243,
+      "calibration_slope": null,
+      "calibration_slope_ci95": null,
+      "sign_accuracy_large_effects": null
+    },
+    "ideal_noise": {
+      "mspe": 0.005197519735623603,
+      "mspe_noise_corrected": 0.0018357237051707773,
+      "bias": -0.0015298118744866245,
+      "calibration_slope": -2.3610102035003746,
+      "calibration_slope_ci95": [
+        -23.30455444202906,
+        19.21943878663436
+      ],
+      "sign_accuracy_large_effects": 0.07142857142857142
+    }
+  },
+  "reversal_rate": {
+    "observed": 0.18611111111111114,
+    "ci95": [
+      0.14444444444444443,
+      0.23055555555555554
+    ]
+  },
+  "by_stratum": {
+    "a_matched_vstar": {
+      "pairs": 120,
+      "mean_observed_gamma": -0.0038723703958078986,
+      "mspe": {
+        "support_map": 0.006186015438385229,
+        "fitted_M2s": 0.006233601064770643,
+        "fitted_M1a": 0.006409832863472554,
+        "difficulty_regression": 0.0061433365383546275,
+        "reporting_only": 0.00615730757572394,
+        "uniform_gain": 0.0061183046682587085,
+        "ideal_noise": 0.0061183046682587085
+      }
+    },
+    "b_similar_eig_diff_burden": {
+      "pairs": 120,
+      "mean_observed_gamma": -0.00229718921125171,
+      "mspe": {
+        "support_map": 0.005201444908374869,
+        "fitted_M2s": 0.005219783062961059,
+        "fitted_M1a": 0.005410274589829665,
+        "difficulty_regression": 0.005072573204284545,
+        "reporting_only": 0.005180837064343621,
+        "uniform_gain": 0.005137145908378643,
+        "ideal_noise": 0.0051370620879828775
+      }
+    },
+    "c_predicted_zero": {
+      "pairs": 120,
+      "mean_observed_gamma": 0.01069145698051948,
+      "mspe": {
+        "support_map": 0.004331929276902963,
+        "fitted_M2s": 0.004334417702168625,
+        "fitted_M1a": 0.004397131027001015,
+        "difficulty_regression": 0.0043251970883206444,
+        "reporting_only": 0.004334699315868057,
+        "uniform_gain": 0.004335160508329659,
+        "ideal_noise": 0.004337192450629221
+      }
+    }
+  },
+  "choices": {
+    "T0": 2880,
+    "T3": 2880
+  }
+}

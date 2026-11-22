@@ -1,0 +1,16 @@
+{
+  "model": "claude-haiku-5-5",
+  "calls": 100,
+  "format_compliance": 0.98,
+  "format_by_task": {
+    "classify": 1.0,
+    "identify": 0.95,
+    "guess": 1.0
+  },
+  "classify_balanced_accuracy": 0.963,
+  "identify_accuracy": 0.9,
+  "identify_chance": 0.03,
+  "guess_consistent_rate": 0.65,
+  "median_completion_tokens": 1282.5,
+  "passes_floor": true
+}

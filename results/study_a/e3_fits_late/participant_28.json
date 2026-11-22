@@ -1,0 +1,21 @@
+{
+ "participant": 28,
+ "uniqueid": "debughoJzp:debugpgG8c",
+ "games": 4,
+ "decisions": 26,
+ "fits": {
+  "bounded": {
+   "model": "bounded",
+   "params": {
+    "eps": 0.048604357927698155,
+    "alpha": 2.218742012415555,
+    "lam": 25.168372644586366,
+    "tau": 0.864770848956623
+   },
+   "loglik": -126.15399061613961,
+   "k": 4,
+   "aic": 260.3079812322792,
+   "evals": 1104
+  }
+ }
+}

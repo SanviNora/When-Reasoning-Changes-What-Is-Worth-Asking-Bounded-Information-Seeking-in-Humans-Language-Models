@@ -1,0 +1,214 @@
+{
+  "qwen3-32b": {
+    "hf_id": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "role": "depth model + panel",
+    "family": "Qwen (Alibaba)",
+    "params_b": 32,
+    "vllm_args": "--max-model-len 16384 --reasoning-parser qwen3",
+    "gpus": 1,
+    "decoding": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 6144
+    },
+    "thinking_off": {
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    },
+    "thinking_on": {
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      }
+    },
+    "serving": {
+      "engine": "vLLM 0.31.0 (OpenAI-compatible server)",
+      "dtype": "bfloat16",
+      "seed": 0,
+      "chat_template": "the model's own template from the pinned revision",
+      "source": "vLLM and Slurm logs of the cluster jobs (not in the repository)",
+      "quantization": "none",
+      "hardware": "1x NVIDIA H200; two jobs on 2x NVIDIA L40S (tensor parallel 2), same weights and dtype",
+      "runs": "screening, B1 (T0 and the T3 aid arm), the probe battery and the native-choice runs, Nov 17-19, 2026"
+    }
+  },
+  "gpt-oss-120b": {
+    "hf_id": "openai/gpt-oss-120b",
+    "revision": "b5c939de8f754692c1647ca79fbf85e8c1e70f8a",
+    "role": "panel (largest)",
+    "family": "gpt-oss (OpenAI open-weight)",
+    "params_b": 117,
+    "vllm_args": "--max-model-len 16384",
+    "gpus": 1,
+    "decoding": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 8192
+    },
+    "thinking_off": {
+      "reasoning_effort": "low"
+    },
+    "thinking_on": {
+      "reasoning_effort": "high"
+    },
+    "serving": {
+      "engine": "vLLM 0.31.0 (OpenAI-compatible server)",
+      "dtype": "bfloat16",
+      "seed": 0,
+      "chat_template": "the model's own template from the pinned revision",
+      "source": "vLLM and Slurm logs of the cluster jobs (not in the repository)",
+      "quantization": "MXFP4 (the format the weights are released in)",
+      "hardware": "1x NVIDIA H200; one job on 2x NVIDIA L40S (tensor parallel 2)",
+      "runs": "screening and B1, Nov 17, 2026"
+    }
+  },
+  "mistral-small-24b": {
+    "hf_id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+    "revision": "95a6d26c4bfb886c58daf9d3f7332c857cb27b43",
+    "role": "panel candidate (not admitted)",
+    "family": "Mistral",
+    "params_b": 24,
+    "vllm_args": "--max-model-len 16384 --tokenizer-mode mistral --config-format mistral --load-format mistral",
+    "gpus": 1,
+    "decoding": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 6144
+    },
+    "serving": {
+      "engine": "vLLM 0.31.0 (OpenAI-compatible server)",
+      "dtype": "bfloat16",
+      "seed": 0,
+      "chat_template": "the model's own template from the pinned revision",
+      "source": "vLLM and Slurm logs of the cluster jobs (not in the repository)",
+      "quantization": "none",
+      "hardware": "1x NVIDIA H200",
+      "runs": "screening only, Nov 17, 2026 (failed the floor rule)"
+    }
+  },
+  "olmo2-32b": {
+    "hf_id": "allenai/OLMo-2-0325-32B-Instruct",
+    "revision": "b96024342a77a69aa0dda815c3454a671f477463",
+    "role": "panel",
+    "family": "OLMo (AI2, fully open)",
+    "params_b": 32,
+    "vllm_args": "--max-model-len 4096",
+    "gpus": 1,
+    "decoding": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 2048
+    },
+    "serving": {
+      "engine": "vLLM 0.31.0 (OpenAI-compatible server)",
+      "dtype": "bfloat16",
+      "seed": 0,
+      "chat_template": "the model's own template from the pinned revision",
+      "source": "vLLM and Slurm logs of the cluster jobs (not in the repository)",
+      "quantization": "none",
+      "hardware": "1x NVIDIA H200; one job on 2x NVIDIA L40S (tensor parallel 2)",
+      "runs": "screening and B1, Nov 17, 2026"
+    }
+  },
+  "phi-4": {
+    "hf_id": "microsoft/phi-4",
+    "revision": "2db69c1c3e91a05d2c64a3185acfbaf36f744e25",
+    "role": "panel (smallest)",
+    "family": "Phi (Microsoft)",
+    "params_b": 14,
+    "vllm_args": "--max-model-len 16384",
+    "gpus": 1,
+    "decoding": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 6144
+    },
+    "serving": {
+      "engine": "vLLM 0.31.0 (OpenAI-compatible server)",
+      "dtype": "bfloat16",
+      "seed": 0,
+      "chat_template": "the model's own template from the pinned revision",
+      "source": "vLLM and Slurm logs of the cluster jobs (not in the repository)",
+      "quantization": "none",
+      "hardware": "1x NVIDIA H200 or 1x NVIDIA L40S",
+      "runs": "screening and B1, Nov 17, 2026"
+    }
+  },
+  "claude-opus-5-5": {
+    "provider": "anthropic",
+    "revision": "api",
+    "family": "Claude (Anthropic, closed)",
+    "note": "API model: no weight revision; the served model id is recorded per call (usage.served_model). Sampling parameters are not accepted by the API, so decoding is the provider default. Opus 5.5 cannot switch thinking off (400 at every effort): T0-T3 use adaptive thinking at effort low, T4 effort high. It is treated as a reasoning model, like gpt-oss-120b.",
+    "hf_id": "claude-opus-5-5",
+    "role": "panel (frontier, closed)",
+    "decoding": {
+      "max_tokens": 8192
+    },
+    "thinking_off": {
+      "thinking": {
+        "type": "adaptive",
+        "display": "summarized"
+      },
+      "output_config": {
+        "effort": "low"
+      }
+    },
+    "thinking_on": {
+      "thinking": {
+        "type": "adaptive",
+        "display": "summarized"
+      },
+      "output_config": {
+        "effort": "high"
+      }
+    },
+    "price_per_mtok": {
+      "input": 4.0,
+      "output": 20.0
+    },
+    "spend_cap_usd": 100,
+    "serving": {
+      "engine": "Anthropic Messages API",
+      "served_model": "claude-opus-5-5",
+      "runs": "screening and B1, Nov 18, 2026"
+    }
+  },
+  "claude-haiku-5-5": {
+    "provider": "anthropic",
+    "revision": "api",
+    "family": "Claude (Anthropic, closed)",
+    "note": "API model: no weight revision; the served model id is recorded per call (usage.served_model). Sampling parameters are not accepted by the API, so decoding is the provider default. Thinking off for T0-T3 (as Qwen3-32B), adaptive thinking at effort high for T4.",
+    "hf_id": "claude-haiku-5-5",
+    "role": "panel (small, closed)",
+    "decoding": {
+      "max_tokens": 8192
+    },
+    "thinking_off": {
+      "thinking": {
+        "type": "disabled"
+      },
+      "output_config": {
+        "effort": "low"
+      }
+    },
+    "thinking_on": {
+      "thinking": {
+        "type": "adaptive"
+      },
+      "output_config": {
+        "effort": "high"
+      }
+    },
+    "price_per_mtok": {
+      "input": 0.1,
+      "output": 0.5
+    },
+    "spend_cap_usd": 10,
+    "serving": {
+      "engine": "Anthropic Messages API",
+      "served_model": "claude-haiku-5-5",
+      "runs": "screening and B1, Nov 18, 2026"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+ "model": "claude-haiku-5-5",
+ "condition": "T0",
+ "unit": "boot_059",
+ "games_played": 100,
+ "games": 100,
+ "decisions": 437,
+ "fits": {
+  "unbounded": {
+   "model": "unbounded",
+   "params": {
+    "lam": 4.6344774274274165,
+    "tau": 0.6101374193431109
+   },
+   "loglik": -1837.130160904305,
+   "k": 2,
+   "aic": 3678.26032180861,
+   "evals": 903
+  },
+  "leaky": {
+   "model": "leaky",
+   "params": {
+    "eps": 0.0020164058680799475,
+    "lam": 3.7476054951218924,
+    "tau": 0.49516630452675187
+   },
+   "loglik": -1838.8441842116044,
+   "k": 3,
+   "aic": 3683.688368423209,
+   "evals": 1903
+  },
+  "bounded": {
+   "model": "bounded",
+   "params": {
+    "eps": 0.002131692800149314,
+    "alpha": 0.0001,
+    "lam": 3.883901459653198,
+    "tau": 0.508176185969348
+   },
+   "loglik": -1843.190878730261,
+   "k": 4,
+   "aic": 3694.381757460522,
+   "evals": 3000
+  }
+ },
+ "procedure": "greedy"
+}

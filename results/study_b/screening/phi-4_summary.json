@@ -1,0 +1,16 @@
+{
+  "model": "phi-4",
+  "calls": 100,
+  "format_compliance": 1.0,
+  "format_by_task": {
+    "classify": 1.0,
+    "identify": 1.0,
+    "guess": 1.0
+  },
+  "classify_balanced_accuracy": 0.605,
+  "identify_accuracy": 0.075,
+  "identify_chance": 0.03,
+  "guess_consistent_rate": 0.55,
+  "median_completion_tokens": 661.5,
+  "passes_floor": true
+}

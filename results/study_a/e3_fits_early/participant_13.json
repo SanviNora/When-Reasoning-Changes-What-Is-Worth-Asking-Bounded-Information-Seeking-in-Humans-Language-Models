@@ -1,0 +1,21 @@
+{
+ "participant": 13,
+ "uniqueid": "debugCUsuC:debug5UCKk",
+ "games": 4,
+ "decisions": 18,
+ "fits": {
+  "bounded": {
+   "model": "bounded",
+   "params": {
+    "eps": 0.3398656041068075,
+    "alpha": 0.871428386953382,
+    "lam": 1.2210410880630664,
+    "tau": 0.0031755289141703344
+   },
+   "loglik": -72.73704336061178,
+   "k": 4,
+   "aic": 153.47408672122356,
+   "evals": 2004
+  }
+ }
+}

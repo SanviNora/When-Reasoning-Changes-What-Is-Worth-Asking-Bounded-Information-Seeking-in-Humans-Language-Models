@@ -1,0 +1,57 @@
+{
+  "participants_cleaned": 39,
+  "games": 390,
+  "solve_rate": 0.864,
+  "human_guesses_solved_games": {
+    "mean": 7.72,
+    "sd": 3.16
+  },
+  "paper_reports": {
+    "solve_rate": 0.86,
+    "human_guesses": 7.5,
+    "max_eig": 3.6,
+    "random": 4.8
+  },
+  "ideal_max_eig_all_256_secrets": {
+    "mean": 3.56,
+    "max": 4
+  },
+  "random_query_1000_games": {
+    "mean": 4.81,
+    "sd": 1.26,
+    "max": 12,
+    "note": "mean matches the paper (4.8); the spread does not (paper SD 1.0, max 7). Drawing without repeats gives 4.74 / 1.11 / 10 and drawing only possible codes gives 3.78 / 0.78 / 6, so no simple rule matches all three; reported as a minor discrepancy in a benchmark only."
+  },
+  "query_structure": {
+    "human_consistent_guess_rate": 0.312,
+    "distinct_colors_per_guess_human": {
+      "1": 0.184,
+      "2": 0.213,
+      "3": 0.421,
+      "4": 0.183
+    },
+    "distinct_colors_per_guess_ideal": {
+      "1": 0.004,
+      "2": 0.254,
+      "3": 0.659,
+      "4": 0.082
+    },
+    "distinct_colors_first_guess_human": {
+      "1": 0.454,
+      "2": 0.108,
+      "3": 0.121,
+      "4": 0.318
+    }
+  },
+  "human_bits_per_guess_mean": 1.611,
+  "entropy_curve_human_mean": [
+    8.0,
+    5.509,
+    3.389,
+    1.843,
+    1.162,
+    0.566,
+    0.27,
+    0.121
+  ]
+}

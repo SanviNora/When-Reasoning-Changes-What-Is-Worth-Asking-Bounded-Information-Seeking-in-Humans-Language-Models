@@ -1,0 +1,187 @@
+{
+ "model": "gpt-oss-120b",
+ "condition": "T0",
+ "unit": "boot_062",
+ "games_played": 100,
+ "games": 98,
+ "decisions": 488,
+ "fits": {
+  "unbounded": {
+   "model": "unbounded",
+   "procedure": "converged",
+   "params": {
+    "lam": 20.413118654030523,
+    "tau": 3.1331768976363086
+   },
+   "loglik": -2230.34477450722,
+   "k": 2,
+   "aic": 4464.68954901444,
+   "evals": 749,
+   "at_limit": [],
+   "limits": {
+    "lam": [
+     0.001,
+     1000.0
+    ],
+    "tau": [
+     0.001,
+     100.0
+    ]
+   },
+   "greedy_search_loglik": -2234.5024745774704,
+   "starts": [
+    {
+     "start": "greedy_search",
+     "loglik": -2230.34477451226,
+     "runs": 2
+    },
+    {
+     "start": "default",
+     "loglik": -2230.344774514804,
+     "runs": 2
+    },
+    {
+     "start": "default",
+     "loglik": -2230.3447745149942,
+     "runs": 2
+    },
+    {
+     "start": "default",
+     "loglik": -2230.34477450722,
+     "runs": 2
+    },
+    {
+     "start": "extra",
+     "loglik": -2230.344774508229,
+     "runs": 2
+    }
+   ]
+  },
+  "leaky": {
+   "model": "leaky",
+   "procedure": "converged",
+   "params": {
+    "eps": 0.49989536210494895,
+    "lam": 999.9596681048408,
+    "tau": 0.001000043900679052
+   },
+   "loglik": -2165.836325092839,
+   "k": 3,
+   "aic": 4337.672650185678,
+   "evals": 1580,
+   "at_limit": [
+    "eps",
+    "lam",
+    "tau"
+   ],
+   "limits": {
+    "eps": [
+     1e-06,
+     0.5
+    ],
+    "lam": [
+     0.001,
+     1000.0
+    ],
+    "tau": [
+     0.001,
+     100.0
+    ]
+   },
+   "greedy_search_loglik": -2242.8690515835992,
+   "starts": [
+    {
+     "start": "greedy_search",
+     "loglik": -2230.3444961882433,
+     "runs": 2
+    },
+    {
+     "start": "nested",
+     "loglik": -2230.3444961882433,
+     "runs": 1
+    },
+    {
+     "start": "ridge",
+     "loglik": -2165.836342944749,
+     "runs": 2
+    },
+    {
+     "start": "extra",
+     "loglik": -2165.836325092839,
+     "runs": 2
+    }
+   ]
+  },
+  "bounded": {
+   "model": "bounded",
+   "procedure": "converged",
+   "params": {
+    "eps": 0.4998930401195574,
+    "alpha": 0.02465446724666325,
+    "lam": 999.9999999999998,
+    "tau": 0.0010000425769070445
+   },
+   "loglik": -2160.693859777518,
+   "k": 4,
+   "aic": 4329.387719555036,
+   "evals": 3474,
+   "at_limit": [
+    "eps",
+    "lam",
+    "tau"
+   ],
+   "limits": {
+    "eps": [
+     1e-06,
+     0.5
+    ],
+    "alpha": [
+     0.0001,
+     100.0
+    ],
+    "lam": [
+     0.001,
+     1000.0
+    ],
+    "tau": [
+     0.001,
+     100.0
+    ]
+   },
+   "greedy_search_loglik": -2233.225318956999,
+   "starts": [
+    {
+     "start": "greedy_search",
+     "loglik": -2226.704091693548,
+     "runs": 2
+    },
+    {
+     "start": "nested",
+     "loglik": -2165.9935498029085,
+     "runs": 1
+    },
+    {
+     "start": "nested",
+     "loglik": -2160.69386969354,
+     "runs": 2
+    },
+    {
+     "start": "nested",
+     "loglik": -2160.693859777518,
+     "runs": 3
+    },
+    {
+     "start": "ridge",
+     "loglik": -2337.063976889726,
+     "runs": 2
+    },
+    {
+     "start": "extra",
+     "loglik": -2160.694400277013,
+     "runs": 2
+    }
+   ]
+  }
+ },
+ "procedure": "converged"
+}

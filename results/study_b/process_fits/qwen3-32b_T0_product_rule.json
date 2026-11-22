@@ -1,0 +1,109 @@
+{
+  "model": "qwen3-32b",
+  "condition": "T0",
+  "rules": [
+    "product",
+    "min",
+    "kth_root"
+  ],
+  "fits": {
+    "M1:product": {
+      "params": {
+        "nu": 0.4241970775040693,
+        "zeta": 0.10701502235224593
+      },
+      "loglik": -6413.2979952626065,
+      "aic": 12830.595990525213,
+      "heldout_loglik": -8927.596650101817
+    },
+    "M1:min": {
+      "params": {
+        "nu": 0.03938564679677452,
+        "zeta": 0.47750853590062914
+      },
+      "loglik": -6673.617008454543,
+      "aic": 13351.234016909086,
+      "heldout_loglik": -9313.955128771382
+    },
+    "M1:kth_root": {
+      "params": {
+        "nu": 0.0065151391286937185,
+        "zeta": 0.4861012169261682
+      },
+      "loglik": -6649.641175983703,
+      "aic": 13303.282351967406,
+      "heldout_loglik": -9286.557339298126
+    },
+    "M2s:product": {
+      "params": {
+        "alpha": 0.00010103940183709342,
+        "nu": 0.4155748650238582,
+        "zeta": 0.11072796139243382
+      },
+      "loglik": -6404.224800165081,
+      "aic": 12814.449600330163,
+      "heldout_loglik": -8923.119409976312
+    },
+    "M2s:min": {
+      "params": {
+        "alpha": 0.008421660040410244,
+        "nu": 0.0386640182062905,
+        "zeta": 0.4662949206951272
+      },
+      "loglik": -6655.349558345152,
+      "aic": 13316.699116690304,
+      "heldout_loglik": -9311.947788006413
+    },
+    "M2s:kth_root": {
+      "params": {
+        "alpha": 0.0038186499432065683,
+        "nu": 0.006600694167231119,
+        "zeta": 0.4789686262122179
+      },
+      "loglik": -6633.999645162308,
+      "aic": 13273.999290324617,
+      "heldout_loglik": -9275.528414567456
+    }
+  },
+  "false_exclusion_by_clue_count": {
+    "1": {
+      "n": 7142,
+      "observed": 0.323,
+      "M1:product": 0.243,
+      "M1:min": 0.249,
+      "M1:kth_root": 0.245,
+      "M2s:product": 0.244,
+      "M2s:min": 0.254,
+      "M2s:kth_root": 0.246
+    },
+    "2": {
+      "n": 2701,
+      "observed": 0.576,
+      "M1:product": 0.392,
+      "M1:min": 0.249,
+      "M1:kth_root": 0.245,
+      "M2s:product": 0.392,
+      "M2s:min": 0.262,
+      "M2s:kth_root": 0.246
+    },
+    "3": {
+      "n": 357,
+      "observed": 0.51,
+      "M1:product": 0.51,
+      "M1:min": 0.249,
+      "M1:kth_root": 0.245,
+      "M2s:product": 0.51,
+      "M2s:min": 0.285,
+      "M2s:kth_root": 0.247
+    }
+  },
+  "M1_best_rule": {
+    "aic": "product",
+    "heldout": "product"
+  },
+  "M2s_best_rule": {
+    "aic": "product",
+    "heldout": "product"
+  },
+  "product_rule_holds": true
+}

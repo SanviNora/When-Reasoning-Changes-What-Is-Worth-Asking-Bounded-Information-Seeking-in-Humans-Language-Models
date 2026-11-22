@@ -1,0 +1,16 @@
+{
+  "model": "gpt-oss-120b",
+  "calls": 100,
+  "format_compliance": 0.96,
+  "format_by_task": {
+    "classify": 1.0,
+    "identify": 0.9,
+    "guess": 1.0
+  },
+  "classify_balanced_accuracy": 1.0,
+  "identify_accuracy": 0.825,
+  "identify_chance": 0.03,
+  "guess_consistent_rate": 0.75,
+  "median_completion_tokens": 1606.5,
+  "passes_floor": true
+}

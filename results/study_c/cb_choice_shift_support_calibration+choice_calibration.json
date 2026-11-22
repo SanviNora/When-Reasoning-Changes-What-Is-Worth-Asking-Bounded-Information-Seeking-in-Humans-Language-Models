@@ -1,0 +1,33 @@
+{
+  "model": "qwen3-32b",
+  "cap": 6144,
+  "splits": [
+    "support_calibration",
+    "choice_calibration"
+  ],
+  "pairs": 96,
+  "families": 48,
+  "choices_parsed": {
+    "T0": 745,
+    "T3": 729
+  },
+  "mean_p_choose_q1": {
+    "T0": 0.30939980158730157,
+    "T3": 0.35761408730158734
+  },
+  "mean_choice_shift_logit": 0.22175987691094567,
+  "primary_measured_gamma": {
+    "slope": 0.06171548745465234,
+    "ci95": [
+      -3.080788941718922,
+      3.4886042477175208
+    ],
+    "p_one_sided": 0.4813,
+    "spearman": -0.03762886597938144
+  },
+  "gamma_reliability": {
+    "split_half_r": 0.11131142660332126,
+    "spearman_brown": 0.2003244526037857,
+    "slope_corrected_for_reliability": 0.30807765428775247
+  }
+}

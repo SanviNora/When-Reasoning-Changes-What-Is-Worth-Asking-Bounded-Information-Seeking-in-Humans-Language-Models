@@ -1,0 +1,67 @@
+{
+ "model": "gpt-oss-120b",
+ "condition": "T0",
+ "unit": "pooled",
+ "games_played": 100,
+ "games": 98,
+ "decisions": 455,
+ "fits": {
+  "bounded": {
+   "model": "bounded",
+   "procedure": "converged",
+   "params": {
+    "eps": 0.4998837805443831,
+    "alpha": 0.022345017359496868,
+    "lam": 999.980313581635,
+    "tau": 0.0010000539822088415
+   },
+   "loglik": -2009.6015787255046,
+   "k": 4,
+   "aic": 4027.2031574510092,
+   "evals": 2252,
+   "at_limit": [
+    "eps",
+    "lam",
+    "tau"
+   ],
+   "limits": {
+    "eps": [
+     1e-06,
+     0.5
+    ],
+    "alpha": [
+     0.0001,
+     100.0
+    ],
+    "lam": [
+     0.001,
+     1000.0
+    ],
+    "tau": [
+     0.001,
+     100.0
+    ]
+   },
+   "greedy_search_loglik": -2076.8170514053177,
+   "starts": [
+    {
+     "start": "greedy_search",
+     "loglik": -2053.9978222914237,
+     "runs": 2
+    },
+    {
+     "start": "ridge",
+     "loglik": -2009.6015787255046,
+     "runs": 3
+    },
+    {
+     "start": "extra",
+     "loglik": -2009.601586409603,
+     "runs": 2
+    }
+   ]
+  }
+ },
+ "cache_rep": 2,
+ "procedure": "converged"
+}

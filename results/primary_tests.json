@@ -1,0 +1,110 @@
+{
+  "alpha": 0.05,
+  "method": "Holm step-down across the course's primary tests (B1 per eligible model, B3, H4)",
+  "family": [
+    {
+      "test": "B1 claude-haiku-5-5",
+      "claim": "slower after Max-EIG than after Simple histories (the human signature)",
+      "estimate": -0.556,
+      "ci95": [
+        -0.9,
+        -0.21
+      ],
+      "p": 0.0018053822548224,
+      "sided": "two",
+      "source": "results/study_b/b1_summary.json (mixed_model)",
+      "p_holm": 0.0072215290192896,
+      "rejected": true
+    },
+    {
+      "test": "B1 claude-opus-5-5",
+      "claim": "slower after Max-EIG than after Simple histories (the human signature)",
+      "estimate": -0.785,
+      "ci95": [
+        -1.07,
+        -0.5
+      ],
+      "p": 4.830493812816575e-08,
+      "sided": "two",
+      "source": "results/study_b/b1_summary.json (mixed_model)",
+      "p_holm": 2.4152469064082873e-07,
+      "rejected": true
+    },
+    {
+      "test": "B1 gpt-oss-120b",
+      "claim": "slower after Max-EIG than after Simple histories (the human signature)",
+      "estimate": 0.225,
+      "ci95": [
+        -0.24,
+        0.69
+      ],
+      "p": 0.34508536993312466,
+      "sided": "two",
+      "source": "results/study_b/b1_summary.json (mixed_model)",
+      "p_holm": 0.6901707398662493,
+      "rejected": false
+    },
+    {
+      "test": "B3",
+      "claim": "the best planned structured account (M2s) beats both unstructured rivals (M0, M1) in held-out log likelihood",
+      "estimate": 4.48,
+      "ci95": [
+        -1.23,
+        10.91
+      ],
+      "p": 0.0715,
+      "sided": "one",
+      "comparisons": {
+        "M0": {
+          "difference": 428.63,
+          "ci95": [
+            332.84,
+            514.58
+          ],
+          "p_one_sided": 0.0
+        },
+        "M1": {
+          "difference": 4.48,
+          "ci95": [
+            -1.23,
+            10.91
+          ],
+          "p_one_sided": 0.0715
+        }
+      },
+      "binding_rival": "M1",
+      "source": "results/study_b/process_fits/qwen3-32b_T0_intervals.json (recomputed resamples)",
+      "p_holm": 0.21449999999999997,
+      "rejected": false
+    },
+    {
+      "test": "H4",
+      "claim": "the choice shift rises with the measured change in usefulness (slope > 0)",
+      "estimate": -0.631,
+      "ci95": [
+        -2.5,
+        1.317
+      ],
+      "p": 0.7457,
+      "sided": "one",
+      "source": "results/study_c/cb_choice_shift_c_confirmation.json",
+      "p_holm": 0.7457,
+      "rejected": false
+    }
+  ],
+  "outside_family": [
+    {
+      "test": "H3",
+      "claim": "support_map has lower family-level MSPE of Gamma than every rival",
+      "p_holm_by_rival": {
+        "difficulty_regression": 1.0,
+        "reporting_only": 1.0,
+        "uniform_gain": 1.0,
+        "ideal_noise": 1.0
+      },
+      "supported": false,
+      "note": "not in the family: preregistered with its own Holm correction across the four rivals",
+      "source": "results/study_c/cc_score.json"
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "T0": {
+    "multi_clue": {
+      "possible": 0.569,
+      "near": 0.245,
+      "far": 0.134
+    },
+    "single_clue": {
+      "possible": 0.323,
+      "near": 0.125,
+      "far": null
+    },
+    "balanced_accuracy": {
+      "multi_clue": {
+        "sensitivity": 0.431,
+        "specificity": 0.8,
+        "balanced_accuracy": 0.616
+      },
+      "single_clue": {
+        "sensitivity": 0.677,
+        "specificity": 0.875,
+        "balanced_accuracy": 0.776
+      }
+    },
+    "replies_by_split": {
+      "development": {
+        "replies": 412,
+        "parsed": 404,
+        "unparsed_by_task": {
+          "identify": 8
+        },
+        "judgments_asked": 4040,
+        "judgments_answered": 4040
+      },
+      "processing_calibration": {
+        "replies": 1000,
+        "parsed": 988,
+        "unparsed_by_task": {
+          "identify": 12
+        },
+        "judgments_asked": 9860,
+        "judgments_answered": 9845
+      },
+      "confirmation": {
+        "replies": 1312,
+        "parsed": 1297,
+        "unparsed_by_task": {
+          "identify": 15
+        },
+        "judgments_asked": 12992,
+        "judgments_answered": 12981
+      },
+      "reserve": {
+        "replies": 664,
+        "parsed": 649,
+        "unparsed_by_task": {
+          "identify": 13,
+          "classify": 2
+        },
+        "judgments_asked": 6492,
+        "judgments_answered": 6460
+      }
+    },
+    "by_clue_count": {
+      "far": {
+        "2": {
+          "n": 1948,
+          "rate": 0.129
+        },
+        "3": {
+          "n": 286,
+          "rate": 0.168
+        }
+      },
+      "near": {
+        "1": {
+          "n": 7150,
+          "rate": 0.125
+        },
+        "2": {
+          "n": 2920,
+          "rate": 0.235
+        },
+        "3": {
+          "n": 322,
+          "rate": 0.342
+        }
+      },
+      "possible": {
+        "1": {
+          "n": 7142,
+          "rate": 0.323
+        },
+        "2": {
+          "n": 2701,
+          "rate": 0.576
+        },
+        "3": {
+          "n": 357,
+          "rate": 0.51
+        }
+      }
+    },
+    "by_query_distinct_digits": {
+      "single_clue": {
+        "near": {
+          "1": {
+            "n": 96,
+            "rate": 0.0
+          },
+          "2": {
+            "n": 2808,
+            "rate": 0.112
+          },
+          "3": {
+            "n": 3622,
+            "rate": 0.142
+          },
+          "4": {
+            "n": 624,
+            "rate": 0.104
+          }
+        },
+        "possible": {
+          "1": {
+            "n": 96,
+            "rate": 0.25
+          },
+          "2": {
+            "n": 2800,
+            "rate": 0.297
+          },
+          "3": {
+            "n": 3622,
+            "rate": 0.336
+          },
+          "4": {
+            "n": 624,
+            "rate": 0.373
+          }
+        }
+      },
+      "multi_clue": {
+        "far": {
+          "1": {
+            "n": 32,
+            "rate": 0.0
+          },
+          "2": {
+            "n": 816,
+            "rate": 0.125
+          },
+          "3": {
+            "n": 1166,
+            "rate": 0.153
+          },
+          "4": {
+            "n": 220,
+            "rate": 0.091
+          }
+        },
+        "near": {
+          "1": {
+            "n": 32,
+            "rate": 0.031
+          },
+          "2": {
+            "n": 1176,
+            "rate": 0.197
+          },
+          "3": {
+            "n": 1704,
+            "rate": 0.279
+          },
+          "4": {
+            "n": 330,
+            "rate": 0.264
+          }
+        },
+        "possible": {
+          "1": {
+            "n": 40,
+            "rate": 0.475
+          },
+          "2": {
+            "n": 1096,
+            "rate": 0.59
+          },
+          "3": {
+            "n": 1608,
+            "rate": 0.537
+          },
+          "4": {
+            "n": 314,
+            "rate": 0.666
+          }
+        }
+      }
+    },
+    "breakdown_note": "clue count = clues in the probe's history (single-clue probes have 1); query distinct digits = complexity of the newest clue's query. Near misses are ruled out only by the newest clue, far misses by an earlier one (so near vs. far also contrasts clue age).",
+    "identification": 0.238,
+    "note": "rates are error rates: 'possible' = false exclusion, 'near'/'far' = false retention",
+    "cells": [
+      {
+        "task": "classify",
+        "kind": "far",
+        "clues": 2,
+        "query_distinct_digits": 1,
+        "n": 16,
+        "error_rate": 0.0
+      },
+      {
+        "task": "classify",
+        "kind": "far",
+        "clues": 2,
+        "query_distinct_digits": 2,
+        "n": 720,
+        "error_rate": 0.125
+      },
+      {
+        "task": "classify",
+        "kind": "far",
+        "clues": 2,
+        "query_distinct_digits": 3,
+        "n": 1008,
+        "error_rate": 0.141
+      },
+      {
+        "task": "classify",
+        "kind": "far",
+        "clues": 2,
+        "query_distinct_digits": 4,
+        "n": 204,
+        "error_rate": 0.098
+      },
+      {
+        "task": "classify",
+        "kind": "far",
+        "clues": 3,
+        "query_distinct_digits": 1,
+        "n": 16,
+        "error_rate": 0.0
+      },
+      {
+        "task": "classify",
+        "kind": "far",
+        "clues": 3,
+        "query_distinct_digits": 2,
+        "n": 96,
+        "error_rate": 0.125
+      },
+      {
+        "task": "classify",
+        "kind": "far",
+        "clues": 3,
+        "query_distinct_digits": 3,
+        "n": 158,
+        "error_rate": 0.228
+      },
+      {
+        "task": "classify",
+        "kind": "far",
+        "clues": 3,
+        "query_distinct_digits": 4,
+        "n": 16,
+        "error_rate": 0.0
+      },
+      {
+        "task": "classify",
+        "kind": "near",
+        "clues": 2,
+        "query_distinct_digits": 1,
+        "n": 24,
+        "error_rate": 0.0
+      },
+      {
+        "task": "classify",
+        "kind": "near",
+        "clues": 2,
+        "query_distinct_digits": 2,
+        "n": 1080,
+        "error_rate": 0.189
+      },
+      {
+        "task": "classify",
+        "kind": "near",
+        "clues": 2,
+        "query_distinct_digits": 3,
+        "n": 1510,
+        "error_rate": 0.263
+      },
+      {
+        "task": "classify",
+        "kind": "near",
+        "clues": 2,
+        "query_distinct_digits": 4,
+        "n": 306,
+        "error_rate": 0.275
+      },
+      {
+        "task": "classify",
+        "kind": "near",
+        "clues": 3,
+        "query_distinct_digits": 1,
+        "n": 8,
+        "error_rate": 0.125
+      },
+      {
+        "task": "classify",
+        "kind": "near",
+        "clues": 3,
+        "query_distinct_digits": 2,
+        "n": 96,
+        "error_rate": 0.292
+      },
+      {
+        "task": "classify",
+        "kind": "near",
+        "clues": 3,
+        "query_distinct_digits": 3,
+        "n": 194,
+        "error_rate": 0.402
+      },
+      {
+        "task": "classify",
+        "kind": "near",
+        "clues": 3,
+        "query_distinct_digits": 4,
+        "n": 24,
+        "error_rate": 0.125
+      },
+      {
+        "task": "classify",
+        "kind": "possible",
+        "clues": 2,
+        "query_distinct_digits": 1,
+        "n": 24,
+        "error_rate": 0.625
+      },
+      {
+        "task": "classify",
+        "kind": "possible",
+        "clues": 2,
+        "query_distinct_digits": 2,
+        "n": 992,
+        "error_rate": 0.603
+      },
+      {
+        "task": "classify",
+        "kind": "possible",
+        "clues": 2,
+        "query_distinct_digits": 3,
+        "n": 1391,
+        "error_rate": 0.542
+      },
+      {
+        "task": "classify",
+        "kind": "possible",
+        "clues": 2,
+        "query_distinct_digits": 4,
+        "n": 294,
+        "error_rate": 0.646
+      },
+      {
+        "task": "classify",
+        "kind": "possible",
+        "clues": 3,
+        "query_distinct_digits": 1,
+        "n": 16,
+        "error_rate": 0.25
+      },
+      {
+        "task": "classify",
+        "kind": "possible",
+        "clues": 3,
+        "query_distinct_digits": 2,
+        "n": 104,
+        "error_rate": 0.471
+      },
+      {
+        "task": "classify",
+        "kind": "possible",
+        "clues": 3,
+        "query_distinct_digits": 3,
+        "n": 217,
+        "error_rate": 0.507
+      },
+      {
+        "task": "classify",
+        "kind": "possible",
+        "clues": 3,
+        "query_distinct_digits": 4,
+        "n": 20,
+        "error_rate": 0.95
+      },
+      {
+        "task": "classify_single",
+        "kind": "near",
+        "clues": 1,
+        "query_distinct_digits": 1,
+        "n": 96,
+        "error_rate": 0.0
+      },
+      {
+        "task": "classify_single",
+        "kind": "near",
+        "clues": 1,
+        "query_distinct_digits": 2,
+        "n": 2808,
+        "error_rate": 0.112
+      },
+      {
+        "task": "classify_single",
+        "kind": "near",
+        "clues": 1,
+        "query_distinct_digits": 3,
+        "n": 3622,
+        "error_rate": 0.142
+      },
+      {
+        "task": "classify_single",
+        "kind": "near",
+        "clues": 1,
+        "query_distinct_digits": 4,
+        "n": 624,
+        "error_rate": 0.104
+      },
+      {
+        "task": "classify_single",
+        "kind": "possible",
+        "clues": 1,
+        "query_distinct_digits": 1,
+        "n": 96,
+        "error_rate": 0.25
+      },
+      {
+        "task": "classify_single",
+        "kind": "possible",
+        "clues": 1,
+        "query_distinct_digits": 2,
+        "n": 2800,
+        "error_rate": 0.297
+      },
+      {
+        "task": "classify_single",
+        "kind": "possible",
+        "clues": 1,
+        "query_distinct_digits": 3,
+        "n": 3622,
+        "error_rate": 0.336
+      },
+      {
+        "task": "classify_single",
+        "kind": "possible",
+        "clues": 1,
+        "query_distinct_digits": 4,
+        "n": 624,
+        "error_rate": 0.373
+      }
+    ]
+  }
+}

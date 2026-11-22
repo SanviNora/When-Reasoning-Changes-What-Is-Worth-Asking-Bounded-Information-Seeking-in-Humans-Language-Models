@@ -1,0 +1,45 @@
+{
+  "participants": 33,
+  "forced_choices": 1279,
+  "games": 330,
+  "p_easy_overall": 0.573,
+  "p_easy_by_trial": {
+    "1": 0.388,
+    "2": 0.483,
+    "3": 0.496,
+    "4": 0.488,
+    "5": 0.524,
+    "6": 0.611,
+    "7": 0.682,
+    "8": 0.659,
+    "9": 0.662,
+    "10": 0.686
+  },
+  "choice_trend": {
+    "estimate": 0.136,
+    "p_glm": 0.0,
+    "p_clustered": 0.0,
+    "ci95_clustered": [
+      0.0922,
+      0.1799
+    ]
+  },
+  "solving_vs_p_easy": {
+    "estimate": 1.7911,
+    "p_glm": 0.0,
+    "p_clustered": 0.0,
+    "ci95_clustered": [
+      0.9514,
+      2.6309
+    ]
+  },
+  "attempts_vs_p_easy": {
+    "estimate": -3.8361,
+    "p_glm": 0.0,
+    "p_clustered": 0.0,
+    "ci95_clustered": [
+      -5.1518,
+      -2.5204
+    ]
+  }
+}

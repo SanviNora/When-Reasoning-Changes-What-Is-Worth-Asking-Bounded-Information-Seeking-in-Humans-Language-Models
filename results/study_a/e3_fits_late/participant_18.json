@@ -1,0 +1,21 @@
+{
+ "participant": 18,
+ "uniqueid": "debugORbhd:debugASuJS",
+ "games": 5,
+ "decisions": 28,
+ "fits": {
+  "bounded": {
+   "model": "bounded",
+   "params": {
+    "eps": 0.4027137248993694,
+    "alpha": 0.06356586265435032,
+    "lam": 1.5281221197952848,
+    "tau": 0.001985518505073355
+   },
+   "loglik": -104.06487892239984,
+   "k": 4,
+   "aic": 216.12975784479968,
+   "evals": 3000
+  }
+ }
+}

@@ -1,0 +1,35 @@
+# environment, secrets and local cluster settings
+.env
+.venv/
+experiments/hpc/site.env
+__pycache__/
+.DS_Store
+
+# logs and partial outputs
+*.log
+*.out
+*.aux
+*.tmp*
+
+# language-model reply cache (large; every reply is also summarized in results/)
+data/probes/
+
+# third-party material: linked, not redistributed
+data/human/*
+!data/human/README.md
+external/
+references/
+
+# local working material, not published
+docs/
+deliverables/
+archive/
+/*.pdf
+
+# cache search chains (large; kept on the cluster)
+data/model_cache/search*/
+
+# partial files from split B1 runs (the assembled file is the result)
+results/study_b/b1/shards/
+# format pilots before the B1 runs (not used in any result)
+results/study_b/b1/pilots/
